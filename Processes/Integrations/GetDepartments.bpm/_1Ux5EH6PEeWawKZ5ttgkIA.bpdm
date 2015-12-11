@@ -1,0 +1,118 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_departmentsservice" xmlns:tns="http://budgeting.example.everteam.com/Types/Business" xmlns:this="http://thisdiagram/process" xmlns:Technical="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://thisdiagram" xmlns:Caller="http://thisdiagram/Caller" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/process">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/processimplicitPartner" bpdm:prefix="processimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_1Ux5EH6PEeWawKZ5ttgkIAimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:budgeting:select_departmentsservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Connectors/Database/select_departments.sql/select_departments.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="Technical" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Caller" bpdm:prefix="Caller" bpdm:comment="contrib=&apos;partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForCaller">
+                <wsdl:operation name="Recieve_request" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA">
+                    <wsdl:input message="this:Recieve_requestRequest" name="Recieve_request"/>
+                    <wsdl:output message="this:Recieve_requestResponse" name="Recieve_requestResponse"/>
+                    <wsdl:fault name="GetDepartmentFault" message="this:Recieve_requestGetDepartmentFault"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForCaller" type="this:ForCaller" bpdm:isSynchronized="true"/>
+            <xs:element name="Recieve_requestRequest" type="xs:string" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA"/>
+            <wsdl:message name="Recieve_requestRequest" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA">
+                <wsdl:part name="body" element="this:Recieve_requestRequest"/>
+            </wsdl:message>
+            <xs:element name="Recieve_requestResponse" type="tns:DepartmentsType" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA"/>
+            <wsdl:message name="Recieve_requestResponse" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA">
+                <wsdl:part name="body" element="this:Recieve_requestResponse"/>
+            </wsdl:message>
+            <xs:element name="Recieve_requestGetDepartmentFault" type="Technical:ErrorType" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA"/>
+            <wsdl:message name="Recieve_requestGetDepartmentFault" bpdm:source="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA">
+                <wsdl:part name="body" element="this:Recieve_requestGetDepartmentFault"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_GJAEMH6QEeWawKZ5ttgkIA" bpdm:label="Caller"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_1Ux5EH6PEeWawKZ5ttgkIAimplicitPartner" bpdm:label="processimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_departments.sql/select_departments.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_departments.sql/select_departments.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_1Ux5EH6PEeWawKZ5ttgkIA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:CallerAndProcess" myRole="process_for_Caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForCaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/Caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_1Ux5EH6PEeWawKZ5ttgkIA:_9_Y4wH6PEeWawKZ5ttgkIA, _6MzigH6QEeWawKZ5ttgkIA:_kNkOkH6REeWawKZ5ttgkIA, _odircH6QEeWawKZ5ttgkIA:_NgCjMH6QEeWawKZ5ttgkIA" bpdm:isManaged="true" bpdm:otherPoolId="_GJAEMH6QEeWawKZ5ttgkIA"/>
+            <bpel:partnerLink name="processimplicitPartnerAndProcessForSelect_departmentsPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForSelect_departmentsPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="ns:select_departmentsService" bpdm:invokedPort="select_departmentsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_departments" bpdm:invokedIsDefault="true" bpdm:clientTasks="_odircH6QEeWawKZ5ttgkIA:_KmVLIH6QEeWawKZ5ttgkIA" bpdm:isManaged="true" bpdm:otherPoolId="_1Ux5EH6PEeWawKZ5ttgkIAimplicitPartner"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisRecieve_requestRequestMsg" messageType="this:Recieve_requestRequest" bpdm:id="_JwaPwH6QEeWawKZ5ttgkIA" bpdm:messageIds="inc:_JwIi8H6QEeWawKZ5ttgkIA"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve request" bpdm:ID="_9_Y4wH6PEeWawKZ5ttgkIA">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_requestRequestMsg" bpdm:msgVarScopeId="_1Ux5EH6PEeWawKZ5ttgkIA" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requestRequest" bpdm:ID="_JwIi8H6QEeWawKZ5ttgkIA"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="SubProcess" bpdm:ID="_odircH6QEeWawKZ5ttgkIA">
+                <bpel:variables>
+                    <bpel:variable name="nsSelect_departmentsResponseMsg" messageType="ns:select_departmentsOutput" binding="ns:select_departmentsPortSoapBinding" operation="select_departments" opMsgType="1" bpdm:messageIds="inc:_KmVLIH6QEeWawKZ5ttgkIAIncoming"/>
+                    <bpel:variable name="nsSelect_departmentsRequestMsg" messageType="ns:select_departmentsInput" binding="ns:select_departmentsPortSoapBinding" operation="select_departments" opMsgType="0" bpdm:messageIds=" out:_KmVLIH6QEeWawKZ5ttgkIAOutgoing">
+                        <bpel:from bpdm:toPart="parameters">
+                            <bpel:literal bpdm:linkedMessageType="ns:select_departmentsInput" bpdm:linkedPart="parameters" bpdm:binding="ns:select_departmentsPortSoapBinding" bpdm:opMsgType="0" bpdm:operation="select_departments"></bpel:literal>
+                        </bpel:from>
+                    </bpel:variable>
+                    <bpel:variable name="thisRecieve_requestResponseMsg" messageType="this:Recieve_requestResponse" bpdm:id="_tbo9IH6QEeWawKZ5ttgkIA" bpdm:messageIds=" out:_tbfMIH6QEeWawKZ5ttgkIA">
+                        <bpel:from bpdm:toPart="body">
+                            <bpel:literal bpdm:linkedMessageType="this:Recieve_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                        </bpel:from>
+                    </bpel:variable>
+                </bpel:variables>
+                <bpel:faultHandlers>
+                    <bpel:catch faultVariable="nsselect_departmentsFaultVar" bpdm:faultOperationPointerQName="ns:select_departmentsPort/select_departments/fault/nsselect_departmentsFault" faultMessageType="ns:select_departmentsFault">
+                        <bpdm:eventHandler bpdm:label="Capture error" bpdm:ID="_ySmsEH6QEeWawKZ5ttgkIA" bpdm:type="error" faultVariable="nsselect_departmentsFaultVar" bpdm:faultOperationPointerQName="ns:select_departmentsPort/select_departments/fault/nsselect_departmentsFault" faultMessageType="ns:select_departmentsFault"></bpdm:eventHandler>
+                        <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Error handler" bpdm:ID="_6MzigH6QEeWawKZ5ttgkIA">
+                            <bpel:variables>
+                                <bpel:variable name="thisRecieve_requestResponseFaultMsg" messageType="this:Recieve_requestGetDepartmentFault" bpdm:id="_PLkxIH8CEeWqGocOE4yoGg" bpdm:messageIds=" out:_PLPZ8H8CEeWqGocOE4yoGg">
+                                    <bpel:from bpdm:toPart="body">
+                                        <bpel:literal bpdm:linkedMessageType="this:Recieve_requestGetDepartmentFault" bpdm:linkedPart="body"></bpel:literal>
+                                    </bpel:from>
+                                </bpel:variable>
+                            </bpel:variables>
+                            <bpel:sequence>
+                                <bpdm:messagingtask operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Send error" bpdm:ID="_kNkOkH6REeWawKZ5ttgkIA">
+                                    <bpdm:linkset bpdm:type="assignments">
+                                        <bpel:copy>
+                                            <bpel:from>"Unable to retrieve deparments"</bpel:from>
+                                            <bpel:to>$thisRecieve_requestResponseFaultMsg.body/Technical:Explanation</bpel:to><mapper:mapperLink><mapper:vertice id="380519283" targetPath="$thisRecieve_requestResponseFaultMsg.body/Technical:Explanation" targetedBy="1271679174-arg0"></mapper:vertice><mapper:vertice id="1271679174" dimension="177x24" location="416,47"><mapper:value>"Unable to retrieve deparments"</mapper:value></mapper:vertice></mapper:mapperLink>
+                                        </bpel:copy>
+                                        <bpel:copy>
+                                            <bpel:from>$nsselect_departmentsFaultVar.fault/ns:errorMessage</bpel:from>
+                                            <bpel:to>$thisRecieve_requestResponseFaultMsg.body/Technical:TechnicalError</bpel:to><mapper:mapperLink><mapper:vertice id="717354449" targetPath="$thisRecieve_requestResponseFaultMsg.body/Technical:TechnicalError" targetedBy="1082003625-arg0"></mapper:vertice><mapper:vertice id="1082003625" sourcePath="$nsselect_departmentsFaultVar.fault/ns:errorMessage"></mapper:vertice></mapper:mapperLink>
+                                        </bpel:copy>
+                                    </bpdm:linkset>
+                                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_requestResponseFaultMsg" bpdm:msgVarScopeId="_6MzigH6QEeWawKZ5ttgkIA" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requestGetDepartmentFault" faultNcName="GetDepartmentFault" bpdm:ID="_PLPZ8H8CEeWqGocOE4yoGg"></bpdm:linkset>
+                                </bpdm:messagingtask>
+                            </bpel:sequence>
+                        </bpel:scope>
+                    </bpel:catch>
+                </bpel:faultHandlers>
+                <bpel:sequence>
+                    <bpdm:messagingtask operation="select_departments" partnerLink="processimplicitPartnerAndProcessForSelect_departmentsPortPlkVar" portType="ns:select_departmentsPort" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Query database" bpdm:ID="_KmVLIH6QEeWawKZ5ttgkIA">
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsSelect_departmentsRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:select_departmentsInput" bpdm:binding="ns:select_departmentsPortSoapBinding" bpdm:ID="_KmVLIH6QEeWawKZ5ttgkIAOutgoing"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsSelect_departmentsResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:select_departmentsOutput" bpdm:binding="ns:select_departmentsPortSoapBinding" bpdm:ID="_KmVLIH6QEeWawKZ5ttgkIAIncoming"></bpdm:linkset>
+                        <bpdm:thrownFault msgFaultNcName="nsselect_departmentsFault" msgFaultTypeQname="ns:select_departmentsFault"/>
+                    </bpdm:messagingtask>
+                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Transform results" bpdm:ID="_rJkM0H6QEeWawKZ5ttgkIA">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>bpel:doXslTransform("../../XSLT/transform_get_departments.xsl", $nsSelect_departmentsResponseMsg.parameters)</bpel:from>
+                                <bpel:to>$thisRecieve_requestResponseMsg.body</bpel:to><mapper:mapperLink><mapper:vertice id="510746503" targetPath="$thisRecieve_requestResponseMsg.body" targetedBy="1155971152-arg2"></mapper:vertice><mapper:vertice id="1155971152" dimension="126x24" location="360,60"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1290203997" dimension="233x24" location="108,12" targetedBy="1155971152-arg0"><mapper:value>"../../XSLT/transform_get_departments.xsl"</mapper:value></mapper:vertice><mapper:vertice id="155380348" sourcePath="$nsSelect_departmentsResponseMsg.parameters" targetedBy="1155971152-arg1"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                    </bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="end: message" operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Send results" bpdm:ID="_NgCjMH6QEeWawKZ5ttgkIA">
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_requestResponseMsg" bpdm:msgVarScopeId="_odircH6QEeWawKZ5ttgkIA" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requestResponse" bpdm:ID="_tbfMIH6QEeWawKZ5ttgkIA"></bpdm:linkset>
+                    </bpdm:messagingtask>
+                </bpel:sequence>
+            </bpel:scope>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

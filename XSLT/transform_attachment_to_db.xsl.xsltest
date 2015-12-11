@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_attachment_to_db.xsl" xmlns:caller="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/caller" xmlns:processimplicitPartner="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/process" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement" xmlns:ns="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice">
+  <!--XSL Test sample  generated on Wed Nov 04 17:19:07 EST 2015
+ for F/Budgeting/Processes/Integrations/AttachmentManagement.bpm
+   pool:process
+   activity: Extract attachment
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_attachment_to_db.xsl", $thisStore_attachmentsRequestMsg.body/tns:Attachments, "pos", $attachmentCounter)
+ Input document as defined in the mapper: $thisStore_attachmentsRequestMsg.body/tns:Attachments-->
+  <test:input>
+    <tns:Attachments>
+      <tns:attachment>
+        <tns:mimeType>string</tns:mimeType>
+        <tns:fileName>string</tns:fileName>
+        <tns:title>string</tns:title>
+        <tns:description>string</tns:description>
+        <tns:creationDate>dateTime</tns:creationDate>
+        <tns:payloadUrl>string</tns:payloadUrl>
+      </tns:attachment>
+      <tns:attachment>
+        <tns:mimeType>string1</tns:mimeType>
+        <tns:fileName>string1</tns:fileName>
+        <tns:title>string1</tns:title>
+        <tns:description>string1</tns:description>
+        <tns:creationDate>dateTime1</tns:creationDate>
+        <tns:payloadUrl>string1</tns:payloadUrl>
+      </tns:attachment>
+    </tns:Attachments>
+  </test:input>
+  <test:param name="pos">2</test:param>
+</test:testxsl>

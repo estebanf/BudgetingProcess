@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_5opVEIM8EeWG07MHKwyOLA" displayName="SaveAttachment" ownerPoolId="_h4nZ8IMyEeWG07MHKwyOLA" ownerPoolNcName="caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_YD4wgIMyEeWG07MHKwyOLA" ncName="process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_s-MnQIMyEeWG07MHKwyOLA" displayName="Save attachments" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_YD4wgIMyEeWG07MHKwyOLA" generatedPartnerLinkTypeLocalName="callerAndProcess" generatedService="CanonicServiceForcaller" generatedOperation="Store_attachments" generatedPort="canonicPort">
+                <bpt:input name="Store_attachments" generatedMessageTypeLocalName="Store_attachmentsRequest">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}StoreAttachmentRequestType" generatedElementLocalName="Store_attachmentsRequest"/>
+                </bpt:input>
+                <bpt:output name="Store_attachmentsResponse" generatedMessageTypeLocalName="Store_attachmentsResponse">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}AcknowledgementType" generatedElementLocalName="Store_attachmentsResponse"/>
+                </bpt:output>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

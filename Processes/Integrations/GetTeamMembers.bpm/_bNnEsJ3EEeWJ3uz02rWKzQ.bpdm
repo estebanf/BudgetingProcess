@@ -1,0 +1,31 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Process="http://thisdiagram/Process" xmlns:diag="http://thisdiagram" xmlns:this="http://thisdiagram/Caller" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Caller">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Process" bpdm:prefix="Process" bpdm:comment="contrib=&apos;partner-pool:///_XQvmgJ3EEeWJ3uz02rWKzQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_XQvmgJ3EEeWJ3uz02rWKzQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Caller" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_XQvmgJ3EEeWJ3uz02rWKzQ" bpdm:label="Process"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Caller" bpdm:ID="_bNnEsJ3EEeWJ3uz02rWKzQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:CallerAndProcess" initializePartnerRole="yes" partnerRole="Process_for_Caller" bpdm:invokedService="Process:CanonicServiceForCaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Process/Caller" bpdm:invokedIsDefault="true" bpdm:clientTasks="_bNnEsJ3EEeWJ3uz02rWKzQ:_ckL2EJ3EEeWJ3uz02rWKzQ" bpdm:isManaged="true" bpdm:otherPoolId="_XQvmgJ3EEeWJ3uz02rWKzQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="processRecieve_requestRequest2Msg" messageType="Process:Recieve_requestRequest" bpdm:id="_ieOyoJ3EEeWJ3uz02rWKzQ" bpdm:messageIds=" out:_id73t53EEeWJ3uz02rWKzQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="Process:Recieve_requestRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="processRecieve_requestResponse2Msg" messageType="Process:Recieve_requestResponse" bpdm:id="_ya98J53EEeWJ3uz02rWKzQ" bpdm:messageIds="inc:_yaXfMJ3EEeWJ3uz02rWKzQ"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="Process:ForCaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get Team Members" bpdm:ID="_ckL2EJ3EEeWJ3uz02rWKzQ">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processRecieve_requestRequest2Msg" bpdm:msgVarScopeId="_bNnEsJ3EEeWJ3uz02rWKzQ" bpdm:variableIsManaged="true" bpdm:messageType="Process:Recieve_requestRequest" bpdm:ID="_id73t53EEeWJ3uz02rWKzQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processRecieve_requestResponse2Msg" bpdm:msgVarScopeId="_bNnEsJ3EEeWJ3uz02rWKzQ" bpdm:variableIsManaged="true" bpdm:messageType="Process:Recieve_requestResponse" bpdm:ID="_yaXfMJ3EEeWJ3uz02rWKzQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

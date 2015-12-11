@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_team_members.xsl" xmlns:ProcessimplicitPartner="http://budgeting.example.everteam.com/Processes/Integrations/GetTeamMembers/ProcessimplicitPartner" xmlns:ns="http://tempo.intalio.org/security/OrganizationInfoService" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://tempo.intalio.org/security/tokenService/" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:this="http://budgeting.example.everteam.com/Processes/Integrations/GetTeamMembers/Process" xmlns:diag="http://budgeting.example.everteam.com/Processes/Integrations/GetTeamMembers" xmlns:Caller="http://budgeting.example.everteam.com/Processes/Integrations/GetTeamMembers/Caller">
+  <!--XSL Test sample  generated on Tue Dec 08 15:16:15 EST 2015
+ for F/Budgeting/Processes/Integrations/GetTeamMembers.bpm
+   pool:Process
+   activity: Reply
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_team_members.xsl", $nsGetSubordinatesResponse1Msg.parameters)
+ Input document as defined in the mapper: $nsGetSubordinatesResponse1Msg.parameters-->
+  <test:input>
+    <getSubordinatesResponse xmlns="http://tempo.intalio.org/security/OrganizationInfoService">
+         <return>
+            <displayName>Ellen Scott</displayName>
+            <firstName>Ellen</firstName>
+            <lastName>Scott</lastName>
+            <name>ellen</name>
+            <realm>examples</realm>
+         </return>
+         <return>
+            <displayName>Daniel Clark</displayName>
+            <firstName>Daniel</firstName>
+            <lastName>Clark</lastName>
+            <name>daniel</name>
+            <realm>examples</realm>
+         </return>
+         <return>
+            <displayName>Roger Baker</displayName>
+            <firstName>Roger</firstName>
+            <lastName>Baker</lastName>
+            <name>roger</name>
+            <realm>examples</realm>
+         </return>
+    </getSubordinatesResponse>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

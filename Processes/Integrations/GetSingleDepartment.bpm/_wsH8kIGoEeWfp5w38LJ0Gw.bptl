@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_wsH8kIGoEeWfp5w38LJ0Gw" displayName="RequestSingleDepartment" ownerPoolId="__A1fsIGlEeWfp5w38LJ0Gw" ownerPoolNcName="Caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_0W7-QIGkEeWnYehdvYwvag" ncName="Process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_Brg9QIGmEeWfp5w38LJ0Gw" displayName="Request single department" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_0W7-QIGkEeWnYehdvYwvag" generatedPartnerLinkTypeLocalName="CallerAndProcess" generatedService="CanonicServiceForCaller" generatedOperation="Recieve__request" generatedPort="canonicPort">
+                <bpt:input name="Recieve__request" generatedMessageTypeLocalName="Recieve__requestRequest">
+                    <bpt:part name="body" generatedElementLocalName="Recieve__requestRequest"/>
+                </bpt:input>
+                <bpt:output name="Recieve__requestResponse" generatedMessageTypeLocalName="Recieve__requestResponse">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Business.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Business}DepartmentType" generatedElementLocalName="Recieve__requestResponse"/>
+                </bpt:output>
+                <bpt:faults>
+                    <bpt:fault name="GetSingleDepartmentFault" generatedMessageTypeLocalName="Recieve__requestGetSingleDepartmentFault">
+                        <bpt:part name="body" attachedSchemaObject="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}ErrorType" generatedElementLocalName="Recieve__requestGetSingleDepartmentFault"/>
+                    </bpt:fault>
+                </bpt:faults>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

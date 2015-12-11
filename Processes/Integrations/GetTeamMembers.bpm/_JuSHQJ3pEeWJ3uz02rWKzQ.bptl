@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_JuSHQJ3pEeWJ3uz02rWKzQ" displayName="GetTeamMemebers" ownerPoolId="_bNnEsJ3EEeWJ3uz02rWKzQ" ownerPoolNcName="Caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_XQvmgJ3EEeWJ3uz02rWKzQ" ncName="Process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_ckL2EJ3EEeWJ3uz02rWKzQ" displayName="Get Team Members" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_XQvmgJ3EEeWJ3uz02rWKzQ" generatedPartnerLinkTypeLocalName="CallerAndProcess" generatedService="CanonicServiceForCaller" generatedOperation="Recieve_request" generatedPort="canonicPort">
+                <bpt:input name="Recieve_request" generatedMessageTypeLocalName="Recieve_requestRequest">
+                    <bpt:part name="body" generatedElementLocalName="Recieve_requestRequest"/>
+                </bpt:input>
+                <bpt:output name="Recieve_requestResponse" generatedMessageTypeLocalName="Recieve_requestResponse">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Business.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Business}TeamMembersType" generatedElementLocalName="Recieve_requestResponse"/>
+                </bpt:output>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_0wu78JnaEeWV9_WeKTMY8g" displayName="GetAttachments" ownerPoolId="_h4nZ8IMyEeWG07MHKwyOLA" ownerPoolNcName="caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_YD4wgIMyEeWG07MHKwyOLA" ncName="process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_zR4L0IMyEeWG07MHKwyOLA" displayName="Retrieve attachments" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_YD4wgIMyEeWG07MHKwyOLA" generatedPartnerLinkTypeLocalName="callerAndProcess" generatedService="CanonicServiceForcaller" generatedOperation="Get_attachments" generatedPort="canonicPort">
+                <bpt:input name="Get_attachments" generatedMessageTypeLocalName="Get_attachmentsRequest">
+                    <bpt:part name="body" generatedElementLocalName="Get_attachmentsRequest"/>
+                </bpt:input>
+                <bpt:output name="Get_attachmentsResponse" generatedMessageTypeLocalName="Get_attachmentsResponse">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}AttachmentsType" generatedElementLocalName="Get_attachmentsResponse"/>
+                </bpt:output>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_extract_department.xsl" xmlns:Department="http://budgeting.example.everteam.com/Processes/Phases/DepartmentsRequirements/Department" xmlns:Master-budgeting_management="http://thisproject/Processes/Core/Master/budgeting_management" xmlns:GetDepartments-process="http://thisproject/Processes/Integrations/GetDepartments/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DepartmentRequirementCollection-Depa="http://thisproject/Processes/Scenarios/DepartmentRequirementCollection/Department" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://budgeting.example.everteam.com/Processes/Phases/DepartmentsRequirements" xmlns:this="http://budgeting.example.everteam.com/Processes/Phases/DepartmentsRequirements/Departments" xmlns:DepartmentsimplicitPartner="http://budgeting.example.everteam.com/Processes/Phases/DepartmentsRequirements/DepartmentsimplicitPartner" xmlns:Master_process="http://budgeting.example.everteam.com/Processes/Phases/DepartmentsRequirements/Master_process">
+  <!--XSL Test sample  generated on Fri Oct 30 10:17:42 EDT 2015
+ for F/Budgeting/Processes/Phases/DepartmentsRequirements.bpm
+   pool:Departments
+   activity: Empty_Start_Event
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_extract_department.xsl", $getDepartments-processRecieve_requestResponseMsg.body, "counter", $deptoCounter)
+ Input document as defined in the mapper: $getDepartments-processRecieve_requestResponseMsg.body-->
+  <test:input>
+    <GetDepartments-process:Recieve_requestResponse>
+      <Business:Department>
+        <Business:DepartmentId>1</Business:DepartmentId>
+        <Business:DeparmentName>Sales</Business:DeparmentName>
+        <Business:DepartmentDirector>Jhoen</Business:DepartmentDirector>
+      </Business:Department>
+      <Business:Department>
+        <Business:DepartmentId>2</Business:DepartmentId>
+        <Business:DeparmentName>Marketing</Business:DeparmentName>
+        <Business:DepartmentDirector>Steve</Business:DepartmentDirector>
+      </Business:Department>
+    </GetDepartments-process:Recieve_requestResponse>
+  </test:input>
+  <test:param name="counter">2</test:param>
+</test:testxsl>

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_6HwYgH6SEeWawKZ5ttgkIA" displayName="RequestDepartments" ownerPoolId="_GJAEMH6QEeWawKZ5ttgkIA" ownerPoolNcName="Caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="_1Ux5EH6PEeWawKZ5ttgkIA" ncName="process" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_G28IQH6QEeWawKZ5ttgkIA" displayName="Request departments" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="_1Ux5EH6PEeWawKZ5ttgkIA" generatedPartnerLinkTypeLocalName="CallerAndProcess" generatedService="CanonicServiceForCaller" generatedOperation="Recieve_request" generatedPort="canonicPort">
+                <bpt:input name="Recieve_request" generatedMessageTypeLocalName="Recieve_requestRequest">
+                    <bpt:part name="body" generatedElementLocalName="Recieve_requestRequest"/>
+                </bpt:input>
+                <bpt:output name="Recieve_requestResponse" generatedMessageTypeLocalName="Recieve_requestResponse">
+                    <bpt:part name="body" attachedSchemaObject="project:///Schemas/Business.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Business}DepartmentsType" generatedElementLocalName="Recieve_requestResponse"/>
+                </bpt:output>
+                <bpt:faults>
+                    <bpt:fault name="GetDepartmentFault" generatedMessageTypeLocalName="Recieve_requestGetDepartmentFault">
+                        <bpt:part name="body" attachedSchemaObject="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}ErrorType" generatedElementLocalName="Recieve_requestGetDepartmentFault"/>
+                    </bpt:fault>
+                </bpt:faults>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

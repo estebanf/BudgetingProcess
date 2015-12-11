@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_get_single_department.xsl" xmlns:ProcessimplicitPartner="http://budgeting.example.everteam.com/Processes/Integrations/GetSingleDepartment/ProcessimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://budgeting.example.everteam.com/Types/Business" xmlns:Technical="http://budgeting.example.everteam.com/Types/Technical" xmlns:this="http://budgeting.example.everteam.com/Processes/Integrations/GetSingleDepartment/Process" xmlns:diag="http://budgeting.example.everteam.com/Processes/Integrations/GetSingleDepartment" xmlns:Caller="http://budgeting.example.everteam.com/Processes/Integrations/GetSingleDepartment/Caller" xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_single_departmentservice">
+  <!--XSL Test sample  generated on Mon Nov 02 16:17:20 EST 2015
+ for F/Budgeting/Processes/Integrations/GetSingleDepartment.bpm
+   pool:Process
+   activity: Transform result
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_get_single_department.xsl", $nsSelect_single_departmentResponseMsg.parameters)
+ Input document as defined in the mapper: $nsSelect_single_departmentResponseMsg.parameters-->
+  <test:input>
+    <ns:select_single_departmentResultSet>
+      <ns:rows>
+        <ns:row>
+          <ns:DEPARTMENT_ID>1</ns:DEPARTMENT_ID>
+          <ns:DEPARTMENT_NAME>Sales</ns:DEPARTMENT_NAME>
+          <ns:DIRECTOR>Jhon</ns:DIRECTOR>
+        </ns:row>
+      </ns:rows>
+    </ns:select_single_departmentResultSet>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

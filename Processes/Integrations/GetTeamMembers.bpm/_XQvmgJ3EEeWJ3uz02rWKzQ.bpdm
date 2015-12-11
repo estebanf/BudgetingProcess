@@ -1,0 +1,136 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:ProcessimplicitPartner="http://thisdiagram/ProcessimplicitPartner" xmlns:ns="http://tempo.intalio.org/security/OrganizationInfoService" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://tempo.intalio.org/security/tokenService/" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:this="http://thisdiagram/Process" xmlns:diag="http://thisdiagram" xmlns:Caller="http://thisdiagram/Caller" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Process">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/ProcessimplicitPartner" bpdm:prefix="ProcessimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_XQvmgJ3EEeWJ3uz02rWKzQimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://tempo.intalio.org/security/OrganizationInfoService" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Services/SOAP/OrganizationInfoService.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://tempo.intalio.org/security/tokenService/" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Services/SOAP/TokenService.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="Business" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Caller" bpdm:prefix="Caller" bpdm:comment="contrib=&apos;partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForCaller">
+                <wsdl:operation name="Recieve_request" bpdm:source="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ">
+                    <wsdl:input message="this:Recieve_requestRequest" name="Recieve_request"/>
+                    <wsdl:output message="this:Recieve_requestResponse" name="Recieve_requestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForCaller" type="this:ForCaller" bpdm:isSynchronized="true"/>
+            <xs:element name="Recieve_requestRequest" type="xs:string" bpdm:source="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ"/>
+            <wsdl:message name="Recieve_requestRequest" bpdm:source="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ">
+                <wsdl:part name="body" element="this:Recieve_requestRequest"/>
+            </wsdl:message>
+            <xs:element name="Recieve_requestResponse" type="Business:TeamMembersType" bpdm:source="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ"/>
+            <wsdl:message name="Recieve_requestResponse" bpdm:source="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ">
+                <wsdl:part name="body" element="this:Recieve_requestResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_bNnEsJ3EEeWJ3uz02rWKzQ" bpdm:label="Caller"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_XQvmgJ3EEeWJ3uz02rWKzQimplicitPartner" bpdm:label="ProcessimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/TokenService.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Services/SOAP/OrganizationInfoService.wsdl"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Process" bpdm:ID="_XQvmgJ3EEeWJ3uz02rWKzQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:CallerAndProcess" myRole="Process_for_Caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForCaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Process/Caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_XQvmgJ3EEeWJ3uz02rWKzQ:_idyGsJ3EEeWJ3uz02rWKzQ, _XQvmgJ3EEeWJ3uz02rWKzQ:_xBGmMJ3EEeWJ3uz02rWKzQ" bpdm:isManaged="true" bpdm:otherPoolId="_bNnEsJ3EEeWJ3uz02rWKzQ"/>
+            <bpel:partnerLink name="processimplicitPartnerAndProcessForPortServicePlkVar" partnerLinkType="diag:ProcessimplicitPartnerAndProcessForPortServicePlk" initializePartnerRole="yes" partnerRole="ProcessimplicitPartner_for_Process" bpdm:invokedService="tns:TokenService" bpdm:invokedPort="Service" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/TokenService.Service/" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XQvmgJ3EEeWJ3uz02rWKzQ:_rD8ENp3EEeWJ3uz02rWKzQ" bpdm:isManaged="true" bpdm:otherPoolId="_XQvmgJ3EEeWJ3uz02rWKzQimplicitPartner"/>
+            <bpel:partnerLink name="processimplicitPartnerAndProcessForPortOrganizationInfoServiceHttpsSoapEndpointPlkVar" partnerLinkType="diag:ProcessimplicitPartnerAndProcessForPortOrganizationInfoServiceHttpsSoapEndpointPlk" initializePartnerRole="yes" partnerRole="ProcessimplicitPartner_for_Process" bpdm:invokedService="ns:OrganizationInfoService" bpdm:invokedPort="OrganizationInfoServiceHttpsSoapEndpoint" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/OrganizationInfoService.OrganizationInfoServiceHttpsSoapEndpoint/" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XQvmgJ3EEeWJ3uz02rWKzQ:_wEnIwZ3EEeWJ3uz02rWKzQ" bpdm:isManaged="true" bpdm:otherPoolId="_XQvmgJ3EEeWJ3uz02rWKzQimplicitPartner"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisRecieve_requestRequest1Msg" messageType="this:Recieve_requestRequest" bpdm:id="_ieX8lZ3EEeWJ3uz02rWKzQ" bpdm:messageIds="inc:_id73t53EEeWJ3uz02rWKzQ"/>
+            <bpel:variable name="tnsAuthenticateUserResponse1Msg" messageType="tns:authenticateUserResponse" binding="tns:TokenServiceSOAP" operation="authenticateUser" opMsgType="1" bpdm:messageIds="inc:_rD8ENp3EEeWJ3uz02rWKzQIncoming"/>
+            <bpel:variable name="tnsAuthenticateUserRequest1Msg" messageType="tns:authenticateUser" binding="tns:TokenServiceSOAP" operation="authenticateUser" opMsgType="0" bpdm:messageIds=" out:_rD8ENp3EEeWJ3uz02rWKzQOutgoing">
+                <bpel:from bpdm:toPart="payload">
+                    <bpel:literal bpdm:linkedMessageType="tns:authenticateUser" bpdm:linkedPart="payload" bpdm:binding="tns:TokenServiceSOAP" bpdm:opMsgType="0" bpdm:operation="authenticateUser"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsGetSubordinatesResponse1Msg" messageType="ns:getSubordinatesResponse" binding="ns:OrganizationInfoServiceSoapBinding" operation="getSubordinates" opMsgType="1" bpdm:messageIds="inc:_wEnIwZ3EEeWJ3uz02rWKzQIncoming"/>
+            <bpel:variable name="nsGetSubordinatesRequest1Msg" messageType="ns:getSubordinatesRequest" binding="ns:OrganizationInfoServiceSoapBinding" operation="getSubordinates" opMsgType="0" bpdm:messageIds=" out:_wEnIwZ3EEeWJ3uz02rWKzQOutgoing">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:getSubordinatesRequest" bpdm:linkedPart="parameters" bpdm:binding="ns:OrganizationInfoServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="getSubordinates"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="thisRecieve_requestResponse1Msg" messageType="this:Recieve_requestResponse" bpdm:id="_yagpKZ3EEeWJ3uz02rWKzQ" bpdm:messageIds=" out:_yaXfMJ3EEeWJ3uz02rWKzQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Recieve_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve request" bpdm:ID="_idyGsJ3EEeWJ3uz02rWKzQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_requestRequest1Msg" bpdm:msgVarScopeId="_XQvmgJ3EEeWJ3uz02rWKzQ" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requestRequest" bpdm:ID="_id73t53EEeWJ3uz02rWKzQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="authenticateUser" partnerLink="processimplicitPartnerAndProcessForPortServicePlkVar" portType="tns:TokenServicePortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="authenticateUser" bpdm:ID="_rD8ENp3EEeWJ3uz02rWKzQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>"admin"</bpel:from>
+                        <bpel:to>$tnsAuthenticateUserRequest1Msg.payload/tns:user</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="770541488" targetPath="$tnsAuthenticateUserRequest1Msg.payload/tns:user" targetedBy="307505189-arg0"></mapper:vertice>
+  <mapper:vertice id="307505189" dimension="79x24" location="430,26">
+    <mapper:value>"admin"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>"changeit"</bpel:from>
+                        <bpel:to>$tnsAuthenticateUserRequest1Msg.payload/tns:password</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="62081558" targetPath="$tnsAuthenticateUserRequest1Msg.payload/tns:password" targetedBy="648939325-arg0"></mapper:vertice>
+  <mapper:vertice id="648939325" dimension="79x24" location="434,74">
+    <mapper:value>"changeit"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsAuthenticateUserRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="tns:authenticateUser" bpdm:binding="tns:TokenServiceSOAP" bpdm:ID="_rD8ENp3EEeWJ3uz02rWKzQOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsAuthenticateUserResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="tns:authenticateUserResponse" bpdm:binding="tns:TokenServiceSOAP" bpdm:ID="_rD8ENp3EEeWJ3uz02rWKzQIncoming"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="getSubordinates" partnerLink="processimplicitPartnerAndProcessForPortOrganizationInfoServiceHttpsSoapEndpointPlkVar" portType="ns:OrganizationInfoServicePortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="getSubordinates" bpdm:ID="_wEnIwZ3EEeWJ3uz02rWKzQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisRecieve_requestRequest1Msg.body</bpel:from>
+                        <bpel:to>$nsGetSubordinatesRequest1Msg.parameters/ns:userID</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="414015160" targetPath="$nsGetSubordinatesRequest1Msg.parameters/ns:userID" targetedBy="1909597660-arg0"></mapper:vertice>
+  <mapper:vertice id="1909597660" sourcePath="$thisRecieve_requestRequest1Msg.body"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$tnsAuthenticateUserResponse1Msg.payload/tns:token</bpel:from>
+                        <bpel:to>$nsGetSubordinatesRequest1Msg.parameters/ns:authenticationToken</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1724846619" targetPath="$nsGetSubordinatesRequest1Msg.parameters/ns:authenticationToken" targetedBy="840878882-arg0"></mapper:vertice>
+  <mapper:vertice id="840878882" sourcePath="$tnsAuthenticateUserResponse1Msg.payload/tns:token"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsGetSubordinatesRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:getSubordinatesRequest" bpdm:binding="ns:OrganizationInfoServiceSoapBinding" bpdm:ID="_wEnIwZ3EEeWJ3uz02rWKzQOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsGetSubordinatesResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:getSubordinatesResponse" bpdm:binding="ns:OrganizationInfoServiceSoapBinding" bpdm:ID="_wEnIwZ3EEeWJ3uz02rWKzQIncoming"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="OrganizationInfoServiceException" msgFaultTypeQname="ns:OrganizationInfoServiceException"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="Recieve_request" partnerLink="callerAndProcessPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Reply" bpdm:ID="_xBGmMJ3EEeWJ3uz02rWKzQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>bpel:doXslTransform("../../XSLT/transform_team_members.xsl", $nsGetSubordinatesResponse1Msg.parameters)</bpel:from>
+                        <bpel:to>$thisRecieve_requestResponse1Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1342256490" targetPath="$thisRecieve_requestResponse1Msg.body" targetedBy="2031396699-arg2"></mapper:vertice>
+  <mapper:vertice id="2031396699" dimension="126x24" location="396,72">
+    <mapper:value>bpel:doXslTransform()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="2042421936" dimension="226x24" location="122,29" targetedBy="2031396699-arg0">
+    <mapper:value>"../../XSLT/transform_team_members.xsl"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="2123221048" sourcePath="$nsGetSubordinatesResponse1Msg.parameters" targetedBy="2031396699-arg1"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_requestResponse1Msg" bpdm:msgVarScopeId="_XQvmgJ3EEeWJ3uz02rWKzQ" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requestResponse" bpdm:ID="_yaXfMJ3EEeWJ3uz02rWKzQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_db_to_attachments.xsl" xmlns:caller="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/caller" xmlns:processimplicitPartner="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement/process" xmlns:select_attachmetns="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://budgeting.example.everteam.com/Processes/Integrations/AttachmentManagement" xmlns:ns="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice">
+  <!--XSL Test sample  generated on Thu Dec 03 11:21:12 EST 2015
+ for F/Budgeting/Processes/Integrations/AttachmentManagement.bpm
+   pool:process
+   activity: Message_End_Event
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_db_to_attachments.xsl", $select_attachmetnsSelect_attachmetnsResponse1Msg.parameters)
+ Input document as defined in the mapper: $select_attachmetnsSelect_attachmetnsResponse1Msg.parameters-->
+  <test:input>
+    <select_attachmetns:select_attachmetnsResultSet>
+      <select_attachmetns:rows>
+        <select_attachmetns:row>
+          <select_attachmetns:EXCERCISE_ID>11</select_attachmetns:EXCERCISE_ID>
+          <select_attachmetns:MIMETYPE>1</select_attachmetns:MIMETYPE>
+          <select_attachmetns:FILENAME>1</select_attachmetns:FILENAME>
+          <select_attachmetns:TITLE>str1ing</select_attachmetns:TITLE>
+          <select_attachmetns:DESCRIPTION>stri11	ng</select_attachmetns:DESCRIPTION>
+          <select_attachmetns:CREATIONDATE>dat1eTime</select_attachmetns:CREATIONDATE>
+          <select_attachmetns:PAYLOADURL>st1ring</select_attachmetns:PAYLOADURL>
+        </select_attachmetns:row>
+        <select_attachmetns:row>
+          <select_attachmetns:EXCERCISE_ID>dec2imal</select_attachmetns:EXCERCISE_ID>
+          <select_attachmetns:MIMETYPE>stri3ng</select_attachmetns:MIMETYPE>
+          <select_attachmetns:FILENAME>stri4ng</select_attachmetns:FILENAME>
+          <select_attachmetns:TITLE>str5ing</select_attachmetns:TITLE>
+          <select_attachmetns:DESCRIPTION>str6ing</select_attachmetns:DESCRIPTION>
+          <select_attachmetns:CREATIONDATE>dateTime</select_attachmetns:CREATIONDATE>
+          <select_attachmetns:PAYLOADURL>string</select_attachmetns:PAYLOADURL>
+        </select_attachmetns:row>
+        <select_attachmetns:row>
+          <select_attachmetns:EXCERCISE_ID>daaecimal</select_attachmetns:EXCERCISE_ID>
+          <select_attachmetns:MIMETYPE>aa</select_attachmetns:MIMETYPE>
+          <select_attachmetns:FILENAME>aff</select_attachmetns:FILENAME>
+          <select_attachmetns:TITLE>string</select_attachmetns:TITLE>
+          <select_attachmetns:DESCRIPTION>string</select_attachmetns:DESCRIPTION>
+          <select_attachmetns:CREATIONDATE>dateTime</select_attachmetns:CREATIONDATE>
+          <select_attachmetns:PAYLOADURL>string</select_attachmetns:PAYLOADURL>
+        </select_attachmetns:row>
+      </select_attachmetns:rows>
+    </select_attachmetns:select_attachmetnsResultSet>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>

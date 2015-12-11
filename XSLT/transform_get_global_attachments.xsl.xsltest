@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase"
+	xsl="transform_get_global_attachments.xsl" xmlns:Variables="http://test.com/xvar/example"
+	xmlns:Master-budgeting_management="http://thisproject/Processes/Core/Master/budgeting_management"
+	xmlns:CFOVariableDefinition="http://www.intalio.com/Budgeting/Webcontents/index.html"
+	xmlns:this="http://budgeting.example.everteam.com/Processes/Phases/VariablesDefinition/Chief_operation_officer"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tns="http://budgeting.example.everteam.com/Types/Technical"
+	xmlns:Chief_operation_officerimplicitPartner="http://budgeting.example.everteam.com/Processes/Phases/VariablesDefinition/Chief_operation_officerimplicitPartner"
+	xmlns:diag="http://budgeting.example.everteam.com/Processes/Phases/VariablesDefinition"
+	xmlns:attachments="http://www.intalio.com/gi/Forms/CFOVariableDefinition.gi/attachments"
+	xmlns:tms="http://www.intalio.com/BPMS/Workflow/TaskManagementServices-20051109/">
+	<!--XSL Test sample generated on Tue Nov 03 15:34:54 EST 2015 for F/Budgeting/Processes/Phases/VariablesDefinition.bpm 
+		pool:Chief operation officer activity: Store variables Complete doXslTransform: 
+		bpel:doXslTransform("../../XSLT/transform_get_global_attachments.xsl", $cFOVariableDefinitionInitProcessRequestMsg.root/CFOVariableDefinition:globalAttachments) 
+		Input document as defined in the mapper: $cFOVariableDefinitionInitProcessRequestMsg.root/CFOVariableDefinition:globalAttachments -->
+	<test:input>
+		<CFOVariableDefinition:globalAttachments>
+			<tms:attachment>
+				<tms:attachmentMetadata>
+					<tms:mimeType>string</tms:mimeType>
+					<tms:fileName>string</tms:fileName>
+					<tms:title>string</tms:title>
+					<tms:description>string</tms:description>
+					<tms:creationDate>dateTime</tms:creationDate>
+				</tms:attachmentMetadata>
+				<tms:payloadUrl>string</tms:payloadUrl>
+			</tms:attachment>
+			<tms:attachment>
+				<tms:attachmentMetadata>
+					<tms:mimeType>string</tms:mimeType>
+					<tms:fileName>string</tms:fileName>
+					<tms:title>string</tms:title>
+					<tms:description>string</tms:description>
+					<tms:creationDate>dateTime</tms:creationDate>
+				</tms:attachmentMetadata>
+				<tms:payloadUrl>string</tms:payloadUrl>
+			</tms:attachment>
+			<tms:attachment>
+				<tms:attachmentMetadata>
+					<tms:mimeType>string</tms:mimeType>
+					<tms:fileName>string</tms:fileName>
+					<tms:title>string</tms:title>
+					<tms:description>string</tms:description>
+					<tms:creationDate>dateTime</tms:creationDate>
+				</tms:attachmentMetadata>
+				<tms:payloadUrl>string</tms:payloadUrl>
+			</tms:attachment>
+		</CFOVariableDefinition:globalAttachments>
+	</test:input>
+	<!--No parameters are currently passed to doXslTransform. -->
+</test:testxsl>

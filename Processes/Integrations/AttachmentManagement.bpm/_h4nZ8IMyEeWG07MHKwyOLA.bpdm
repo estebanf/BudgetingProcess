@@ -1,0 +1,54 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/caller" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:process="http://thisdiagram/process" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/caller">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/caller" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="process" bpdm:comment="contrib=&apos;partner-pool:///_YD4wgIMyEeWG07MHKwyOLA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_YD4wgIMyEeWG07MHKwyOLA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_YD4wgIMyEeWG07MHKwyOLA" bpdm:label="process"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="caller" bpdm:ID="_h4nZ8IMyEeWG07MHKwyOLA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" initializePartnerRole="yes" partnerRole="process_for_caller" bpdm:invokedService="process:CanonicServiceForcaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:invokedIsDefault="true" bpdm:clientTasks="_h4nZ8IMyEeWG07MHKwyOLA:_zR4L0IMyEeWG07MHKwyOLA, _h4nZ8IMyEeWG07MHKwyOLA:_s-MnQIMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_YD4wgIMyEeWG07MHKwyOLA"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="processStore_attachmentsRequestMsg" messageType="process:Store_attachmentsRequest" bpdm:id="_uxnFoIMyEeWG07MHKwyOLA" bpdm:messageIds=" out:_uxeiwIMyEeWG07MHKwyOLA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="process:Store_attachmentsRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="processStore_attachmentsResponseMsg" messageType="process:Store_attachmentsResponse" bpdm:id="_xoZskIMyEeWG07MHKwyOLA" bpdm:messageIds="inc:_xn-OwIMyEeWG07MHKwyOLA"/>
+            <bpel:variable name="processGet_attachmentsRequestMsg" messageType="process:Get_attachmentsRequest" bpdm:id="_2GfogIMyEeWG07MHKwyOLA" bpdm:messageIds=" out:_2GY60IMyEeWG07MHKwyOLA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="process:Get_attachmentsRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="processGet_attachmentsResponseMsg" messageType="process:Get_attachmentsResponse" bpdm:id="_55EiQIMyEeWG07MHKwyOLA" bpdm:messageIds="inc:_54eFUIMyEeWG07MHKwyOLA"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_j85l4IMyEeWG07MHKwyOLA"></bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Action" bpdm:ID="_rr4q0IMyEeWG07MHKwyOLA" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_s-St4IMyEeWG07MHKwyOLA" bpdm:targetDisplayName="default"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_zSBVwIMyEeWG07MHKwyOLA" bpdm:targetDisplayName="[Action - Retrieve attachments]"></bpdm:linkset>
+                <bpel:sequence>
+                    <bpdm:messagingtask operation="Store_attachments" partnerLink="callerAndProcessPlkVar" portType="process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save attachments" bpdm:ID="_s-MnQIMyEeWG07MHKwyOLA">
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processStore_attachmentsRequestMsg" bpdm:msgVarScopeId="_h4nZ8IMyEeWG07MHKwyOLA" bpdm:variableIsManaged="true" bpdm:messageType="process:Store_attachmentsRequest" bpdm:ID="_uxeiwIMyEeWG07MHKwyOLA"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processStore_attachmentsResponseMsg" bpdm:msgVarScopeId="_h4nZ8IMyEeWG07MHKwyOLA" bpdm:variableIsManaged="true" bpdm:messageType="process:Store_attachmentsResponse" bpdm:ID="_xn-OwIMyEeWG07MHKwyOLA"></bpdm:linkset>
+                    </bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_8STqgIMyEeWG07MHKwyOLA"></bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask operation="Get_attachments" partnerLink="callerAndProcessPlkVar" portType="process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Retrieve attachments" bpdm:ID="_zR4L0IMyEeWG07MHKwyOLA">
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processGet_attachmentsRequestMsg" bpdm:msgVarScopeId="_h4nZ8IMyEeWG07MHKwyOLA" bpdm:variableIsManaged="true" bpdm:messageType="process:Get_attachmentsRequest" bpdm:ID="_2GY60IMyEeWG07MHKwyOLA"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processGet_attachmentsResponseMsg" bpdm:msgVarScopeId="_h4nZ8IMyEeWG07MHKwyOLA" bpdm:variableIsManaged="true" bpdm:messageType="process:Get_attachmentsResponse" bpdm:ID="_54eFUIMyEeWG07MHKwyOLA"></bpdm:linkset>
+                    </bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_81xj8IMyEeWG07MHKwyOLA"></bpdm:messagingtask>
+                </bpel:sequence>
+            </bpdm:gateway>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test:testxsl xmlns:test="http://intalio.com/xsltestcase" xsl="transform_attachments_to_global_form.xsl" xmlns:Variables="http://test.com/xvar/example" xmlns:this="http://budgeting.example.everteam.com/Processes/Scenarios/DepartmentRequirementCollection/Department" xmlns:DirectorRequirementsDefinition="http://www.intalio.com/gi/Forms/DirectorRequirementsDefinition.gi" xmlns:attachments="http://www.intalio.com/gi/Forms/DirectorRequirementsDefinition.gi/attachments" xmlns:AttachmentManagement-process="http://thisproject/Processes/Integrations/AttachmentManagement/process" xmlns:DepartmentimplicitPartner="http://budgeting.example.everteam.com/Processes/Scenarios/DepartmentRequirementCollection/DepartmentimplicitPartner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DepartmentsRequirements-Departments="http://thisproject/Processes/Phases/DepartmentsRequirements/Departments" xmlns:diag="http://budgeting.example.everteam.com/Processes/Scenarios/DepartmentRequirementCollection" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:DepartmentsRequirements="http://budgeting.example.everteam.com/Processes/Scenarios/DepartmentRequirementCollection/DepartmentsRequirements" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process">
+  <!--XSL Test sample  generated on Thu Dec 03 14:28:06 EST 2015
+ for F/Budgeting/Processes/Scenarios/DepartmentRequirementCollection.bpm
+   pool:Department
+   activity: Request department requirements
+ Complete doXslTransform: bpel:doXslTransform("../../XSLT/transform_attachments_to_global_form.xsl", $attachmentManagement-processGet_attachmentsResponse1Msg.body)
+ Input document as defined in the mapper: $attachmentManagement-processGet_attachmentsResponse1Msg.body-->
+  <test:input>
+    <AttachmentManagement-process:Get_attachmentsResponse>
+      <tns:attachment>
+        <tns:mimeType>string</tns:mimeType>
+        <tns:fileName>string</tns:fileName>
+        <tns:title>string</tns:title>
+        <tns:description>string</tns:description>
+        <tns:creationDate>dateTime</tns:creationDate>
+        <tns:payloadUrl>string</tns:payloadUrl>
+      </tns:attachment>
+      <tns:attachment>
+        <tns:mimeType>string</tns:mimeType>
+        <tns:fileName>string</tns:fileName>
+        <tns:title>string</tns:title>
+        <tns:description>string</tns:description>
+        <tns:creationDate>dateTime</tns:creationDate>
+        <tns:payloadUrl>string</tns:payloadUrl>
+      </tns:attachment>
+    </AttachmentManagement-process:Get_attachmentsResponse>
+  </test:input>
+  <!--No parameters are currently passed to doXslTransform.-->
+</test:testxsl>
