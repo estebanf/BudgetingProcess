@@ -82,8 +82,12 @@
                     <bpdm:messagingtask operation="select_attachmetns" partnerLink="processimplicitPartnerAndProcessForSelect_attachmetnsPortPlkVar" portType="select_attachmetns:select_attachmetnsPort" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Query attachments" bpdm:ID="_3Rxv4IMyEeWG07MHKwyOLA">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
-                                <bpel:from>xs:int($thisGet_attachmentsRequestMsg.body)</bpel:from>
-                                <bpel:to>$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:EXCERCISE_ID</bpel:to><mapper:mapperLink><mapper:vertice id="1705321560" targetPath="$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:EXCERCISE_ID" targetedBy="1742710674-arg1"></mapper:vertice><mapper:vertice id="1742710674" dimension="79x24" location="374,86"><mapper:value>xs:int()</mapper:value></mapper:vertice><mapper:vertice id="1297231274" sourcePath="$thisGet_attachmentsRequestMsg.body" targetedBy="1742710674-arg0"></mapper:vertice></mapper:mapperLink>
+                                <bpel:from>$thisGet_attachmentsRequestMsg.body</bpel:from>
+                                <bpel:to>$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="701140085" targetPath="$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE" targetedBy="728104015-arg0"></mapper:vertice>
+  <mapper:vertice id="728104015" sourcePath="$thisGet_attachmentsRequestMsg.body"></mapper:vertice>
+</mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                         <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="select_attachmetnsSelect_attachmetnsRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="select_attachmetns:select_attachmetnsInput" bpdm:binding="select_attachmetns:select_attachmetnsPortSoapBinding" bpdm:ID="_3Rxv4IMyEeWG07MHKwyOLAOutgoing"></bpdm:linkset>
@@ -134,10 +138,6 @@
                             <bpdm:messagingtask operation="insert_attachment" partnerLink="processimplicitPartnerAndProcessForInsert_attachmentPortPlkVar" portType="ns:insert_attachmentPort" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Insert attachment" bpdm:ID="_wT7M8IMyEeWG07MHKwyOLA">
                                 <bpdm:linkset bpdm:type="assignments">
                                     <bpel:copy>
-                                        <bpel:from>$thisStore_attachmentsRequestMsg.body/tns:ExcerciseId</bpel:from>
-                                        <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID</bpel:to><mapper:mapperLink><mapper:vertice id="346575113" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID" targetedBy="282873251-arg0"></mapper:vertice><mapper:vertice id="282873251" sourcePath="$thisStore_attachmentsRequestMsg.body/tns:ExcerciseId"></mapper:vertice></mapper:mapperLink>
-                                    </bpel:copy>
-                                    <bpel:copy>
                                         <bpel:from>$Attachment/tns:mimeType</bpel:from>
                                         <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:MIMETYPE</bpel:to><mapper:mapperLink><mapper:vertice id="994639666" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:MIMETYPE" targetedBy="2134444060-arg0"></mapper:vertice><mapper:vertice id="2134444060" sourcePath="$Attachment/tns:mimeType"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
@@ -160,6 +160,14 @@
                                     <bpel:copy>
                                         <bpel:from>$Attachment/tns:payloadUrl</bpel:from>
                                         <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:PAYLOADURL</bpel:to><mapper:mapperLink><mapper:vertice id="961672472" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:PAYLOADURL" targetedBy="136985099-arg0"></mapper:vertice><mapper:vertice id="136985099" sourcePath="$Attachment/tns:payloadUrl"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$thisStore_attachmentsRequestMsg.body/tns:Reference</bpel:from>
+                                        <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1778919355" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE" targetedBy="105541008-arg0"></mapper:vertice>
+  <mapper:vertice id="105541008" sourcePath="$thisStore_attachmentsRequestMsg.body/tns:Reference"></mapper:vertice>
+</mapper:mapperLink>
                                     </bpel:copy>
                                 </bpdm:linkset>
                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsInsert_attachmentRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:insert_attachmentInput" bpdm:binding="ns:insert_attachmentPortSoapBinding" bpdm:ID="_wT7M8IMyEeWG07MHKwyOLAOutgoing"></bpdm:linkset>

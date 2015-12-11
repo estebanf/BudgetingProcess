@@ -45,7 +45,7 @@
 
     <complexType name="StoreAttachmentRequestType">
     	<sequence>
-    		<element name="ExcerciseId" type="int"></element>
+    		<element name="Reference" type="string"></element>
     		<element name="Attachments" type="tns:AttachmentsType"></element>
     	</sequence>
     </complexType>

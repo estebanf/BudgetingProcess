@@ -104,4 +104,54 @@
   </complexType>
 
   <element name="Project" type="tns:ProjectsType"></element>
+
+  <complexType name="ProjectIdentifierType">
+  	<sequence>
+  		<element name="ExcerciseId" type="int" maxOccurs="1" minOccurs="1"></element>
+  		<element name="DepartmentId" type="int" maxOccurs="1" minOccurs="1"></element>
+  		<element name="ProjectId" type="int" maxOccurs="1" minOccurs="1"></element>
+  	</sequence>
+  </complexType>
+
+  <complexType name="SingleProjectRequestType">
+  	<sequence>
+  		<element name="id" type="tns:ProjectIdentifierType"></element>
+  		<element name="Project" type="tns:ProjectsType"></element>
+  	</sequence>
+  </complexType>
+
+  <complexType name="SingleProjectRequirementsType">
+  	<sequence>
+  		<element name="Id" type="tns:ProjectIdentifierType" maxOccurs="1" minOccurs="1"></element>
+  		<element name="Requirements" maxOccurs="1" minOccurs="1">
+  			<complexType>
+  				<sequence>
+                        <element name="LastYearBudget" type="double" maxOccurs="1" minOccurs="0"></element>
+                        <element name="Budget" type="double" maxOccurs="1" minOccurs="1"></element>
+  					<element name="Priority" maxOccurs="1" minOccurs="1">
+  						<simpleType>
+  							<restriction base="string">
+  								<enumeration value="Low"></enumeration>
+  								<enumeration value="Medium"></enumeration>
+  								<enumeration value="High"></enumeration>
+  							</restriction>
+  						</simpleType>
+  					</element>
+  					<element name="StartExecution" type="date" maxOccurs="1" minOccurs="1"></element>
+  					<element name="EndExecution" type="date" maxOccurs="1" minOccurs="1"></element>
+  					<element name="NewProject" type="boolean" maxOccurs="1" minOccurs="1"></element>
+  					<element name="Description" type="string" maxOccurs="1" minOccurs="1"></element>
+  					<element name="Justification" type="string" maxOccurs="1" minOccurs="1"></element>
+  				</sequence>
+  			</complexType></element>
+  	</sequence>
+  </complexType>
+
+  <element name="ProjectDefinitionInput"
+  	type="tns:SingleProjectRequestType">
+  </element>
+
+  <element name="ProjectDefinitionOutput"
+  	type="tns:SingleProjectRequirementsType">
+  </element>
 </schema>

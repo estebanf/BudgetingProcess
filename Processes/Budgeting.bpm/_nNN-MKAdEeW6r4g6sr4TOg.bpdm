@@ -1,4 +1,4 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:AttachmentManagement-process="http://thisproject/Processes/Integrations/AttachmentManagement/process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GetTeamMembers-Process="http://thisproject/Processes/Integrations/GetTeamMembers/Process" xmlns:Department_directorimplicitPartner="http://thisdiagram/Department_directorimplicitPartner" xmlns:diag="http://thisdiagram" xmlns:requirements="http://www.intalio.com/Budgeting/Webcontents/requirements.html" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/Department_director" xmlns:attachments="http://www.intalio.com/Budgeting/Webcontents/requirements.html/attachments" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:Departments="http://thisdiagram/Departments" xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Department_director">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:AttachmentManagement-process="http://thisproject/Processes/Integrations/AttachmentManagement/process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GetTeamMembers-Process="http://thisproject/Processes/Integrations/GetTeamMembers/Process" xmlns:Department_directorimplicitPartner="http://thisdiagram/Department_directorimplicitPartner" xmlns:diag="http://thisdiagram" xmlns:requirements="http://www.intalio.com/Budgeting/Webcontents/requirements.html" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:Manager="http://thisdiagram/Manager" xmlns:this="http://thisdiagram/Department_director" xmlns:attachments="http://www.intalio.com/Budgeting/Webcontents/requirements.html/attachments" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:Departments="http://thisdiagram/Departments" xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Department_director">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="Variables" bpdm:comment="contrib=&apos;project:///Metrics/Variables.xvar"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/AttachmentManagement/process" bpdm:prefix="AttachmentManagement-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/AttachmentManagement-process.wsdl"></bpdm:namespaceDefinition>
@@ -8,6 +8,7 @@
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/Budgeting/Webcontents/requirements.html" bpdm:prefix="requirements" bpdm:comment="contrib=&apos;project:///Webcontents/requirements.html.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Manager" bpdm:prefix="Manager" bpdm:comment="contrib=&apos;partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Department_director" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/Budgeting/Webcontents/requirements.html/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///Webcontents/requirements.html.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="Business" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
@@ -16,6 +17,9 @@
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" bpdm:prefix="GetSingleDepartment-Process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
         <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <vprop:property name="excerciseId" type="xs:int"/>
+            <vprop:property name="deptoId" type="xs:int"/>
+            <vprop:property name="projectId" type="xs:int"/>
             <wsdl:portType name="ForDepartments">
                 <wsdl:operation name="Recieve_requirement_request" bpdm:source="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg">
                     <wsdl:input message="this:Recieve_requirement_requestRequest" name="Recieve_requirement_request"/>
@@ -28,6 +32,13 @@
                     <address location="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Department_director/Department_directorimplicitPartner/WFmagic_QaR8dqAeEeW6r4g6sr4TOg"/>
                 </wsdl:port>
             </wsdl:service>
+            <wsdl:portType name="ForManager">
+                <wsdl:operation name="Recieve_project_requirement" bpdm:source="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg">
+                    <wsdl:input message="this:Recieve_project_requirementRequest" name="Recieve_project_requirement"/>
+                    <wsdl:output message="this:Recieve_project_requirementResponse" name="Recieve_project_requirementResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForManager" type="this:ForManager" bpdm:isSynchronized="true"/>
             <xs:element name="Recieve_requirement_requestRequest" type="tns:DepartmentsRequirementType" bpdm:source="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg"/>
             <wsdl:message name="Recieve_requirement_requestRequest" bpdm:source="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg">
                 <wsdl:part name="body" element="this:Recieve_requirement_requestRequest"/>
@@ -36,16 +47,43 @@
             <wsdl:message name="Recieve_requirement_requestResponse" bpdm:source="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg">
                 <wsdl:part name="body" element="this:Recieve_requirement_requestResponse"/>
             </wsdl:message>
+            <xs:element name="Recieve_project_requirementRequest" type="Business:ProjectIdentifierType" bpdm:source="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg"/>
+            <wsdl:message name="Recieve_project_requirementRequest" bpdm:source="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg">
+                <wsdl:part name="body" element="this:Recieve_project_requirementRequest"/>
+            </wsdl:message>
+            <xs:element name="Recieve_project_requirementResponse" type="tns:AcknowledgementType" bpdm:source="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg"/>
+            <wsdl:message name="Recieve_project_requirementResponse" bpdm:source="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg">
+                <wsdl:part name="body" element="this:Recieve_project_requirementResponse"/>
+            </wsdl:message>
             <bpel:binding name="WFmagic_QaR8dqAeEeW6r4g6sr4TOgServiceBinding" type="requirements:Process" bpdm:isSynchronized="true"/>
+            <vprop:propertyAlias propertyName="this:deptoId" messageType="Manager:Recieve_project_requestRequest" part="body">
+                <vprop:query>Business:DepartmentId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:deptoId" messageType="this:Recieve_project_requirementRequest" part="body">
+                <vprop:query>Business:DepartmentId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:excerciseId" messageType="this:Recieve_project_requirementRequest" part="body">
+                <vprop:query>Business:ExcerciseId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:excerciseId" messageType="Manager:Recieve_project_requestRequest" part="body">
+                <vprop:query>Business:ExcerciseId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:projectId" messageType="Manager:Recieve_project_requestRequest" part="body">
+                <vprop:query>Business:ProjectId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:projectId" messageType="this:Recieve_project_requirementRequest" part="body">
+                <vprop:query>Business:ProjectId/text()</vprop:query>
+            </vprop:propertyAlias>
         </bpdm:namespaceContributor>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOg" bpdm:label="Departments"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_o4kG4KA3EeW6r4g6sr4TOg" bpdm:label="Manager"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOgimplicitPartner" bpdm:label="Department directorimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
@@ -56,6 +94,7 @@
             <bpel:partnerLink name="department_directorimplicitPartnerAndDepartment_directorForCanonicPortPlk2Var" partnerLinkType="diag:Department_directorimplicitPartnerAndDepartment_directorForCanonicPortPlk2" initializePartnerRole="yes" partnerRole="Department_directorimplicitPartner_for_Department_director" bpdm:invokedService="GetTeamMembers-Process:CanonicServiceForCaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_nNN-MKAdEeW6r4g6sr4TOg:_GHgFFqAeEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_nNN-MKAdEeW6r4g6sr4TOgimplicitPartner"/>
             <bpel:partnerLink name="department_directorimplicitPartnerAndDepartment_directorForCanonicPortPlk0Var" partnerLinkType="diag:Department_directorimplicitPartnerAndDepartment_directorForCanonicPortPlk0" initializePartnerRole="yes" partnerRole="Department_directorimplicitPartner_for_Department_director" bpdm:invokedService="AttachmentManagement-process:CanonicServiceForcaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_nNN-MKAdEeW6r4g6sr4TOg:_ICvCtqAeEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_nNN-MKAdEeW6r4g6sr4TOgimplicitPartner"/>
             <bpel:partnerLink name="wFmagic_QaR8dqAeEeW6r4g6sr4TOgPlkVar" partnerLinkType="diag:WFmagic_QaR8dqAeEeW6r4g6sr4TOg" initializePartnerRole="no" myRole="Department_director_for_Department_directorimplicitPartnerForThePortTypeProcess" bpdm:enableSharing="false" bpdm:providedService="this:WFmagic_QaR8dqAeEeW6r4g6sr4TOgService" bpdm:providedPort="Department_director_for_Department_directorimplicitPartnerForThePortTypeProcessPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Department_director/Department_directorimplicitPartner/WFmagic_QaR8dqAeEeW6r4g6sr4TOg" bpdm:providedIsDefault="true" partnerRole="Department_directorimplicitPartnerForThePortTypeProcess_for_Department_director" bpdm:invokedService="requirements:WorkflowSoapService" bpdm:invokedPort="tnsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/fds/workflow/tns" bpdm:invokedIsDefault="true" bpdm:clientTasks="_nNN-MKAdEeW6r4g6sr4TOg:_QaR8dqAeEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_nNN-MKAdEeW6r4g6sr4TOgimplicitPartner"/>
+            <bpel:partnerLink name="managerAndDepartment_directorPlkVar" partnerLinkType="diag:ManagerAndDepartment_director" initializePartnerRole="yes" myRole="Department_director_for_Manager" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForManager" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Department_director/Manager" bpdm:providedIsDefault="true" partnerRole="Manager_for_Department_director" bpdm:invokedService="Manager:CanonicServiceForDepartment_director" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Manager/Department_director" bpdm:invokedIsDefault="true" bpdm:clientTasks="_5kLUIKAtEeW6r4g6sr4TOg:_PNPuUKAuEeW6r4g6sr4TOg, _5kLUIKAtEeW6r4g6sr4TOg:_ZK2O0KBNEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_o4kG4KA3EeW6r4g6sr4TOg"/>
         </bpel:partnerLinks>
         <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
             <bpel:variable name="thisRecieve_requirement_requestRequest1Msg" messageType="this:Recieve_requirement_requestRequest" bpdm:id="_qWh4jKAdEeW6r4g6sr4TOg" bpdm:messageIds="inc:_qWYukKAdEeW6r4g6sr4TOg"/>
@@ -211,11 +250,14 @@
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="requirementsCreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="requirements:createTaskSingleActivityRequest" bpdm:ID="_QaR8dqAeEeW6r4g6sr4TOgOutgoing"></bpdm:linkset>
             </bpdm:messagingtask>
-            <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="SubProcess" bpdm:ID="_5kLUIKAtEeW6r4g6sr4TOg">
-                <bpdm:linkset bpdm:type="loop" bpdm:loopType="forEach" bpdm:backEdgeParticipantType="none" parallel="yes" counterName="emptyCounter">
+            <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get project requirements" bpdm:ID="_5kLUIKAtEeW6r4g6sr4TOg">
+                <bpdm:linkset bpdm:type="loop" bpdm:loopType="forEach" bpdm:backEdgeParticipantType="none" parallel="yes" counterName="Get_project_requirementsCounter">
                     <bpel:condition bpdm:loopType="forEachStartCounter">1<mapper:mapperLink><mapper:vertice id="924550448" targetPath="$Start counter" targetedBy="185280274-arg0"></mapper:vertice><mapper:vertice id="185280274" dimension="79x24" location="527,39"><mapper:value>1</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                     <bpel:condition bpdm:loopType="forEachFinalCounter">count($requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput/Business:Projects)<mapper:mapperLink><mapper:vertice id="1516486518" targetPath="$Final counter" targetedBy="1381814805-arg1"></mapper:vertice><mapper:vertice id="1381814805" dimension="79x24" location="475,207"><mapper:value>count()</mapper:value></mapper:vertice><mapper:vertice id="1672705885" sourcePath="$requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput/Business:Projects" targetedBy="1381814805-arg0"></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
+                <bpel:correlationSets>
+                    <bpel:correlationSet name="getProjectRequirements-CS" properties="this:excerciseId this:deptoId this:projectId"/>
+                </bpel:correlationSets>
                 <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
                     <bpel:variable name="Project" element="Business:Project" bpdm:id="_TKQ9hqAuEeW6r4g6sr4TOg">
                         <bpel:from>
@@ -223,14 +265,26 @@
                         </bpel:from>
                     </bpel:variable>
                     <bpel:variable name="ExcerciseProject" element="Variables:ExcerciseProject" xvar:id="ExcerciseProject-_gzmZoKAxEeW6r4g6sr4TOg" xvar:relates-to="ExcerciseProject-keys" bpdm:xvarType="Variables:ExcerciseProject" bpdm:id="_gzmZoKAxEeW6r4g6sr4TOg"/>
+                    <bpel:variable name="managerRecieve_project_requestRequest2Msg" messageType="Manager:Recieve_project_requestRequest" bpdm:id="_Kaas8KA4EeW6r4g6sr4TOg" bpdm:messageIds=" out:_KaRjAKA4EeW6r4g6sr4TOg">
+                        <bpel:from bpdm:toPart="body">
+                            <bpel:literal bpdm:linkedMessageType="Manager:Recieve_project_requestRequest" bpdm:linkedPart="body"></bpel:literal>
+                        </bpel:from>
+                    </bpel:variable>
+                    <bpel:variable name="managerRecieve_project_requestResponse2Msg" messageType="Manager:Recieve_project_requestResponse" bpdm:id="_K3BwcKA4EeW6r4g6sr4TOg" bpdm:messageIds="inc:_K2wqsKA4EeW6r4g6sr4TOg"/>
+                    <bpel:variable name="thisRecieve_project_requirementRequest1Msg" messageType="this:Recieve_project_requirementRequest" bpdm:id="_bSxkoKBNEeW6r4g6sr4TOg" bpdm:messageIds="inc:_bSZxMKBNEeW6r4g6sr4TOg"/>
+                    <bpel:variable name="thisRecieve_project_requirementResponse2Msg" messageType="this:Recieve_project_requirementResponse" bpdm:id="_b_I7YKBNEeW6r4g6sr4TOg" bpdm:messageIds=" out:_b-9VMKBNEeW6r4g6sr4TOg">
+                        <bpel:from bpdm:toPart="body">
+                            <bpel:literal bpdm:linkedMessageType="this:Recieve_project_requirementResponse" bpdm:linkedPart="body"></bpel:literal>
+                        </bpel:from>
+                    </bpel:variable>
                 </bpel:variables>
                 <bpel:sequence>
                     <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_7t3kgKAtEeW6r4g6sr4TOg"></bpdm:messagingtask>
                     <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Extract project" bpdm:ID="_GwxRQKAuEeW6r4g6sr4TOg">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
-                                <bpel:from>bpel:doXslTransform("../XSLT/transform_extract_project.xsl", $requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput, "pos", $emptyCounter)</bpel:from>
-                                <bpel:to>$Project</bpel:to><mapper:mapperLink><mapper:vertice id="1707738759" targetPath="$Project" targetedBy="1082330275-arg1"></mapper:vertice><mapper:vertice id="1082330275" dimension="126x109" location="420,132"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="182999178" dimension="210x24" location="179,66" targetedBy="1082330275-arg0"><mapper:value>"../XSLT/transform_extract_project.xsl"</mapper:value></mapper:vertice><mapper:vertice id="564537869" sourcePath="$requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput" targetedBy="1082330275-arg2"></mapper:vertice><mapper:vertice id="282571865" dimension="79x24" location="252,228" targetedBy="1082330275-arg3"><mapper:value>"pos"</mapper:value></mapper:vertice><mapper:vertice id="243931319" sourcePath="$emptyCounter" targetedBy="1082330275-arg4"></mapper:vertice></mapper:mapperLink>
+                                <bpel:from>bpel:doXslTransform("../XSLT/transform_extract_project.xsl", $requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput, "pos", $Get_project_requirementsCounter)</bpel:from>
+                                <bpel:to>$Project</bpel:to><mapper:mapperLink><mapper:vertice id="1707738759" targetPath="$Project" targetedBy="1082330275-arg1"></mapper:vertice><mapper:vertice id="1082330275" dimension="126x109" location="420,132"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="182999178" dimension="210x24" location="179,66" targetedBy="1082330275-arg0"><mapper:value>"../XSLT/transform_extract_project.xsl"</mapper:value></mapper:vertice><mapper:vertice id="564537869" sourcePath="$requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput" targetedBy="1082330275-arg2"></mapper:vertice><mapper:vertice id="282571865" dimension="79x24" location="252,228" targetedBy="1082330275-arg3"><mapper:value>"pos"</mapper:value></mapper:vertice><mapper:vertice id="243931319" sourcePath="$Get_project_requirementsCounter" targetedBy="1082330275-arg4"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
@@ -245,24 +299,63 @@
                                 <bpel:to>$ExcerciseProject/Variables:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="2119083029" targetPath="$ExcerciseProject/Variables:DepartmentId" targetedBy="1790412241-arg0"></mapper:vertice><mapper:vertice id="1790412241" sourcePath="$thisRecieve_requirement_requestRequest1Msg.body/tns:DepartmentId"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
+                                <bpel:from>$Get_project_requirementsCounter</bpel:from>
+                                <bpel:to>$ExcerciseProject/Variables:project_id</bpel:to><mapper:mapperLink><mapper:vertice id="10454572" targetPath="$ExcerciseProject/Variables:project_id" targetedBy="650353850-arg0"></mapper:vertice><mapper:vertice id="650353850" sourcePath="$Get_project_requirementsCounter"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
                                 <bpel:from>$Project/Business:ProjectName</bpel:from>
-                                <bpel:to>$ExcerciseProject/Variables:name</bpel:to><mapper:mapperLink><mapper:vertice id="48767044" targetPath="$ExcerciseProject/Variables:name" targetedBy="1319722504-arg0"></mapper:vertice><mapper:vertice id="1319722504" sourcePath="$Project/Business:ProjectName"></mapper:vertice></mapper:mapperLink>
+                                <bpel:to>$ExcerciseProject/Variables:name</bpel:to><mapper:mapperLink><mapper:vertice id="992138586" targetPath="$ExcerciseProject/Variables:name" targetedBy="1526530510-arg0"></mapper:vertice><mapper:vertice id="1526530510" sourcePath="$Project/Business:ProjectName"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$Project/Business:ProjectResponsible</bpel:from>
-                                <bpel:to>$ExcerciseProject/Variables:responsible</bpel:to><mapper:mapperLink><mapper:vertice id="486069411" targetPath="$ExcerciseProject/Variables:responsible" targetedBy="8978530-arg0"></mapper:vertice><mapper:vertice id="8978530" sourcePath="$Project/Business:ProjectResponsible"></mapper:vertice></mapper:mapperLink>
+                                <bpel:to>$ExcerciseProject/Variables:responsible</bpel:to><mapper:mapperLink><mapper:vertice id="633735876" targetPath="$ExcerciseProject/Variables:responsible" targetedBy="1758850959-arg0"></mapper:vertice><mapper:vertice id="1758850959" sourcePath="$Project/Business:ProjectResponsible"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>$Project/Business:TargetBudget</bpel:from>
-                                <bpel:to>$ExcerciseProject/Variables:target_budget</bpel:to><mapper:mapperLink><mapper:vertice id="40088984" targetPath="$ExcerciseProject/Variables:target_budget" targetedBy="1356814224-arg0"></mapper:vertice><mapper:vertice id="1356814224" sourcePath="$Project/Business:TargetBudget"></mapper:vertice></mapper:mapperLink>
+                                <bpel:to>$ExcerciseProject/Variables:target_budget</bpel:to><mapper:mapperLink><mapper:vertice id="370918839" targetPath="$ExcerciseProject/Variables:target_budget" targetedBy="1263295602-arg0"></mapper:vertice><mapper:vertice id="1263295602" sourcePath="$Project/Business:TargetBudget"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                             <bpel:copy>
-                                <bpel:from>$Project/Business:Notes</bpel:from>
-                                <bpel:to>$ExcerciseProject/Variables:notes</bpel:to><mapper:mapperLink><mapper:vertice id="547670274" targetPath="$ExcerciseProject/Variables:notes" targetedBy="1980868351-arg0"></mapper:vertice><mapper:vertice id="1980868351" sourcePath="$Project/Business:Notes"></mapper:vertice></mapper:mapperLink>
+                                <bpel:from>current-dateTime()</bpel:from>
+                                <bpel:to>$ExcerciseProject/Variables:RequestedDate</bpel:to><mapper:mapperLink><mapper:vertice id="1115615007" targetPath="$ExcerciseProject/Variables:RequestedDate" targetedBy="1027686026-arg0"></mapper:vertice><mapper:vertice id="1027686026" dimension="109x24" location="570,204"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
-                    <bpdm:messagingtask eventType="intermediate: message" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Request project requirement" bpdm:ID="_PNPuUKAuEeW6r4g6sr4TOg"></bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="intermediate: message" operation="Recieve_project_request" partnerLink="managerAndDepartment_directorPlkVar" portType="Manager:ForDepartment_director" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Request project requirement" bpdm:ID="_PNPuUKAuEeW6r4g6sr4TOg">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>$ExcerciseProject/Variables:excercise_id</bpel:from>
+                                <bpel:to>$managerRecieve_project_requestRequest2Msg.body/Business:ExcerciseId</bpel:to><mapper:mapperLink><mapper:vertice id="1183053314" targetPath="$managerRecieve_project_requestRequest2Msg.body/Business:ExcerciseId" targetedBy="816092587-arg0"></mapper:vertice><mapper:vertice id="816092587" sourcePath="$ExcerciseProject/Variables:excercise_id"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$ExcerciseProject/Variables:DepartmentId</bpel:from>
+                                <bpel:to>$managerRecieve_project_requestRequest2Msg.body/Business:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="1243273440" targetPath="$managerRecieve_project_requestRequest2Msg.body/Business:DepartmentId" targetedBy="799765024-arg0"></mapper:vertice><mapper:vertice id="799765024" sourcePath="$ExcerciseProject/Variables:DepartmentId"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>$ExcerciseProject/Variables:project_id</bpel:from>
+                                <bpel:to>$managerRecieve_project_requestRequest2Msg.body/Business:ProjectId</bpel:to><mapper:mapperLink><mapper:vertice id="1411691436" targetPath="$managerRecieve_project_requestRequest2Msg.body/Business:ProjectId" targetedBy="853437980-arg0"></mapper:vertice><mapper:vertice id="853437980" sourcePath="$ExcerciseProject/Variables:project_id"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="managerRecieve_project_requestRequest2Msg" bpdm:msgVarScopeId="_5kLUIKAtEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Manager:Recieve_project_requestRequest" bpdm:ID="_KaRjAKA4EeW6r4g6sr4TOg">
+                            <bpel:correlation set="getProjectRequirements-CS" initiate="join" pattern="request" bpdm:isSource="false"></bpel:correlation>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="managerRecieve_project_requestResponse2Msg" bpdm:msgVarScopeId="_5kLUIKAtEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Manager:Recieve_project_requestResponse" bpdm:ID="_K2wqsKA4EeW6r4g6sr4TOg"></bpdm:linkset>
+                    </bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="intermediate: message" operation="Recieve_project_requirement" partnerLink="managerAndDepartment_directorPlkVar" portType="this:ForManager" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve project requirement" bpdm:ID="_ZK2O0KBNEeW6r4g6sr4TOg">
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_project_requirementRequest1Msg" bpdm:msgVarScopeId="_5kLUIKAtEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_project_requirementRequest" bpdm:ID="_bSZxMKBNEeW6r4g6sr4TOg">
+                            <bpel:correlation set="getProjectRequirements-CS" initiate="join" pattern="response" bpdm:isSource="false"></bpel:correlation>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>$ode:pid</bpel:from>
+                                <bpel:to>$thisRecieve_project_requirementResponse2Msg.body/tns:InstanceId</bpel:to><mapper:mapperLink><mapper:vertice id="1232167755" targetPath="$thisRecieve_project_requirementResponse2Msg.body/tns:InstanceId" targetedBy="1718421080-arg0"></mapper:vertice><mapper:vertice id="1718421080" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>current-dateTime()</bpel:from>
+                                <bpel:to>$thisRecieve_project_requirementResponse2Msg.body/tns:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="1304827178" targetPath="$thisRecieve_project_requirementResponse2Msg.body/tns:Timestamp" targetedBy="2112183461-arg0"></mapper:vertice><mapper:vertice id="2112183461" dimension="109x24" location="469,102"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_project_requirementResponse2Msg" bpdm:msgVarScopeId="_5kLUIKAtEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_project_requirementResponse" bpdm:ID="_b-9VMKBNEeW6r4g6sr4TOg"></bpdm:linkset>
+                    </bpdm:messagingtask>
                 </bpel:sequence>
             </bpel:scope>
         </bpel:sequence>

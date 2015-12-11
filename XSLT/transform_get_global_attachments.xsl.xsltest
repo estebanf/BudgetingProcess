@@ -2,7 +2,7 @@
 <test:testxsl xmlns:test="http://intalio.com/xsltestcase"
 	xsl="transform_get_global_attachments.xsl" xmlns:Variables="http://test.com/xvar/example"
 	xmlns:Master-budgeting_management="http://thisproject/Processes/Core/Master/budgeting_management"
-	xmlns:CFOVariableDefinition="http://www.intalio.com/Budgeting/Webcontents/index.html"
+	xmlns:CFOVariableDefinition="http://www.inta11111lio.com/Budgeting/Webcontents/index.html"
 	xmlns:this="http://budgeting.example.everteam.com/Processes/Phases/VariablesDefinition/Chief_operation_officer"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:tns="http://budgeting.example.everteam.com/Types/Technical"

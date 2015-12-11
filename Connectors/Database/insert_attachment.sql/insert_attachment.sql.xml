@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jdbc:descriptor wsdlLocation="insert_attachment.sql.wsdl" targetNamespace="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice" xmlns:jdbc="http://bpms.intalio.com/connectors/jdbc/">
     <jdbc:service name="insert_attachmentService">
-        <jdbc:operation name="urn:insert_attachment" sqlStatement="INSERT INTO BudgetingAttachments (EXCERCISE_ID,MIMETYPE,FILENAME,TITLE,DESCRIPTION,CREATIONDATE,PAYLOADURL) VALUES (?,?,?,?,?,?,?);" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice">
+        <jdbc:operation name="urn:insert_attachment" sqlStatement="INSERT INTO BudgetingAttachments (REFERENCE,MIMETYPE,FILENAME,TITLE,DESCRIPTION,CREATIONDATE,PAYLOADURL) VALUES (?,?,?,?,?,?,?);" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice">
             <jdbc:input>
                 <jdbc:parameter>
                     <jdbc:mode>1</jdbc:mode>
-                    <jdbc:name>EXCERCISE_ID</jdbc:name>
-                    <jdbc:type>20</jdbc:type>
-                    <jdbc:length>0</jdbc:length>
+                    <jdbc:name>REFERENCE</jdbc:name>
+                    <jdbc:type>40</jdbc:type>
+                    <jdbc:length>10</jdbc:length>
                     <jdbc:typeName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                    <jdbc:precision>15</jdbc:precision>
-                    <jdbc:scale>2</jdbc:scale>
+                    <jdbc:precision>0</jdbc:precision>
+                    <jdbc:scale>0</jdbc:scale>
                     <jdbc:nullable>false</jdbc:nullable>
-                    <jdbc:value>1</jdbc:value>
+                    <jdbc:value>asd</jdbc:value>
                     <jdbc:index>0</jdbc:index>
                 </jdbc:parameter>
                 <jdbc:parameter>

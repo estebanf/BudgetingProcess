@@ -130,6 +130,10 @@
                                 <bpel:from>$department_directorRecieve_requirement_requestRequest2Msg.body/tns:DepartmentId</bpel:from>
                                 <bpel:to>$ExcerciseDepartment/Variables:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="812173448" targetPath="$ExcerciseDepartment/Variables:DepartmentId" targetedBy="452065599-arg0"></mapper:vertice><mapper:vertice id="452065599" sourcePath="$department_directorRecieve_requirement_requestRequest2Msg.body/tns:DepartmentId"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>current-dateTime()</bpel:from>
+                                <bpel:to>$ExcerciseDepartment/Variables:RequestedDate</bpel:to><mapper:mapperLink><mapper:vertice id="127825851" targetPath="$ExcerciseDepartment/Variables:RequestedDate" targetedBy="632186894-arg0"></mapper:vertice><mapper:vertice id="632186894" dimension="109x24" location="517,214"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
                     <bpdm:messagingtask eventType="intermediate: message" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve department requirements" bpdm:ID="_cQ1loKAcEeW6r4g6sr4TOg"></bpdm:messagingtask>

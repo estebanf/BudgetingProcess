@@ -6,9 +6,9 @@
       <xjdbc:jdbc>
         <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
         <xjdbc:table xbpms:isDefault="true">ExcerciseProject</xjdbc:table>
-        <xjdbc:column key="yes" name="excercise_id" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
-        <xjdbc:column key="yes" name="DepartmentId" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
-        <xjdbc:column generator="sequence" key="no" name="project_id" xbpms:type-label="sequence"/>
+        <xjdbc:column key="yes" name="excercise_id" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
+        <xjdbc:column key="yes" name="DepartmentId" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
+        <xjdbc:column key="yes" name="project_id" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
         <xjdbc:column key="no" name="name" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
         <xjdbc:column key="no" name="responsible" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
         <xjdbc:column key="no" name="target_budget" sql-type="FLOAT" xbpms:type-label="float" xsd-type="xs:float"/>
@@ -17,6 +17,16 @@
         <xjdbc:column generator="utimestamp" key="no" name="updated_on" xbpms:type-label="update-timestamp"/>
         <xjdbc:column generator="pid" key="no" name="process" xbpms:type-label="process-definition-id"/>
         <xjdbc:column generator="iid" key="no" name="pid" xbpms:type-label="process-instance-id"/>
+        <xjdbc:column key="no" name="LastYearBudget" sql-type="FLOAT" xbpms:type-label="float" xsd-type="xs:float"/>
+        <xjdbc:column key="no" name="Budget" sql-type="FLOAT" xbpms:type-label="float" xsd-type="xs:float"/>
+        <xjdbc:column key="no" name="Priority" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="StartExecution" sql-type="TIMESTAMP" xbpms:type-label="timestamp" xsd-type="xs:dateTime"/>
+        <xjdbc:column key="no" name="EndExecution" sql-type="TIMESTAMP" xbpms:type-label="timestamp" xsd-type="xs:dateTime"/>
+        <xjdbc:column key="no" name="NewProject" sql-type="BOOLEAN" xbpms:type-label="boolean" xsd-type="xs:boolean"/>
+        <xjdbc:column key="no" name="Description" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="Justification" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="RequestedDate" sql-type="TIMESTAMP" xbpms:type-label="timestamp" xsd-type="xs:dateTime"/>
+        <xjdbc:column key="no" name="DefinedDate" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
         <xjdbc:init mode="update-insert"/>
       </xjdbc:jdbc>
     </xbpms:binding>
@@ -27,12 +37,13 @@
       <xjdbc:jdbc>
         <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
         <xjdbc:table xbpms:isDefault="true">ExcerciseDepartment</xjdbc:table>
-        <xjdbc:column key="yes" name="excercise_id" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
-        <xjdbc:column key="yes" name="DepartmentId" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="yes" name="excercise_id" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
+        <xjdbc:column key="yes" name="DepartmentId" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
         <xjdbc:column generator="ctimestamp" key="no" name="created_on" xbpms:type-label="creation-timestamp"/>
         <xjdbc:column generator="utimestamp" key="no" name="updated_on" xbpms:type-label="update-timestamp"/>
         <xjdbc:column generator="pid" key="no" name="process" xbpms:type-label="process-definition-id"/>
-        <xjdbc:column generator="iid" key="no" name="pid" xbpms:type-label="process-instance-id"/>
+        <xjdbc:column generator="utimestamp" key="no" name="pid" xbpms:type-label="update-timestamp"/>
+        <xjdbc:column key="no" name="RequestedDate" sql-type="TIMESTAMP" xbpms:type-label="timestamp" xsd-type="xs:dateTime"/>
         <xjdbc:init mode="update-insert"/>
       </xjdbc:jdbc>
     </xbpms:binding>
@@ -43,7 +54,7 @@
       <xjdbc:jdbc>
         <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
         <xjdbc:table xbpms:isDefault="true">BudgetingVar</xjdbc:table>
-        <xjdbc:column key="yes" name="excercise_id" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="yes" name="excercise_id" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
         <xjdbc:column key="no" name="fiscal_year" sql-type="INTEGER" xbpms:type-label="integer" xsd-type="xs:integer"/>
         <xjdbc:column key="no" name="target_expenses" sql-type="NUMERIC" xbpms:ddl-precision="15" xbpms:ddl-scale="2" xbpms:ddl-size="250" xbpms:type-label="numeric" xsd-type="xs:decimal"/>
         <xjdbc:column key="no" name="expected_increase" sql-type="NUMERIC" xbpms:ddl-precision="15" xbpms:ddl-scale="2" xbpms:ddl-size="250" xbpms:type-label="numeric" xsd-type="xs:decimal"/>

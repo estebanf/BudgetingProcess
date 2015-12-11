@@ -42,11 +42,6 @@
                     <bpel:literal bpdm:linkedMessageType="tns:initProcessResponse" bpdm:linkedPart="root"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
-            <bpel:variable name="Attachments" element="Technical:Attachments" bpdm:id="_DPZ-8KAQEeW6r4g6sr4TOg">
-                <bpel:from>
-                    <bpel:literal bpdm:linkedElement="Technical:Attachments"></bpel:literal>
-                </bpel:from>
-            </bpel:variable>
             <bpel:variable name="BudgetingVar" element="Variables:BudgetingVar" xvar:id="BudgetingVar-_IQX-caAQEeW6r4g6sr4TOg" xvar:relates-to="BudgetingVar-keys" bpdm:xvarType="Variables:BudgetingVar" bpdm:id="_IQX-caAQEeW6r4g6sr4TOg"/>
             <bpel:variable name="master_processInitiate_budgeting_processRequest2Msg" messageType="Master_process:Initiate_budgeting_processRequest" bpdm:id="_bNj1qaAaEeW6r4g6sr4TOg" bpdm:messageIds=" out:_bNart6AaEeW6r4g6sr4TOg">
                 <bpel:from bpdm:toPart="body">
@@ -115,6 +110,11 @@
                                                     <bpel:literal bpdm:linkedMessageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:linkedPart="body" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:opMsgType="0" bpdm:operation="Store_attachments"></bpel:literal>
                                                 </bpel:from>
                                             </bpel:variable>
+                                            <bpel:variable name="Attachments" element="Technical:Attachments" bpdm:id="_7dWrMKBMEeW6r4g6sr4TOg">
+                                                <bpel:from>
+                                                    <bpel:literal bpdm:linkedElement="Technical:Attachments"></bpel:literal>
+                                                </bpel:from>
+                                            </bpel:variable>
                                         </bpel:variables>
                                         <bpel:sequence>
                                             <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_I-rrYKAPEeW0J6TOrDqjOw"></bpdm:messagingtask>
@@ -129,12 +129,12 @@
                                             <bpdm:messagingtask operation="Store_attachments" partnerLink="chief_financial_officerimplicitPartnerAndChief_financial_officerForPortTypeProcessPlkVar" portType="AttachmentManagement-process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save attachments" bpdm:ID="_ODiFUKAPEeW0J6TOrDqjOw">
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
-                                                        <bpel:from>$ode:pid</bpel:from>
-                                                        <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/Technical:ExcerciseId</bpel:to><mapper:mapperLink><mapper:vertice id="611635663" targetPath="$attachmentManagement-processStore_attachments1Msg.body/Technical:ExcerciseId" targetedBy="1195932382-arg0"></mapper:vertice><mapper:vertice id="1195932382" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
-                                                    </bpel:copy>
-                                                    <bpel:copy>
                                                         <bpel:from>$Attachments</bpel:from>
                                                         <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/Technical:Attachments</bpel:to><mapper:mapperLink><mapper:vertice id="1244912771" targetPath="$attachmentManagement-processStore_attachments1Msg.body/Technical:Attachments" targetedBy="1952639154-arg0"></mapper:vertice><mapper:vertice id="1952639154" sourcePath="$Attachments"></mapper:vertice></mapper:mapperLink>
+                                                    </bpel:copy>
+                                                    <bpel:copy>
+                                                        <bpel:from>$ode:pid</bpel:from>
+                                                        <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/Technical:Reference</bpel:to><mapper:mapperLink><mapper:vertice id="1025746793" targetPath="$attachmentManagement-processStore_attachments1Msg.body/Technical:Reference" targetedBy="1276013414-arg0"></mapper:vertice><mapper:vertice id="1276013414" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="attachmentManagement-processStore_attachments1Msg" bpdm:variableIsManaged="true" bpdm:messageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:ID="_ODiFUKAPEeW0J6TOrDqjOwOutgoing"></bpdm:linkset>

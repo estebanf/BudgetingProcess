@@ -43,14 +43,13 @@
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence>
-                    <xsd:element name="EXCERCISE_ID">
+                    <xsd:element name="REFERENCE">
                       <xsd:annotation>
                         <xsd:documentation>The parameter value</xsd:documentation>
                       </xsd:annotation>
                       <xsd:simpleType>
-                        <xsd:restriction base="xsd:decimal">
-                          <xsd:totalDigits value="15"/>
-                          <xsd:fractionDigits value="2"/>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="10"/>
                         </xsd:restriction>
                       </xsd:simpleType>
                     </xsd:element>
@@ -95,14 +94,13 @@
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence>
-                    <xsd:element name="EXCERCISE_ID">
+                    <xsd:element nillable="true" name="REFERENCE">
                       <xsd:annotation>
-                        <xsd:documentation>The type definition for  EXCERCISE_ID</xsd:documentation>
+                        <xsd:documentation>The type definition for  REFERENCE</xsd:documentation>
                       </xsd:annotation>
                       <xsd:simpleType>
-                        <xsd:restriction base="xsd:decimal">
-                          <xsd:totalDigits value="10"/>
-                          <xsd:fractionDigits value="0"/>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="250"/>
                         </xsd:restriction>
                       </xsd:simpleType>
                     </xsd:element>

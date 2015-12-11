@@ -43,14 +43,13 @@
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence>
-                    <xsd:element name="EXCERCISE_ID">
+                    <xsd:element name="REFERENCE">
                       <xsd:annotation>
                         <xsd:documentation>The parameter value</xsd:documentation>
                       </xsd:annotation>
                       <xsd:simpleType>
-                        <xsd:restriction base="xsd:decimal">
-                          <xsd:totalDigits value="15"/>
-                          <xsd:fractionDigits value="2"/>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:maxLength value="10"/>
                         </xsd:restriction>
                       </xsd:simpleType>
                     </xsd:element>

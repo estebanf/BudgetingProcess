@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jdbc:descriptor wsdlLocation="select_attachmetns.sql.wsdl" targetNamespace="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice" xmlns:jdbc="http://bpms.intalio.com/connectors/jdbc/">
     <jdbc:service name="select_attachmetnsService">
-        <jdbc:operation name="urn:select_attachmetns" sqlStatement="select EXCERCISE_ID,MIMETYPE,FILENAME,TITLE,DESCRIPTION,CREATIONDATE,PAYLOADURL from BudgetingAttachments where EXCERCISE_ID= ? order by CREATIONDATE" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice">
+        <jdbc:operation name="urn:select_attachmetns" sqlStatement="select REFERENCE,MIMETYPE,FILENAME,TITLE,DESCRIPTION,CREATIONDATE,PAYLOADURL from BudgetingAttachments where REFERENCE= ? order by CREATIONDATE" event="false" dynamicCredentials="true" xmlns:urn="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice">
             <jdbc:input>
                 <jdbc:parameter>
                     <jdbc:mode>1</jdbc:mode>
-                    <jdbc:name>EXCERCISE_ID</jdbc:name>
-                    <jdbc:type>20</jdbc:type>
-                    <jdbc:length>0</jdbc:length>
+                    <jdbc:name>REFERENCE</jdbc:name>
+                    <jdbc:type>40</jdbc:type>
+                    <jdbc:length>10</jdbc:length>
                     <jdbc:typeName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                    <jdbc:precision>15</jdbc:precision>
-                    <jdbc:scale>2</jdbc:scale>
+                    <jdbc:precision>0</jdbc:precision>
+                    <jdbc:scale>0</jdbc:scale>
                     <jdbc:nullable>false</jdbc:nullable>
-                    <jdbc:value>0</jdbc:value>
                     <jdbc:index>0</jdbc:index>
                 </jdbc:parameter>
             </jdbc:input>
