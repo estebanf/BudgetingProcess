@@ -1,5 +1,26 @@
 ﻿<xbpms:descriptor targetNamespace="http://test.com/xvar/example" xmlns:xbpms="http://bpms.intalio.com/externalVariables" xmlns:tns="http://test.com/xvar/example" xmlns:xjdbc="http://ode.apache.org/externalVariables/jdbc" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xvar="http://ode.apache.org/externalVariables">
   <xbpms:import namespace="http://test.com/xvar/example" schemaLocation="${currentFileName}.xsd"/>
+  <xbpms:externalVariable name="ExcerciseProject">
+    <xbpms:description>default description</xbpms:description>
+    <xbpms:binding>
+      <xjdbc:jdbc>
+        <xjdbc:datasource-jndi>${defaultBpmsJndiDataSource}</xjdbc:datasource-jndi>
+        <xjdbc:table xbpms:isDefault="true">ExcerciseProject</xjdbc:table>
+        <xjdbc:column key="yes" name="excercise_id" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="yes" name="DepartmentId" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column generator="sequence" key="no" name="project_id" xbpms:type-label="sequence"/>
+        <xjdbc:column key="no" name="name" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="responsible" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column key="no" name="target_budget" sql-type="FLOAT" xbpms:type-label="float" xsd-type="xs:float"/>
+        <xjdbc:column key="no" name="notes" sql-type="VARCHAR" xbpms:ddl-size="250" xbpms:type-label="string" xsd-type="xs:string"/>
+        <xjdbc:column generator="ctimestamp" key="no" name="created_on" xbpms:type-label="creation-timestamp"/>
+        <xjdbc:column generator="utimestamp" key="no" name="updated_on" xbpms:type-label="update-timestamp"/>
+        <xjdbc:column generator="pid" key="no" name="process" xbpms:type-label="process-definition-id"/>
+        <xjdbc:column generator="iid" key="no" name="pid" xbpms:type-label="process-instance-id"/>
+        <xjdbc:init mode="update-insert"/>
+      </xjdbc:jdbc>
+    </xbpms:binding>
+  </xbpms:externalVariable>
   <xbpms:externalVariable name="ExcerciseDepartment">
     <xbpms:description>default description</xbpms:description>
     <xbpms:binding>

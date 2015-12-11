@@ -359,6 +359,13 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TKQ9paAuEeW6r4g6sr4TOg" key="defaultDeclarationName" value="Project"/>
         </eAnnotations>
       </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_gzpc8KAxEeW6r4g6sr4TOg" iD="_gzmZoKAxEeW6r4g6sr4TOg" name="ExcerciseProject">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gzpc8aAxEeW6r4g6sr4TOg" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gzpc8qAxEeW6r4g6sr4TOg" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gzpc86AxEeW6r4g6sr4TOg" key="douri" value="project:///Metrics/Variables.xvar?xvartype={http://test.com/xvar/example}ExcerciseProject"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gzqrEKAxEeW6r4g6sr4TOg" key="defaultDeclarationName" value="ExcerciseProject"/>
+        </eAnnotations>
+      </artifacts>
       <vertices xmi:type="bpmn:Activity" xmi:id="_7t3kgaAtEeW6r4g6sr4TOg" iD="_7t3kgKAtEeW6r4g6sr4TOg" outgoingEdges="_GwxRSqAuEeW6r4g6sr4TOg" activityType="EventStartEmpty"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_GwxRQaAuEeW6r4g6sr4TOg" iD="_GwxRQKAuEeW6r4g6sr4TOg" outgoingEdges="_M5HvmKAuEeW6r4g6sr4TOg" incomingEdges="_GwxRSqAuEeW6r4g6sr4TOg" name="Extract project" activityType="Task"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_M4-loaAuEeW6r4g6sr4TOg" iD="_M4-loKAuEeW6r4g6sr4TOg" outgoingEdges="_PNY4QaAuEeW6r4g6sr4TOg" incomingEdges="_M5HvmKAuEeW6r4g6sr4TOg" name="Save project" activityType="EventIntermediateEmpty"/>
