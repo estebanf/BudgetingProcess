@@ -81,9 +81,9 @@
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
