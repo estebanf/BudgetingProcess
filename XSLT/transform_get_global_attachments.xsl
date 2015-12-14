@@ -4,7 +4,7 @@
 	xmlns:tns="http://budgeting.example.everteam.com/Types/Technical"
 	xmlns:tms="http://www.intalio.com/BPMS/Workflow/TaskManagementServices-20051109/">
 	<xsl:output method="xml" omit-xml-declaration="yes" indent="yes"/>
-	<xsl:template match="/*[local-name()='globalAttachments']">
+	<xsl:template match="/*[local-name()='attachments']">
 		<tns:Attachments>
 			<xsl:apply-templates />
 		</tns:Attachments>

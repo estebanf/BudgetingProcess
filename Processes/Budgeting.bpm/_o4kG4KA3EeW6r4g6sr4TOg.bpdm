@@ -139,58 +139,6 @@
             </bpdm:messagingtask>
             <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_szaw4KBNEeW6r4g6sr4TOg" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
                 <bpel:sequence>
-                    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Store attachments" bpdm:ID="_rzsOsKBMEeW6r4g6sr4TOg">
-                        <bpel:variables>
-                            <bpel:variable name="attachmentManagement-processStore_attachmentsResponse1Msg" messageType="AttachmentManagement-process:Store_attachmentsResponse" binding="AttachmentManagement-process:callerAndProcessServiceBinding" operation="Store_attachments" opMsgType="1" bpdm:messageIds="inc:_pmq9gKBMEeW6r4g6sr4TOgIncoming"/>
-                            <bpel:variable name="attachmentManagement-processStore_attachments1Msg" messageType="AttachmentManagement-process:Store_attachmentsRequest" binding="AttachmentManagement-process:callerAndProcessServiceBinding" operation="Store_attachments" opMsgType="0" bpdm:messageIds=" out:_pmq9gKBMEeW6r4g6sr4TOgOutgoing">
-                                <bpel:from bpdm:toPart="body">
-                                    <bpel:literal bpdm:linkedMessageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:linkedPart="body" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:opMsgType="0" bpdm:operation="Store_attachments"></bpel:literal>
-                                </bpel:from>
-                            </bpel:variable>
-                            <bpel:variable name="Attachments" element="tns:Attachments" bpdm:id="_-eMmAKBMEeW6r4g6sr4TOg">
-                                <bpel:from>
-                                    <bpel:literal bpdm:linkedElement="tns:Attachments"></bpel:literal>
-                                </bpel:from>
-                            </bpel:variable>
-                        </bpel:variables>
-                        <bpel:sequence>
-                            <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_lnnuAKBMEeW6r4g6sr4TOg"></bpdm:messagingtask>
-                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Extract attachments" bpdm:ID="_nGQPMKBMEeW6r4g6sr4TOg">
-                                <bpdm:linkset bpdm:type="assignments">
-                                    <bpel:copy>
-                                        <bpel:from>bpel:doXslTransform("../XSLT/transform_get_global_attachments.xsl", $projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:globalAttachments)</bpel:from>
-                                        <bpel:to>$Attachments</bpel:to><mapper:mapperLink><mapper:vertice id="487992732" targetPath="$Attachments" targetedBy="279092164-arg2"></mapper:vertice><mapper:vertice id="279092164" dimension="126x24" location="369,57"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="686704929" dimension="259x24" location="72,24" targetedBy="279092164-arg0"><mapper:value>"../XSLT/transform_get_global_attachments.xsl"</mapper:value></mapper:vertice><mapper:vertice id="613197610" sourcePath="$projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:globalAttachments" targetedBy="279092164-arg1"></mapper:vertice></mapper:mapperLink>
-                                    </bpel:copy>
-                                </bpdm:linkset>
-                            </bpdm:messagingtask>
-                            <bpdm:messagingtask operation="Store_attachments" partnerLink="managerimplicitPartnerAndManagerForCanonicPortPlkVar" portType="AttachmentManagement-process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save attachments" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOg">
-                                <bpdm:linkset bpdm:type="assignments">
-                                    <bpel:copy>
-                                        <bpel:from>concat("P", $thisRecieve_project_requestRequest2Msg.body/Business:ExcerciseId, "-", $thisRecieve_project_requestRequest2Msg.body/Business:DepartmentId, "-", $thisRecieve_project_requestRequest2Msg.body/Business:ProjectId, "-", $ode:pid)</bpel:from>
-                                        <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/tns:Reference</bpel:to><mapper:mapperLink><mapper:vertice id="1465632774" targetPath="$attachmentManagement-processStore_attachments1Msg.body/tns:Reference" targetedBy="651776418-arg8"></mapper:vertice><mapper:vertice id="651776418" dimension="79x195" location="471,58"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="783769777" dimension="79x24" location="267,23" targetedBy="651776418-arg0"><mapper:value>"P"</mapper:value></mapper:vertice><mapper:vertice id="1069099051" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:ExcerciseId" targetedBy="651776418-arg1"></mapper:vertice><mapper:vertice id="579215159" dimension="79x24" location="312,72" targetedBy="651776418-arg2"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="1016573340" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:DepartmentId" targetedBy="651776418-arg3"></mapper:vertice><mapper:vertice id="21204552" dimension="79x24" location="333,123" targetedBy="651776418-arg4"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="2058152367" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:ProjectId" targetedBy="651776418-arg5"></mapper:vertice><mapper:vertice id="1084073850" dimension="79x24" location="252,192" targetedBy="651776418-arg6"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="313601917" sourcePath="$ode:pid" targetedBy="651776418-arg7"></mapper:vertice></mapper:mapperLink>
-                                    </bpel:copy>
-                                    <bpel:copy>
-                                        <bpel:from>$Attachments</bpel:from>
-                                        <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/tns:Attachments</bpel:to><mapper:mapperLink><mapper:vertice id="2086768265" targetPath="$attachmentManagement-processStore_attachments1Msg.body/tns:Attachments" targetedBy="508029770-arg0"></mapper:vertice><mapper:vertice id="508029770" sourcePath="$Attachments"></mapper:vertice></mapper:mapperLink>
-                                    </bpel:copy>
-                                </bpdm:linkset>
-                                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="attachmentManagement-processStore_attachments1Msg" bpdm:variableIsManaged="true" bpdm:messageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOgOutgoing"></bpdm:linkset>
-                                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="attachmentManagement-processStore_attachmentsResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="AttachmentManagement-process:Store_attachmentsResponse" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOgIncoming"></bpdm:linkset>
-                            </bpdm:messagingtask>
-                        </bpel:sequence>
-                    </bpel:scope>
-                    <bpdm:messagingtask eventType="end: message" operation="Recieve_project_requirement" partnerLink="managerAndDepartment_directorPlkVar" portType="Department_director:ForManager" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_x_r24KBMEeW6r4g6sr4TOg">
-                        <bpdm:linkset bpdm:type="assignments">
-                            <bpel:copy>
-                                <bpel:from>$thisRecieve_project_requestRequest2Msg.body</bpel:from>
-                                <bpel:to>$department_directorRecieve_project_requirementRequest1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="449685975" targetPath="$department_directorRecieve_project_requirementRequest1Msg.body" targetedBy="1274522703-arg0"></mapper:vertice><mapper:vertice id="1274522703" sourcePath="$thisRecieve_project_requestRequest2Msg.body"></mapper:vertice></mapper:mapperLink>
-                            </bpel:copy>
-                        </bpdm:linkset>
-                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="department_directorRecieve_project_requirementRequest1Msg" bpdm:msgVarScopeId="_o4kG4KA3EeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_project_requirementRequest" bpdm:ID="_bSZxMKBNEeW6r4g6sr4TOg"></bpdm:linkset>
-                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="department_directorRecieve_project_requirementResponse2Msg" bpdm:msgVarScopeId="_o4kG4KA3EeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_project_requirementResponse" bpdm:ID="_b-9VMKBNEeW6r4g6sr4TOg"></bpdm:linkset>
-                    </bpdm:messagingtask>
-                </bpel:sequence>
-                <bpel:sequence>
                     <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save project" bpdm:ID="_wLgHAKBNEeW6r4g6sr4TOg">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
@@ -244,6 +192,85 @@
                         </bpdm:linkset>
                     </bpdm:messagingtask>
                     <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_zLwzAKBNEeW6r4g6sr4TOg"></bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:gateway bpdm:label="Has attachments" bpdm:ID="_eXs60KHlEeWujqVpfVkA2w" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
+                        <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_fNmoEKHlEeWujqVpfVkA2w" bpdm:targetDisplayName="[Has attachments - Store attachments]">
+                            <bpel:condition>exists($projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:attachments)
+<mapper:mapperLink>
+  <mapper:vertice id="2129660182" targetPath="$condition" targetedBy="308373276-arg0"></mapper:vertice>
+  <mapper:vertice id="308373276" dimension="79x24" location="409,49">
+    <mapper:value>exists()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="622256465" sourcePath="$projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:attachments" targetedBy="308373276-arg1"></mapper:vertice>
+</mapper:mapperLink></bpel:condition>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_ihCHt6HlEeWujqVpfVkA2w" bpdm:targetDisplayName="default"></bpdm:linkset>
+                        <bpel:sequence>
+                            <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Store attachments" bpdm:ID="_rzsOsKBMEeW6r4g6sr4TOg">
+                                <bpel:variables>
+                                    <bpel:variable name="attachmentManagement-processStore_attachmentsResponse1Msg" messageType="AttachmentManagement-process:Store_attachmentsResponse" binding="AttachmentManagement-process:callerAndProcessServiceBinding" operation="Store_attachments" opMsgType="1" bpdm:messageIds="inc:_pmq9gKBMEeW6r4g6sr4TOgIncoming"/>
+                                    <bpel:variable name="attachmentManagement-processStore_attachments1Msg" messageType="AttachmentManagement-process:Store_attachmentsRequest" binding="AttachmentManagement-process:callerAndProcessServiceBinding" operation="Store_attachments" opMsgType="0" bpdm:messageIds=" out:_pmq9gKBMEeW6r4g6sr4TOgOutgoing">
+                                        <bpel:from bpdm:toPart="body">
+                                            <bpel:literal bpdm:linkedMessageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:linkedPart="body" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:opMsgType="0" bpdm:operation="Store_attachments"></bpel:literal>
+                                        </bpel:from>
+                                    </bpel:variable>
+                                    <bpel:variable name="Attachments" element="tns:Attachments" bpdm:id="_-eMmAKBMEeW6r4g6sr4TOg">
+                                        <bpel:from>
+                                            <bpel:literal bpdm:linkedElement="tns:Attachments"></bpel:literal>
+                                        </bpel:from>
+                                    </bpel:variable>
+                                </bpel:variables>
+                                <bpel:sequence>
+                                    <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_lnnuAKBMEeW6r4g6sr4TOg"></bpdm:messagingtask>
+                                    <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Extract attachments" bpdm:ID="_nGQPMKBMEeW6r4g6sr4TOg">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>bpel:doXslTransform("../XSLT/transform_get_global_attachments.xsl", $projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:attachments)</bpel:from>
+                                                <bpel:to>$Attachments</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="164462269" targetPath="$Attachments" targetedBy="16989309-arg1"></mapper:vertice>
+  <mapper:vertice id="16989309" dimension="126x24" location="369,57">
+    <mapper:value>bpel:doXslTransform()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="333352415" dimension="259x24" location="72,24" targetedBy="16989309-arg0">
+    <mapper:value>"../XSLT/transform_get_global_attachments.xsl"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1157216529" sourcePath="$projectCreateTaskSingleActivityResponse1Msg.root/project:taskMetaData/project:attachments" targetedBy="16989309-arg2"></mapper:vertice>
+</mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                    <bpdm:messagingtask operation="Store_attachments" partnerLink="managerimplicitPartnerAndManagerForCanonicPortPlkVar" portType="AttachmentManagement-process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Save attachments" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOg">
+                                        <bpdm:linkset bpdm:type="assignments">
+                                            <bpel:copy>
+                                                <bpel:from>concat("P", $thisRecieve_project_requestRequest2Msg.body/Business:ExcerciseId, "-", $thisRecieve_project_requestRequest2Msg.body/Business:DepartmentId, "-", $thisRecieve_project_requestRequest2Msg.body/Business:ProjectId, "-", $ode:pid)</bpel:from>
+                                                <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/tns:Reference</bpel:to><mapper:mapperLink><mapper:vertice id="1465632774" targetPath="$attachmentManagement-processStore_attachments1Msg.body/tns:Reference" targetedBy="651776418-arg8"></mapper:vertice><mapper:vertice id="651776418" dimension="79x195" location="471,58"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="783769777" dimension="79x24" location="267,23" targetedBy="651776418-arg0"><mapper:value>"P"</mapper:value></mapper:vertice><mapper:vertice id="1069099051" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:ExcerciseId" targetedBy="651776418-arg1"></mapper:vertice><mapper:vertice id="579215159" dimension="79x24" location="312,72" targetedBy="651776418-arg2"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="1016573340" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:DepartmentId" targetedBy="651776418-arg3"></mapper:vertice><mapper:vertice id="21204552" dimension="79x24" location="333,123" targetedBy="651776418-arg4"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="2058152367" sourcePath="$thisRecieve_project_requestRequest2Msg.body/Business:ProjectId" targetedBy="651776418-arg5"></mapper:vertice><mapper:vertice id="1084073850" dimension="79x24" location="252,192" targetedBy="651776418-arg6"><mapper:value>"-"</mapper:value></mapper:vertice><mapper:vertice id="313601917" sourcePath="$ode:pid" targetedBy="651776418-arg7"></mapper:vertice></mapper:mapperLink>
+                                            </bpel:copy>
+                                            <bpel:copy>
+                                                <bpel:from>$Attachments</bpel:from>
+                                                <bpel:to>$attachmentManagement-processStore_attachments1Msg.body/tns:Attachments</bpel:to><mapper:mapperLink><mapper:vertice id="2086768265" targetPath="$attachmentManagement-processStore_attachments1Msg.body/tns:Attachments" targetedBy="508029770-arg0"></mapper:vertice><mapper:vertice id="508029770" sourcePath="$Attachments"></mapper:vertice></mapper:mapperLink>
+                                            </bpel:copy>
+                                        </bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="attachmentManagement-processStore_attachments1Msg" bpdm:variableIsManaged="true" bpdm:messageType="AttachmentManagement-process:Store_attachmentsRequest" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOgOutgoing"></bpdm:linkset>
+                                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="attachmentManagement-processStore_attachmentsResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="AttachmentManagement-process:Store_attachmentsResponse" bpdm:binding="AttachmentManagement-process:callerAndProcessServiceBinding" bpdm:ID="_pmq9gKBMEeW6r4g6sr4TOgIncoming"></bpdm:linkset>
+                                    </bpdm:messagingtask>
+                                </bpel:sequence>
+                            </bpel:scope>
+                        </bpel:sequence>
+                        <bpel:sequence></bpel:sequence>
+                    </bpdm:gateway>
+                    <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_ig3voKHlEeWujqVpfVkA2w" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+                    <bpdm:messagingtask eventType="end: message" operation="Recieve_project_requirement" partnerLink="managerAndDepartment_directorPlkVar" portType="Department_director:ForManager" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_x_r24KBMEeW6r4g6sr4TOg">
+                        <bpdm:linkset bpdm:type="assignments">
+                            <bpel:copy>
+                                <bpel:from>$thisRecieve_project_requestRequest2Msg.body</bpel:from>
+                                <bpel:to>$department_directorRecieve_project_requirementRequest1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="449685975" targetPath="$department_directorRecieve_project_requirementRequest1Msg.body" targetedBy="1274522703-arg0"></mapper:vertice><mapper:vertice id="1274522703" sourcePath="$thisRecieve_project_requestRequest2Msg.body"></mapper:vertice></mapper:mapperLink>
+                            </bpel:copy>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="department_directorRecieve_project_requirementRequest1Msg" bpdm:msgVarScopeId="_o4kG4KA3EeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_project_requirementRequest" bpdm:ID="_bSZxMKBNEeW6r4g6sr4TOg"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="department_directorRecieve_project_requirementResponse2Msg" bpdm:msgVarScopeId="_o4kG4KA3EeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_project_requirementResponse" bpdm:ID="_b-9VMKBNEeW6r4g6sr4TOg"></bpdm:linkset>
+                    </bpdm:messagingtask>
                 </bpel:sequence>
             </bpdm:gateway>
         </bpel:sequence>

@@ -98,7 +98,14 @@
                             <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_XB0O8KAPEeW0J6TOrDqjOw" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
                                 <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_bQt4V6APEeW0J6TOrDqjOw" bpdm:targetDisplayName="default"></bpdm:linkset>
                                 <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_Xy_NMKAPEeW0J6TOrDqjOw" bpdm:targetDisplayName="[GatewayDataBasedExclusive - Store attachments]">
-                                    <bpel:condition>exists($tnsInitProcessRequest1Msg.root/tns:globalAttachments)<mapper:mapperLink><mapper:vertice id="1307664435" targetPath="$condition" targetedBy="1460720117-arg1"></mapper:vertice><mapper:vertice id="1460720117" dimension="79x24" location="257,107"><mapper:value>exists()</mapper:value></mapper:vertice><mapper:vertice id="100129973" sourcePath="$tnsInitProcessRequest1Msg.root/tns:globalAttachments" targetedBy="1460720117-arg0"></mapper:vertice></mapper:mapperLink></bpel:condition>
+                                    <bpel:condition>exists($tnsInitProcessRequest1Msg.root/tns:attachments)
+<mapper:mapperLink>
+  <mapper:vertice id="1937242487" targetPath="$condition" targetedBy="1934863768-arg0"></mapper:vertice>
+  <mapper:vertice id="1934863768" dimension="79x24" location="257,107">
+    <mapper:value>exists()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1410889973" sourcePath="$tnsInitProcessRequest1Msg.root/tns:attachments" targetedBy="1934863768-arg1"></mapper:vertice>
+</mapper:mapperLink></bpel:condition>
                                 </bpdm:linkset>
                                 <bpel:sequence></bpel:sequence>
                                 <bpel:sequence>
@@ -121,8 +128,18 @@
                                             <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Extract attachments" bpdm:ID="_KprNkKAPEeW0J6TOrDqjOw">
                                                 <bpdm:linkset bpdm:type="assignments">
                                                     <bpel:copy>
-                                                        <bpel:from>bpel:doXslTransform("../XSLT/transform_get_global_attachments.xsl", $tnsInitProcessRequest1Msg.root/tns:globalAttachments)</bpel:from>
-                                                        <bpel:to>$Attachments</bpel:to><mapper:mapperLink><mapper:vertice id="1853437345" targetPath="$Attachments" targetedBy="1557935527-arg2"></mapper:vertice><mapper:vertice id="1557935527" dimension="126x24" location="353,72"><mapper:value>bpel:doXslTransform()</mapper:value></mapper:vertice><mapper:vertice id="1773665581" dimension="259x24" location="61,17" targetedBy="1557935527-arg0"><mapper:value>"../XSLT/transform_get_global_attachments.xsl"</mapper:value></mapper:vertice><mapper:vertice id="1403201355" sourcePath="$tnsInitProcessRequest1Msg.root/tns:globalAttachments" targetedBy="1557935527-arg1"></mapper:vertice></mapper:mapperLink>
+                                                        <bpel:from>bpel:doXslTransform("../XSLT/transform_get_global_attachments.xsl", $tnsInitProcessRequest1Msg.root/tns:attachments)</bpel:from>
+                                                        <bpel:to>$Attachments</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="605424829" targetPath="$Attachments" targetedBy="199080893-arg1"></mapper:vertice>
+  <mapper:vertice id="199080893" dimension="126x24" location="353,72">
+    <mapper:value>bpel:doXslTransform()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="738617397" dimension="259x24" location="61,17" targetedBy="199080893-arg0">
+    <mapper:value>"../XSLT/transform_get_global_attachments.xsl"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="697430575" sourcePath="$tnsInitProcessRequest1Msg.root/tns:attachments" targetedBy="199080893-arg2"></mapper:vertice>
+</mapper:mapperLink>
                                                     </bpel:copy>
                                                 </bpdm:linkset>
                                             </bpdm:messagingtask>

@@ -522,7 +522,7 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QJDbAKBJEeW6r4g6sr4TOg" key="mapperParticipantUsers" value="$ExcerciseProject/Variables:responsible"/>
       </eAnnotations>
     </vertices>
-    <vertices xmi:type="bpmn:SubProcess" xmi:id="_rzsOsaBMEeW6r4g6sr4TOg" iD="_rzsOsKBMEeW6r4g6sr4TOg" outgoingEdges="_x_wvYaBMEeW6r4g6sr4TOg" incomingEdges="_utgfAaBNEeW6r4g6sr4TOg" name="Store attachments">
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_rzsOsaBMEeW6r4g6sr4TOg" iD="_rzsOsKBMEeW6r4g6sr4TOg" outgoingEdges="_jEgoMaHlEeWujqVpfVkA2w" incomingEdges="_fNmoEaHlEeWujqVpfVkA2w" name="Store attachments">
       <artifacts xmi:type="bpmn:DataObject" xmi:id="_-eQ3cKBMEeW6r4g6sr4TOg" iD="_-eMmAKBMEeW6r4g6sr4TOg" name="Attachments">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-eQ3caBMEeW6r4g6sr4TOg" source="attachedDataobject">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-eQ3cqBMEeW6r4g6sr4TOg" key="isBpelDeclaration" value="true"/>
@@ -542,20 +542,25 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_qKJeAaBMEeW6r4g6sr4TOg" iD="_qKJeAKBMEeW6r4g6sr4TOg"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nGVuwaBMEeW6r4g6sr4TOg" iD="_nGVuwKBMEeW6r4g6sr4TOg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_x_r24aBMEeW6r4g6sr4TOg" iD="_x_r24KBMEeW6r4g6sr4TOg" associations="_bSpBwKBNEeW6r4g6sr4TOg _b_p4wKBNEeW6r4g6sr4TOg" incomingEdges="_x_wvYaBMEeW6r4g6sr4TOg" activityType="EventEndMessage">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_x_r24aBMEeW6r4g6sr4TOg" iD="_x_r24KBMEeW6r4g6sr4TOg" associations="_bSpBwKBNEeW6r4g6sr4TOg _b_p4wKBNEeW6r4g6sr4TOg" incomingEdges="_jZpKsaHlEeWujqVpfVkA2w" activityType="EventEndMessage">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_bSZxMaBNEeW6r4g6sr4TOg"/>
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_b-9VMaBNEeW6r4g6sr4TOg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_szaw4aBNEeW6r4g6sr4TOg" iD="_szaw4KBNEeW6r4g6sr4TOg" outgoingEdges="_utgfAaBNEeW6r4g6sr4TOg _wLlmkaBNEeW6r4g6sr4TOg" incomingEdges="_szissaBNEeW6r4g6sr4TOg" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_szaw4aBNEeW6r4g6sr4TOg" iD="_szaw4KBNEeW6r4g6sr4TOg" outgoingEdges="_wLlmkaBNEeW6r4g6sr4TOg _eYFVUaHlEeWujqVpfVkA2w" incomingEdges="_szissaBNEeW6r4g6sr4TOg" activityType="GatewayParallel"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_wLgHAaBNEeW6r4g6sr4TOg" iD="_wLgHAKBNEeW6r4g6sr4TOg" outgoingEdges="_zL588aBNEeW6r4g6sr4TOg" incomingEdges="_wLlmkaBNEeW6r4g6sr4TOg" name="Save project" activityType="EventIntermediateEmpty"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_zLwzAaBNEeW6r4g6sr4TOg" iD="_zLwzAKBNEeW6r4g6sr4TOg" incomingEdges="_zL588aBNEeW6r4g6sr4TOg" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_eXs60aHlEeWujqVpfVkA2w" iD="_eXs60KHlEeWujqVpfVkA2w" outgoingEdges="_fNmoEaHlEeWujqVpfVkA2w _ihCHuKHlEeWujqVpfVkA2w" incomingEdges="_eYFVUaHlEeWujqVpfVkA2w" name="Has attachments" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ig3voaHlEeWujqVpfVkA2w" iD="_ig3voKHlEeWujqVpfVkA2w" outgoingEdges="_jZpKsaHlEeWujqVpfVkA2w" incomingEdges="_ihCHuKHlEeWujqVpfVkA2w _jEgoMaHlEeWujqVpfVkA2w" activityType="GatewayDataBasedExclusive"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ll5pAaBHEeW6r4g6sr4TOg" iD="_ll5pAKBHEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_D0sGYaBJEeW6r4g6sr4TOg" iD="_D0sGYKBJEeW6r4g6sr4TOg"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_x_wvYaBMEeW6r4g6sr4TOg" iD="_x_wvYKBMEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_szissaBNEeW6r4g6sr4TOg" iD="_szissKBNEeW6r4g6sr4TOg"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_utgfAaBNEeW6r4g6sr4TOg" iD="_utgfAKBNEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_wLlmkaBNEeW6r4g6sr4TOg" iD="_wLlmkKBNEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_zL588aBNEeW6r4g6sr4TOg" iD="_zL588KBNEeW6r4g6sr4TOg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_eYFVUaHlEeWujqVpfVkA2w" iD="_eYFVUKHlEeWujqVpfVkA2w"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_fNmoEaHlEeWujqVpfVkA2w" iD="_fNmoEKHlEeWujqVpfVkA2w"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ihCHuKHlEeWujqVpfVkA2w" iD="_ihCHt6HlEeWujqVpfVkA2w" conditionType="Default" isDefault="true"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_jEgoMaHlEeWujqVpfVkA2w" iD="_jEgoMKHlEeWujqVpfVkA2w"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_jZpKsaHlEeWujqVpfVkA2w" iD="_jZpKsKHlEeWujqVpfVkA2w"/>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_bNaruKAaEeW6r4g6sr4TOg" iD="_bNart6AaEeW6r4g6sr4TOg" source="_en5PgaAPEeW0J6TOrDqjOw" target="_bNQ6saAaEeW6r4g6sr4TOg"/>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_b-I-AaAaEeW6r4g6sr4TOg" iD="_b-I-AKAaEeW6r4g6sr4TOg" source="_bNQ6saAaEeW6r4g6sr4TOg" target="_en5PgaAPEeW0J6TOrDqjOw">
