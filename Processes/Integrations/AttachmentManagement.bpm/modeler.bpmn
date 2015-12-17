@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_YD4JcYMyEeWG07MHKwyOLA" iD="_YD4JcIMyEeWG07MHKwyOLA">
   <pools xmi:type="bpmn:Pool" xmi:id="_YD4wgYMyEeWG07MHKwyOLA" iD="_YD4wgIMyEeWG07MHKwyOLA" name="process">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uIirQKQzEeWVE9id1dycXQ" source="inMemoryProcess">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uIirQaQzEeWVE9id1dycXQ" key="InMemoryProcess" value="false"/>
+    </eAnnotations>
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_uxz58YMyEeWG07MHKwyOLA" iD="_uxz58IMyEeWG07MHKwyOLA" name="thisStore_attachmentsRequestMsg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uxz58oMyEeWG07MHKwyOLA" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uxz584MyEeWG07MHKwyOLA" key="isBpelDeclaration" value="true"/>

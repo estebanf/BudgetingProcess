@@ -1,0 +1,17 @@
+﻿<bpel:literal xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:Variables="http://test.com/xvar/example"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:diag="http://thisdiagram"
+    xmlns:caller="http://thisdiagram/caller"
+    xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_projectsservice"
+    xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:this="http://thisdiagram/process"
+    xmlns:tns="http://budgeting.example.everteam.com/Types/Business"
+    xmlns:Technical="http://budgeting.example.everteam.com/Types/Technical"
+    xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process"
+    xmlns:select_project_attachments="urn:intalio.com:connectors:database:budgeting:select_project_attachmentsservice"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<Technical:Attachments>
+</Technical:Attachments>
+</bpel:literal>

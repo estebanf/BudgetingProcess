@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_XQcEgZ3EEeWJ3uz02rWKzQ" iD="_XQcEgJ3EEeWJ3uz02rWKzQ">
   <pools xmi:type="bpmn:Pool" xmi:id="_XQvmgZ3EEeWJ3uz02rWKzQ" iD="_XQvmgJ3EEeWJ3uz02rWKzQ" name="Process">
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ieX8lp3EEeWJ3uz02rWKzQ" iD="_ieX8lZ3EEeWJ3uz02rWKzQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xehvoKQzEeWVE9id1dycXQ" source="inMemoryProcess">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xehvoaQzEeWVE9id1dycXQ" key="InMemoryProcess" value="true"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ieX8lp3EEeWJ3uz02rWKzQ" iD="_ieX8lZ3EEeWJ3uz02rWKzQ" name="thisRecieve_requestRequest1Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ieX8l53EEeWJ3uz02rWKzQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ieX8mJ3EEeWJ3uz02rWKzQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ieX8oZ3EEeWJ3uz02rWKzQ" key="defaultDeclarationName" value="thisRecieve_requestRequest1Msg"/>
@@ -13,10 +16,10 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_yagpKp3EEeWJ3uz02rWKzQ" iD="_yagpKZ3EEeWJ3uz02rWKzQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_yagpKp3EEeWJ3uz02rWKzQ" iD="_yagpKZ3EEeWJ3uz02rWKzQ" name="thisRecieve_requestResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yagpK53EEeWJ3uz02rWKzQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yagpLJ3EEeWJ3uz02rWKzQ" key="isBpelDeclaration" value="true"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yaqaKJ3EEeWJ3uz02rWKzQ" key="defaultDeclarationName" value="thisRecieve_requestResponse1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yaqaKJ3EEeWJ3uz02rWKzQ" key="defaultDeclarationName" value="thisRecieve_requestResponse2Msg"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ya98IZ3EEeWJ3uz02rWKzQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Process}Recieve_requestResponse"/>
       </eAnnotations>
       <associations xmi:type="bpmn:Association" xmi:id="_ya0LIJ3EEeWJ3uz02rWKzQ" direction="To">
@@ -53,7 +56,7 @@
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8s_UJ3EEeWJ3uz02rWKzQ" source="executablepool">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b8s_UZ3EEeWJ3uz02rWKzQ" key="poolIsExecutable" value="false"/>
     </eAnnotations>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ieOyoZ3EEeWJ3uz02rWKzQ" iD="_ieOyoJ3EEeWJ3uz02rWKzQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ieOyoZ3EEeWJ3uz02rWKzQ" iD="_ieOyoJ3EEeWJ3uz02rWKzQ" name="processRecieve_requestRequest2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ieOyop3EEeWJ3uz02rWKzQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ieOyo53EEeWJ3uz02rWKzQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ieOyrJ3EEeWJ3uz02rWKzQ" key="defaultDeclarationName" value="processRecieve_requestRequest2Msg"/>
@@ -65,7 +68,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ya98KJ3EEeWJ3uz02rWKzQ" iD="_ya98J53EEeWJ3uz02rWKzQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ya98KJ3EEeWJ3uz02rWKzQ" iD="_ya98J53EEeWJ3uz02rWKzQ" name="processRecieve_requestResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ya98KZ3EEeWJ3uz02rWKzQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ya98Kp3EEeWJ3uz02rWKzQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ybHGGJ3EEeWJ3uz02rWKzQ" key="defaultDeclarationName" value="processRecieve_requestResponse2Msg"/>

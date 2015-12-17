@@ -13,6 +13,15 @@
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Master_process" bpdm:prefix="Master_process" bpdm:comment="contrib=&apos;partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
         <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <vprop:property name="reference" type="xs:string"/>
+            <vprop:property name="department" type="xs:string"/>
+            <wsdl:portType name="ForDepartment_director">
+                <wsdl:operation name="Recieve_department_requirements" bpdm:source="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg">
+                    <wsdl:input message="this:Recieve_department_requirementsRequest" name="Recieve_department_requirements"/>
+                    <wsdl:output message="this:Recieve_department_requirementsResponse" name="Recieve_department_requirementsResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForDepartment_director" type="this:ForDepartment_director" bpdm:isSynchronized="true"/>
             <wsdl:portType name="ForMaster_process">
                 <wsdl:operation name="Recieve_information_request" bpdm:source="partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg">
                     <wsdl:input message="this:Recieve_information_requestRequest" name="Recieve_information_request"/>
@@ -20,6 +29,14 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForMaster_process" type="this:ForMaster_process" bpdm:isSynchronized="true"/>
+            <xs:element name="Recieve_department_requirementsRequest" type="tns:DepartmentsRequirementType" bpdm:source="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg"/>
+            <wsdl:message name="Recieve_department_requirementsRequest" bpdm:source="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg">
+                <wsdl:part name="body" element="this:Recieve_department_requirementsRequest"/>
+            </wsdl:message>
+            <xs:element name="Recieve_department_requirementsResponse" type="tns:AcknowledgementType" bpdm:source="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg"/>
+            <wsdl:message name="Recieve_department_requirementsResponse" bpdm:source="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg">
+                <wsdl:part name="body" element="this:Recieve_department_requirementsResponse"/>
+            </wsdl:message>
             <xs:element name="Recieve_information_requestRequest" type="xs:string" bpdm:source="partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg"/>
             <wsdl:message name="Recieve_information_requestRequest" bpdm:source="partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg">
                 <wsdl:part name="body" element="this:Recieve_information_requestRequest"/>
@@ -28,10 +45,22 @@
             <wsdl:message name="Recieve_information_requestResponse" bpdm:source="partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg">
                 <wsdl:part name="body" element="this:Recieve_information_requestResponse"/>
             </wsdl:message>
+            <vprop:propertyAlias propertyName="this:reference" messageType="this:Recieve_department_requirementsRequest" part="body">
+                <vprop:query>tns:Reference/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:department" messageType="Department_director:Recieve_requirement_requestRequest" part="body">
+                <vprop:query>tns:DepartmentId/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:reference" messageType="Department_director:Recieve_requirement_requestRequest" part="body">
+                <vprop:query>tns:Reference/text()</vprop:query>
+            </vprop:propertyAlias>
+            <vprop:propertyAlias propertyName="this:department" messageType="this:Recieve_department_requirementsRequest" part="body">
+                <vprop:query>tns:DepartmentId/text()</vprop:query>
+            </vprop:propertyAlias>
         </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg" bpdm:label="Department director"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_Aw8M4KAaEeW6r4g6sr4TOg" bpdm:label="Master process"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_ptWDgKAbEeW6r4g6sr4TOgimplicitPartner" bpdm:label="DepartmentsimplicitPartner"/>
-        <bpdm:namespaceContributor bpdm:url="partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg" bpdm:label="Department director"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetDepartments-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
@@ -40,9 +69,9 @@
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Departments" bpdm:ID="_ptWDgKAbEeW6r4g6sr4TOg">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="departmentsAndMaster_processPlkVar" partnerLinkType="diag:DepartmentsAndMaster_process" myRole="Departments_for_Master_process" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForMaster_process" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Departments/Master_process" bpdm:providedIsDefault="true" bpdm:clientTasks="_ptWDgKAbEeW6r4g6sr4TOg:_yvgnkKAbEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_Aw8M4KAaEeW6r4g6sr4TOg"/>
+            <bpel:partnerLink name="departmentsAndMaster_processPlkVar" partnerLinkType="diag:DepartmentsAndMaster_process" initializePartnerRole="yes" myRole="Departments_for_Master_process" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForMaster_process" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Departments/Master_process" bpdm:providedIsDefault="true" partnerRole="Master_process_for_Departments" bpdm:invokedService="Master_process:CanonicServiceForDepartments" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Master_process/Departments" bpdm:invokedIsDefault="true" bpdm:clientTasks="_ptWDgKAbEeW6r4g6sr4TOg:_nrIw0KKwEeWFS7bBQTvFJw, _ptWDgKAbEeW6r4g6sr4TOg:_yvgnkKAbEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_Aw8M4KAaEeW6r4g6sr4TOg"/>
+            <bpel:partnerLink name="departmentsAndDepartment_directorPlkVar" partnerLinkType="diag:DepartmentsAndDepartment_director" initializePartnerRole="yes" myRole="Departments_for_Department_director" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForDepartment_director" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Departments/Department_director" bpdm:providedIsDefault="true" partnerRole="Department_director_for_Departments" bpdm:invokedService="Department_director:CanonicServiceForDepartments" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Department_director/Departments" bpdm:invokedIsDefault="true" bpdm:clientTasks="_e6274KAcEeW6r4g6sr4TOg:_ZYzokKAcEeW6r4g6sr4TOg, _e6274KAcEeW6r4g6sr4TOg:_cQ1loKAcEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_nNN-MKAdEeW6r4g6sr4TOg"/>
             <bpel:partnerLink name="departmentsimplicitPartnerAndDepartmentsForCanonicPortPlkVar" partnerLinkType="diag:DepartmentsimplicitPartnerAndDepartmentsForCanonicPortPlk" initializePartnerRole="yes" partnerRole="DepartmentsimplicitPartner_for_Departments" bpdm:invokedService="GetDepartments-process:CanonicServiceForCaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_ptWDgKAbEeW6r4g6sr4TOg:_CJOjlqAcEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_ptWDgKAbEeW6r4g6sr4TOgimplicitPartner"/>
-            <bpel:partnerLink name="departmentsAndDepartment_directorPlkVar" partnerLinkType="diag:DepartmentsAndDepartment_director" initializePartnerRole="yes" partnerRole="Department_director_for_Departments" bpdm:invokedService="Department_director:CanonicServiceForDepartments" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/Department_director/Departments" bpdm:invokedIsDefault="true" bpdm:clientTasks="_e6274KAcEeW6r4g6sr4TOg:_ZYzokKAcEeW6r4g6sr4TOg" bpdm:isManaged="true" bpdm:otherPoolId="_nNN-MKAdEeW6r4g6sr4TOg"/>
         </bpel:partnerLinks>
         <bpel:variables>
             <bpel:variable name="thisRecieve_information_requestRequest1Msg" messageType="this:Recieve_information_requestRequest" bpdm:id="_yvzikqAbEeW6r4g6sr4TOg" bpdm:messageIds="inc:_yvgnmaAbEeW6r4g6sr4TOg"/>
@@ -51,6 +80,12 @@
                     <bpel:literal bpdm:linkedMessageType="this:Recieve_information_requestResponse" bpdm:linkedPart="body"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
+            <bpel:variable name="master_processRecieve_departments_requirementsRequest1Msg" messageType="Master_process:Recieve_departments_requirementsRequest" bpdm:id="_oeGe0KKwEeWFS7bBQTvFJw" bpdm:messageIds=" out:_od8t0KKwEeWFS7bBQTvFJw">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="Master_process:Recieve_departments_requirementsRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="master_processRecieve_departments_requirementsResponse2Msg" messageType="Master_process:Recieve_departments_requirementsResponse" bpdm:id="_o9P48KKwEeWFS7bBQTvFJw" bpdm:messageIds="inc:_o8pcAKKwEeWFS7bBQTvFJw"/>
             <bpel:variable name="getDepartments-processRecieve_requestResponse1Msg" messageType="GetDepartments-process:Recieve_requestResponse" binding="GetDepartments-process:CallerAndProcessServiceBinding" operation="Recieve_request" opMsgType="1" bpdm:messageIds="inc:_CJOjlqAcEeW6r4g6sr4TOgIncoming"/>
             <bpel:variable name="getDepartments-processRecieve_request1Msg" messageType="GetDepartments-process:Recieve_requestRequest" binding="GetDepartments-process:CallerAndProcessServiceBinding" operation="Recieve_request" opMsgType="0" bpdm:messageIds=" out:_CJOjlqAcEeW6r4g6sr4TOgOutgoing">
                 <bpel:from bpdm:toPart="body">
@@ -83,6 +118,9 @@
                     <bpel:condition bpdm:loopType="forEachStartCounter">1<mapper:mapperLink><mapper:vertice id="1910370356" targetPath="$Start counter" targetedBy="1384309586-arg0"></mapper:vertice><mapper:vertice id="1384309586" dimension="79x24" location="472,55"><mapper:value>1</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                     <bpel:condition bpdm:loopType="forEachFinalCounter">count($getDepartments-processRecieve_requestResponse1Msg.body/Business:Department)<mapper:mapperLink><mapper:vertice id="207717379" targetPath="$Final counter" targetedBy="1143968262-arg1"></mapper:vertice><mapper:vertice id="1143968262" dimension="79x24" location="466,125"><mapper:value>count()</mapper:value></mapper:vertice><mapper:vertice id="405256269" sourcePath="$getDepartments-processRecieve_requestResponse1Msg.body/Business:Department" targetedBy="1143968262-arg0"></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
+                <bpel:correlationSets>
+                    <bpel:correlationSet name="getDepartmentRequirements-CS" properties="this:reference this:department"/>
+                </bpel:correlationSets>
                 <bpel:variables xmlns:xvar="http://ode.apache.org/externalVariables">
                     <bpel:variable name="department" type="Business:DepartmentType" bpdm:id="_7UNXFqAcEeW6r4g6sr4TOg">
                         <bpel:from>
@@ -96,6 +134,12 @@
                     </bpel:variable>
                     <bpel:variable name="department_directorRecieve_requirement_requestResponse2Msg" messageType="Department_director:Recieve_requirement_requestResponse" bpdm:id="_si5peaAdEeW6r4g6sr4TOg" bpdm:messageIds="inc:_simugKAdEeW6r4g6sr4TOg"/>
                     <bpel:variable name="ExcerciseDepartment" element="Variables:ExcerciseDepartment" xvar:id="ExcerciseDepartment-_a7CAlqAtEeW6r4g6sr4TOg" xvar:relates-to="ExcerciseDepartment-keys" bpdm:xvarType="Variables:ExcerciseDepartment" bpdm:id="_a7CAlqAtEeW6r4g6sr4TOg"/>
+                    <bpel:variable name="thisRecieve_department_requirementsRequest1Msg" messageType="this:Recieve_department_requirementsRequest" bpdm:id="_wxOsFqKDEeWFS7bBQTvFJw" bpdm:messageIds="inc:_wwfsQKKDEeWFS7bBQTvFJw"/>
+                    <bpel:variable name="thisRecieve_department_requirementsResponse2Msg" messageType="this:Recieve_department_requirementsResponse" bpdm:id="_xI7aaaKDEeWFS7bBQTvFJw" bpdm:messageIds=" out:_xIxpYKKDEeWFS7bBQTvFJw">
+                        <bpel:from bpdm:toPart="body">
+                            <bpel:literal bpdm:linkedMessageType="this:Recieve_department_requirementsResponse" bpdm:linkedPart="body"></bpel:literal>
+                        </bpel:from>
+                    </bpel:variable>
                 </bpel:variables>
                 <bpel:sequence>
                     <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_G-Q_4KAcEeW6r4g6sr4TOg">
@@ -117,7 +161,9 @@
                                 <bpel:to>$department_directorRecieve_requirement_requestRequest2Msg.body/tns:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="517612399" targetPath="$department_directorRecieve_requirement_requestRequest2Msg.body/tns:DepartmentId" targetedBy="285700571-arg0"></mapper:vertice><mapper:vertice id="285700571" sourcePath="$department/Business:DepartmentId"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
-                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="department_directorRecieve_requirement_requestRequest2Msg" bpdm:msgVarScopeId="_e6274KAcEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_requirement_requestRequest" bpdm:ID="_qWYukKAdEeW6r4g6sr4TOg"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="department_directorRecieve_requirement_requestRequest2Msg" bpdm:msgVarScopeId="_e6274KAcEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_requirement_requestRequest" bpdm:ID="_qWYukKAdEeW6r4g6sr4TOg">
+                            <bpel:correlation set="getDepartmentRequirements-CS" initiate="join" pattern="request" bpdm:isSource="false"></bpel:correlation>
+                        </bpdm:linkset>
                         <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="department_directorRecieve_requirement_requestResponse2Msg" bpdm:msgVarScopeId="_e6274KAcEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Department_director:Recieve_requirement_requestResponse" bpdm:ID="_simugKAdEeW6r4g6sr4TOg"></bpdm:linkset>
                     </bpdm:messagingtask>
                     <bpdm:messagingtask eventType="intermediate: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Intermediate_Event" bpdm:ID="_ZrBKMKAtEeW6r4g6sr4TOg">
@@ -136,10 +182,25 @@
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
-                    <bpdm:messagingtask eventType="intermediate: message" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve department requirements" bpdm:ID="_cQ1loKAcEeW6r4g6sr4TOg"></bpdm:messagingtask>
+                    <bpdm:messagingtask eventType="intermediate: message" operation="Recieve_department_requirements" partnerLink="departmentsAndDepartment_directorPlkVar" portType="this:ForDepartment_director" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve department requirements" bpdm:ID="_cQ1loKAcEeW6r4g6sr4TOg">
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_department_requirementsRequest1Msg" bpdm:msgVarScopeId="_e6274KAcEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_department_requirementsRequest" bpdm:ID="_wwfsQKKDEeWFS7bBQTvFJw">
+                            <bpel:correlation set="getDepartmentRequirements-CS" initiate="join" pattern="response" bpdm:isSource="false"></bpel:correlation>
+                        </bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_department_requirementsResponse2Msg" bpdm:msgVarScopeId="_e6274KAcEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_department_requirementsResponse" bpdm:ID="_xIxpYKKDEeWFS7bBQTvFJw"></bpdm:linkset>
+                    </bpdm:messagingtask>
                     <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_d2UVsKAcEeW6r4g6sr4TOg"></bpdm:messagingtask>
                 </bpel:sequence>
             </bpel:scope>
+            <bpdm:messagingtask eventType="end: message" operation="Recieve_departments_requirements" partnerLink="departmentsAndMaster_processPlkVar" portType="Master_process:ForDepartments" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_nrIw0KKwEeWFS7bBQTvFJw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisRecieve_information_requestRequest1Msg.body</bpel:from>
+                        <bpel:to>$master_processRecieve_departments_requirementsRequest1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="1686528529" targetPath="$master_processRecieve_departments_requirementsRequest1Msg.body" targetedBy="2075694350-arg0"></mapper:vertice><mapper:vertice id="2075694350" sourcePath="$thisRecieve_information_requestRequest1Msg.body"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="master_processRecieve_departments_requirementsRequest1Msg" bpdm:msgVarScopeId="_ptWDgKAbEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Master_process:Recieve_departments_requirementsRequest" bpdm:ID="_od8t0KKwEeWFS7bBQTvFJw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="master_processRecieve_departments_requirementsResponse2Msg" bpdm:msgVarScopeId="_ptWDgKAbEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Master_process:Recieve_departments_requirementsResponse" bpdm:ID="_o8pcAKKwEeWFS7bBQTvFJw"></bpdm:linkset>
+            </bpdm:messagingtask>
         </bpel:sequence>
     </bpel:scope>
 </bpel:process>

@@ -158,13 +158,40 @@
           </eAnnotations>
         </associations>
       </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_oejKyKKwEeWFS7bBQTvFJw" iD="_oejKx6KwEeWFS7bBQTvFJw" name="thisRecieve_departments_requirementsRequest1Msg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oejKyaKwEeWFS7bBQTvFJw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oejKyqKwEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oesUuKKwEeWFS7bBQTvFJw" key="defaultDeclarationName" value="thisRecieve_departments_requirementsRequest1Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oesUvKKwEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Master_process}Recieve_departments_requirementsRequest"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_oesUuaKwEeWFS7bBQTvFJw" direction="From">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oesUuqKwEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oesUu6KwEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_o8zNCqKwEeWFS7bBQTvFJw" iD="_o8zNCaKwEeWFS7bBQTvFJw" name="thisRecieve_departments_requirementsResponse2Msg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o8zNC6KwEeWFS7bBQTvFJw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o8zNDKKwEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o88-CKKwEeWFS7bBQTvFJw" key="defaultDeclarationName" value="thisRecieve_departments_requirementsResponse2Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9GH8qKwEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Master_process}Recieve_departments_requirementsResponse"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_o88-CaKwEeWFS7bBQTvFJw" direction="To">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9GH8KKwEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9GH8aKwEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
       <vertices xmi:type="bpmn:Activity" xmi:id="_Alf8caAbEeW6r4g6sr4TOg" iD="_Alf8cKAbEeW6r4g6sr4TOg" associations="_yvziiaAbEeW6r4g6sr4TOg _0birmaAbEeW6r4g6sr4TOg" outgoingEdges="_JmLSyqAbEeW6r4g6sr4TOg" incomingEdges="_KqR0EaAbEeW6r4g6sr4TOg" name="Request departments information" activityType="EventIntermediateMessage" looping="false">
         <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_yvgnmqAbEeW6r4g6sr4TOg"/>
         <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_0a8OoaAbEeW6r4g6sr4TOg"/>
       </vertices>
       <vertices xmi:type="bpmn:Activity" xmi:id="_GI4sgaAbEeW6r4g6sr4TOg" iD="_GI4sgKAbEeW6r4g6sr4TOg" outgoingEdges="_KqR0EaAbEeW6r4g6sr4TOg" activityType="EventStartEmpty" looping="false"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_KQpMEaAbEeW6r4g6sr4TOg" iD="_KQpMEKAbEeW6r4g6sr4TOg" incomingEdges="_KQy9GKAbEeW6r4g6sr4TOg" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_JmLSwaAbEeW6r4g6sr4TOg" iD="_JmLSwKAbEeW6r4g6sr4TOg" outgoingEdges="_KQy9GKAbEeW6r4g6sr4TOg" incomingEdges="_JmLSyqAbEeW6r4g6sr4TOg" name="Recieve departments requirements" activityType="EventIntermediateMessage"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_JmLSwaAbEeW6r4g6sr4TOg" iD="_JmLSwKAbEeW6r4g6sr4TOg" associations="_oesUuaKwEeWFS7bBQTvFJw _o88-CaKwEeWFS7bBQTvFJw" outgoingEdges="_KQy9GKAbEeW6r4g6sr4TOg" incomingEdges="_JmLSyqAbEeW6r4g6sr4TOg" name="Recieve departments requirements" activityType="EventIntermediateMessage">
+        <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_od8t0aKwEeWFS7bBQTvFJw"/>
+        <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_o8pcAaKwEeWFS7bBQTvFJw"/>
+      </vertices>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JmLSyqAbEeW6r4g6sr4TOg" iD="_JmLSyaAbEeW6r4g6sr4TOg"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KQy9GKAbEeW6r4g6sr4TOg" iD="_KQy9F6AbEeW6r4g6sr4TOg"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KqR0EaAbEeW6r4g6sr4TOg" iD="_KqR0EKAbEeW6r4g6sr4TOg"/>
@@ -197,6 +224,30 @@
         </eAnnotations>
       </associations>
     </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_oeGe0aKwEeWFS7bBQTvFJw" iD="_oeGe0KKwEeWFS7bBQTvFJw" name="master_processRecieve_departments_requirementsRequest1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oeGe0qKwEeWFS7bBQTvFJw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oeGe06KwEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oeQP2KKwEeWFS7bBQTvFJw" key="defaultDeclarationName" value="master_processRecieve_departments_requirementsRequest1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oejKwaKwEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Master_process}Recieve_departments_requirementsRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_oeaA0KKwEeWFS7bBQTvFJw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oeaA0aKwEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oejKwKKwEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_o9P48aKwEeWFS7bBQTvFJw" iD="_o9P48KKwEeWFS7bBQTvFJw" name="master_processRecieve_departments_requirementsResponse2Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9P48qKwEeWFS7bBQTvFJw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9P486KwEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9ZC6KKwEeWFS7bBQTvFJw" key="defaultDeclarationName" value="master_processRecieve_departments_requirementsResponse2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9r90qKwEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Master_process}Recieve_departments_requirementsResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_o9iz4KKwEeWFS7bBQTvFJw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o9r90KKwEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o9r90aKwEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
     <vertices xmi:type="bpmn:Activity" xmi:id="_yvgnkaAbEeW6r4g6sr4TOg" iD="_yvgnkKAbEeW6r4g6sr4TOg" associations="_yv9Tg6AbEeW6r4g6sr4TOg _0bPwqaAbEeW6r4g6sr4TOg" outgoingEdges="_EaNHsaAcEeW6r4g6sr4TOg" name="Recieve information request" activityType="EventStartMessage">
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_yvgnmqAbEeW6r4g6sr4TOg"/>
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_0a8OoaAbEeW6r4g6sr4TOg"/>
@@ -208,7 +259,7 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CJOjtaAcEeW6r4g6sr4TOg" key="douri" value="project:///Processes/Integrations/GetDepartments-process.wsdl?invokerequestresponsebound={http://thisproject/Processes/Integrations/GetDepartments/process}CanonicServiceForCaller/canonicPort/Recieve_request"/>
       </eAnnotations>
     </vertices>
-    <vertices xmi:type="bpmn:SubProcess" xmi:id="_e6274aAcEeW6r4g6sr4TOg" iD="_e6274KAcEeW6r4g6sr4TOg" incomingEdges="_G-aw6KAcEeW6r4g6sr4TOg" name="Get individual departments requirements" looping="true">
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_e6274aAcEeW6r4g6sr4TOg" iD="_e6274KAcEeW6r4g6sr4TOg" outgoingEdges="_nrSh2KKwEeWFS7bBQTvFJw" incomingEdges="_G-aw6KAcEeW6r4g6sr4TOg" name="Get individual departments requirements" looping="true">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pU8VIKAcEeW6r4g6sr4TOg" source="forEachSource">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pU8VIaAcEeW6r4g6sr4TOg" key="loopTypeDetailsKey" value="loopTypeForEach"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s9izgKAcEeW6r4g6sr4TOg" key="forEachIsParallel" value="true"/>
@@ -251,12 +302,39 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_a7CAtaAtEeW6r4g6sr4TOg" key="defaultDeclarationName" value="ExcerciseDepartment"/>
         </eAnnotations>
       </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_wxOsF6KDEeWFS7bBQTvFJw" iD="_wxOsFqKDEeWFS7bBQTvFJw" name="thisRecieve_department_requirementsRequest1Msg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wxOsGKKDEeWFS7bBQTvFJw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxOsGaKDEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxOsIqKDEeWFS7bBQTvFJw" key="defaultDeclarationName" value="thisRecieve_department_requirementsRequest1Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxYdE6KDEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Departments}Recieve_department_requirementsRequest"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_wxYdEKKDEeWFS7bBQTvFJw" direction="From">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wxYdEaKDEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxYdEqKDEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_xI7aaqKDEeWFS7bBQTvFJw" iD="_xI7aaaKDEeWFS7bBQTvFJw" name="thisRecieve_department_requirementsResponse2Msg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xI7aa6KDEeWFS7bBQTvFJw" source="attachedDataobject">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xI7abKKDEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJFLaKKDEeWFS7bBQTvFJw" key="defaultDeclarationName" value="thisRecieve_department_requirementsResponse2Msg"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJOVU6KDEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Departments}Recieve_department_requirementsResponse"/>
+        </eAnnotations>
+        <associations xmi:type="bpmn:Association" xmi:id="_xJOVUKKDEeWFS7bBQTvFJw" direction="To">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xJOVUaKDEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJOVUqKDEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+          </eAnnotations>
+        </associations>
+      </artifacts>
       <vertices xmi:type="bpmn:Activity" xmi:id="_d2UVsaAcEeW6r4g6sr4TOg" iD="_d2UVsKAcEeW6r4g6sr4TOg" incomingEdges="_d2dfqKAcEeW6r4g6sr4TOg" activityType="EventEndEmpty"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_ZYzokaAcEeW6r4g6sr4TOg" iD="_ZYzokKAcEeW6r4g6sr4TOg" associations="_qWh4g6AdEeW6r4g6sr4TOg _sjNLcKAdEeW6r4g6sr4TOg" outgoingEdges="_ZrBKOqAtEeW6r4g6sr4TOg" incomingEdges="_ZZGjgaAcEeW6r4g6sr4TOg" name="Request department requirement" activityType="EventIntermediateMessage">
         <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qWYukaAdEeW6r4g6sr4TOg"/>
         <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_simugaAdEeW6r4g6sr4TOg"/>
       </vertices>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_cQ1loaAcEeW6r4g6sr4TOg" iD="_cQ1loKAcEeW6r4g6sr4TOg" outgoingEdges="_d2dfqKAcEeW6r4g6sr4TOg" incomingEdges="_aT_OsaAtEeW6r4g6sr4TOg" name="Recieve department requirements" activityType="EventIntermediateMessage"/>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_cQ1loaAcEeW6r4g6sr4TOg" iD="_cQ1loKAcEeW6r4g6sr4TOg" associations="_wxYdEKKDEeWFS7bBQTvFJw _xJOVUKKDEeWFS7bBQTvFJw" outgoingEdges="_d2dfqKAcEeW6r4g6sr4TOg" incomingEdges="_aT_OsaAtEeW6r4g6sr4TOg" name="Recieve department requirements" activityType="EventIntermediateMessage">
+        <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_wwfsQaKDEeWFS7bBQTvFJw"/>
+        <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_xIxpYaKDEeWFS7bBQTvFJw"/>
+      </vertices>
       <vertices xmi:type="bpmn:Activity" xmi:id="_G-Q_4aAcEeW6r4g6sr4TOg" iD="_G-Q_4KAcEeW6r4g6sr4TOg" outgoingEdges="_ZZGjgaAcEeW6r4g6sr4TOg" activityType="EventStartEmpty" looping="false"/>
       <vertices xmi:type="bpmn:Activity" xmi:id="_ZrBKMaAtEeW6r4g6sr4TOg" iD="_ZrBKMKAtEeW6r4g6sr4TOg" outgoingEdges="_aT_OsaAtEeW6r4g6sr4TOg" incomingEdges="_ZrBKOqAtEeW6r4g6sr4TOg" activityType="EventIntermediateEmpty"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_d2dfqKAcEeW6r4g6sr4TOg" iD="_d2dfp6AcEeW6r4g6sr4TOg"/>
@@ -264,8 +342,13 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZrBKOqAtEeW6r4g6sr4TOg" iD="_ZrBKOaAtEeW6r4g6sr4TOg"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_aT_OsaAtEeW6r4g6sr4TOg" iD="_aT_OsKAtEeW6r4g6sr4TOg"/>
     </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_nrIw0aKwEeWFS7bBQTvFJw" iD="_nrIw0KKwEeWFS7bBQTvFJw" associations="_oeaA0KKwEeWFS7bBQTvFJw _o9iz4KKwEeWFS7bBQTvFJw" incomingEdges="_nrSh2KKwEeWFS7bBQTvFJw" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_od8t0aKwEeWFS7bBQTvFJw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_o8pcAaKwEeWFS7bBQTvFJw"/>
+    </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EaNHsaAcEeW6r4g6sr4TOg" iD="_EaNHsKAcEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_G-aw6KAcEeW6r4g6sr4TOg" iD="_G-aw56AcEeW6r4g6sr4TOg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nrSh2KKwEeWFS7bBQTvFJw" iD="_nrSh16KwEeWFS7bBQTvFJw"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_nNN-MaAdEeW6r4g6sr4TOg" iD="_nNN-MKAdEeW6r4g6sr4TOg" name="Department director">
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_qWh4jaAdEeW6r4g6sr4TOg" iD="_qWh4jKAdEeW6r4g6sr4TOg" name="thisRecieve_requirement_requestRequest1Msg">
@@ -298,6 +381,30 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_84q-HaAdEeW6r4g6sr4TOg" key="douri" value="project:///Metrics/Variables.xvar?xvartype={http://test.com/xvar/example}BudgetingVar"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_84q-HqAdEeW6r4g6sr4TOg" key="defaultDeclarationName" value="BudgetingVar"/>
       </eAnnotations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_wwpdQaKDEeWFS7bBQTvFJw" iD="_wwpdQKKDEeWFS7bBQTvFJw" name="departmentsRecieve_department_requirementsRequest1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wwpdQqKDEeWFS7bBQTvFJw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wwpdQ6KDEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wwyAKKKDEeWFS7bBQTvFJw" key="defaultDeclarationName" value="departmentsRecieve_department_requirementsRequest1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxOsEKKDEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Departments}Recieve_department_requirementsRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ww7xIKKDEeWFS7bBQTvFJw" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wxFiIKKDEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxFiIaKDEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_xJYGVqKDEeWFS7bBQTvFJw" iD="_xJYGVaKDEeWFS7bBQTvFJw" name="departmentsRecieve_department_requirementsResponse2Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xJYGV6KDEeWFS7bBQTvFJw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJYGWKKDEeWFS7bBQTvFJw" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJh3WKKDEeWFS7bBQTvFJw" key="defaultDeclarationName" value="departmentsRecieve_department_requirementsResponse2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJ0yQqKDEeWFS7bBQTvFJw" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/Departments}Recieve_department_requirementsResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_xJroUKKDEeWFS7bBQTvFJw" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xJ0yQKKDEeWFS7bBQTvFJw" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJ0yQaKDEeWFS7bBQTvFJw" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
     </artifacts>
     <vertices xmi:type="bpmn:Activity" xmi:id="_qWPkoaAdEeW6r4g6sr4TOg" iD="_qWPkoKAdEeW6r4g6sr4TOg" associations="_qWrpgqAdEeW6r4g6sr4TOg _si5pcKAdEeW6r4g6sr4TOg" outgoingEdges="_AWGHKKAeEeW6r4g6sr4TOg" name="Recieve requirement request" activityType="EventStartMessage">
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qWYukaAdEeW6r4g6sr4TOg"/>
@@ -347,7 +454,7 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8SZywaAeEeW6r4g6sr4TOg" key="mapperParticipantUsers" value="$getSingleDepartment-ProcessRecieve__requestResponse1Msg.body/Business:DepartmentDirector"/>
       </eAnnotations>
     </vertices>
-    <vertices xmi:type="bpmn:SubProcess" xmi:id="_5kLUIaAtEeW6r4g6sr4TOg" iD="_5kLUIKAtEeW6r4g6sr4TOg" incomingEdges="_5ke2IaAtEeW6r4g6sr4TOg" name="Get project requirements" activityType="SubProcess" looping="true">
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_5kLUIaAtEeW6r4g6sr4TOg" iD="_5kLUIKAtEeW6r4g6sr4TOg" outgoingEdges="_p1xV0aKDEeWFS7bBQTvFJw" incomingEdges="_5ke2IaAtEeW6r4g6sr4TOg" name="Get project requirements" activityType="SubProcess" looping="true">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-Jui8KAtEeW6r4g6sr4TOg" source="forEachSource">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Jui8aAtEeW6r4g6sr4TOg" key="loopTypeDetailsKey" value="loopTypeForEach"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__YQyoKAtEeW6r4g6sr4TOg" key="forEachIsParallel" value="true"/>
@@ -430,6 +537,30 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_PNY4QaAuEeW6r4g6sr4TOg" iD="_PNY4QKAuEeW6r4g6sr4TOg"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZK9jkaBNEeW6r4g6sr4TOg" iD="_ZK9jkKBNEeW6r4g6sr4TOg"/>
     </vertices>
+    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_ngKwc6KDEeWFS7bBQTvFJw" iD="_nf31caKDEeWFS7bBQTvFJw" outgoingEdges="_q-M9gaKDEeWFS7bBQTvFJw" incomingEdges="_p1xV0aKDEeWFS7bBQTvFJw" name="Review requirements" activityType="UserTask">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ngKwdKKDEeWFS7bBQTvFJw" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKwdaKDEeWFS7bBQTvFJw" key="projectRelativePath" value="Webcontents/department_review.html"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ngKwdqKDEeWFS7bBQTvFJw" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKwd6KDEeWFS7bBQTvFJw" key="factoryId" value="sampleform"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKweKKDEeWFS7bBQTvFJw" key="taskType" value="single-create-and-complete"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ngKweaKDEeWFS7bBQTvFJw" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKweqKDEeWFS7bBQTvFJw" key="partnerLinkTypeKey" value="WFmagic_nf31caKDEeWFS7bBQTvFJw"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKwe6KDEeWFS7bBQTvFJw" key="douri" value="project:///Webcontents/department_review.html.wsdl?wsdloperation={http://www.intalio.com/Budgeting/Webcontents/department_review.html}Process/createCompleteTaskSingleActivity"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKwfKKDEeWFS7bBQTvFJw" key="blackbox" value="true"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ngKwfaKDEeWFS7bBQTvFJw" source="formDeployURL">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ngKwfqKDEeWFS7bBQTvFJw" key="formURL" value="Webcontents/department_review.html"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tT5iMKKGEeWFS7bBQTvFJw" source="sourceMapperParticipantAssignment">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tT5iMaKGEeWFS7bBQTvFJw" key="mapperParticipantUsers" value="$getSingleDepartment-ProcessRecieve__requestResponse1Msg.body/Business:DepartmentDirector"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_q9wRkaKDEeWFS7bBQTvFJw" iD="_q9wRkKKDEeWFS7bBQTvFJw" associations="_ww7xIKKDEeWFS7bBQTvFJw _xJroUKKDEeWFS7bBQTvFJw" incomingEdges="_q-M9gaKDEeWFS7bBQTvFJw" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_wwfsQaKDEeWFS7bBQTvFJw"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_xIxpYaKDEeWFS7bBQTvFJw"/>
+    </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_AWGHKKAeEeW6r4g6sr4TOg" iD="_AWGHJ6AeEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_A0y1WqAeEeW6r4g6sr4TOg" iD="_A0y1WaAeEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JP7OkaAeEeW6r4g6sr4TOg" iD="_JP7OkKAeEeW6r4g6sr4TOg"/>
@@ -440,6 +571,8 @@
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_OU6ycaAeEeW6r4g6sr4TOg" iD="_OU6ycKAeEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SiBsEaAeEeW6r4g6sr4TOg" iD="_SiBsEKAeEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_5ke2IaAtEeW6r4g6sr4TOg" iD="_5ke2IKAtEeW6r4g6sr4TOg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_p1xV0aKDEeWFS7bBQTvFJw" iD="_p1xV0KKDEeWFS7bBQTvFJw"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_q-M9gaKDEeWFS7bBQTvFJw" iD="_q-M9gKKDEeWFS7bBQTvFJw"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_o4kG4aA3EeW6r4g6sr4TOg" iD="_o4kG4KA3EeW6r4g6sr4TOg" name="Manager">
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_KajP0aA4EeW6r4g6sr4TOg" iD="_KajP0KA4EeW6r4g6sr4TOg" name="thisRecieve_project_requestRequest2Msg">
@@ -602,6 +735,24 @@
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_b-9VMaBNEeW6r4g6sr4TOg" iD="_b-9VMKBNEeW6r4g6sr4TOg" source="_ZK2O0aBNEeW6r4g6sr4TOg" target="_x_r24aBMEeW6r4g6sr4TOg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1QmjIKBOEeW6r4g6sr4TOg" source="attachedDataobject">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QmjIaBOEeW6r4g6sr4TOg" key="douri" value="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}AcknowledgementType"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_wwfsQaKDEeWFS7bBQTvFJw" iD="_wwfsQKKDEeWFS7bBQTvFJw" source="_q9wRkaKDEeWFS7bBQTvFJw" target="_cQ1loaAcEeW6r4g6sr4TOg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1JYYEKKDEeWFS7bBQTvFJw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1JYYEaKDEeWFS7bBQTvFJw" key="douri" value="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}DepartmentsRequirementType"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_xIxpYaKDEeWFS7bBQTvFJw" iD="_xIxpYKKDEeWFS7bBQTvFJw" source="_cQ1loaAcEeW6r4g6sr4TOg" target="_q9wRkaKDEeWFS7bBQTvFJw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2eUKsKKDEeWFS7bBQTvFJw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2eUKsaKDEeWFS7bBQTvFJw" key="douri" value="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}AcknowledgementType"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2eUKsqKDEeWFS7bBQTvFJw" key="douri2" value="project:///Schemas/Technical.xsd?xsdelement={http://budgeting.example.everteam.com/Types/Technical}ACK"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_od8t0aKwEeWFS7bBQTvFJw" iD="_od8t0KKwEeWFS7bBQTvFJw" source="_nrIw0aKwEeWFS7bBQTvFJw" target="_JmLSwaAbEeW6r4g6sr4TOg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_o8pcAaKwEeWFS7bBQTvFJw" iD="_o8pcAKKwEeWFS7bBQTvFJw" source="_JmLSwaAbEeW6r4g6sr4TOg" target="_nrIw0aKwEeWFS7bBQTvFJw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wfTVIKKwEeWFS7bBQTvFJw" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wfTVIaKwEeWFS7bBQTvFJw" key="douri" value="project:///Schemas/Technical.xsd?xsdtype={http://budgeting.example.everteam.com/Types/Technical}AcknowledgementType"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wfTVIqKwEeWFS7bBQTvFJw" key="douri2" value="project:///Schemas/Technical.xsd?xsdelement={http://budgeting.example.everteam.com/Types/Technical}ACK"/>
     </eAnnotations>
   </messages>
 </bpmn:BpmnDiagram>

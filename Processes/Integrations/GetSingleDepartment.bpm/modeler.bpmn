@@ -2,7 +2,7 @@
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_0WpDUYGkEeWnYehdvYwvag" iD="_0WpDUIGkEeWnYehdvYwvag">
   <pools xmi:type="bpmn:Pool" xmi:id="_0W7-QYGkEeWnYehdvYwvag" iD="_0W7-QIGkEeWnYehdvYwvag" name="Process">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5hdYwIJcEeWG07MHKwyOLA" source="inMemoryProcess">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5hdYwYJcEeWG07MHKwyOLA" key="InMemoryProcess" value="false"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5hdYwYJcEeWG07MHKwyOLA" key="InMemoryProcess" value="true"/>
     </eAnnotations>
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_Dl_s8YGmEeWfp5w38LJ0Gw" iD="_Dl_s8IGmEeWfp5w38LJ0Gw" name="thisRecieve__requestRequestMsg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Dl_s8oGmEeWfp5w38LJ0Gw" source="attachedDataobject">

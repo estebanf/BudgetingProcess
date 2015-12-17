@@ -1,9 +1,10 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:caller="http://thisdiagram/caller" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:this="http://thisdiagram/process" xmlns:select_attachmetns="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://thisdiagram" xmlns:ns="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/process">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:caller="http://thisdiagram/caller" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:this="http://thisdiagram/process" xmlns:select_attachmetns="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:diag="http://thisdiagram" xmlns:ns="urn:intalio.com:connectors:database:budgeting:insert_attachmentservice" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/process">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/caller" bpdm:prefix="caller" bpdm:comment="contrib=&apos;partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/processimplicitPartner" bpdm:prefix="processimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///_YD4wgIMyEeWG07MHKwyOLAimplicitPartner"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="Business" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:budgeting:select_attachmetnsservice" bpdm:prefix="select_attachmetns" bpdm:comment="contrib=&apos;project:///Connectors/Database/select_attachmetns.sql/select_attachmetns.sql.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
@@ -42,14 +43,15 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA" bpdm:label="caller"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_YD4wgIMyEeWG07MHKwyOLAimplicitPartner" bpdm:label="processimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_attachment.sql/insert_attachment.sql.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_attachment.sql/insert_attachment.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_attachmetns.sql/select_attachmetns.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_attachmetns.sql/select_attachmetns.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_attachment.sql/insert_attachment.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/insert_attachment.sql/insert_attachment.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_YD4wgIMyEeWG07MHKwyOLA">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_4HG1YIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_ePYCYIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_w-HZcIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_fy2AQIMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_h4nZ8IMyEeWG07MHKwyOLA"/>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_ePYCYIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_4HG1YIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_w-HZcIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_fy2AQIMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_h4nZ8IMyEeWG07MHKwyOLA"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForInsert_attachmentPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForInsert_attachmentPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="ns:insert_attachmentService" bpdm:invokedPort="insert_attachmentPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/insert_attachment" bpdm:invokedIsDefault="true" bpdm:clientTasks="_Iie6UINBEeWG07MHKwyOLA:_wT7M8IMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_YD4wgIMyEeWG07MHKwyOLAimplicitPartner"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForSelect_attachmetnsPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForSelect_attachmetnsPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="select_attachmetns:select_attachmetnsService" bpdm:invokedPort="select_attachmetnsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_attachmetns" bpdm:invokedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_3Rxv4IMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_YD4wgIMyEeWG07MHKwyOLAimplicitPartner"/>
         </bpel:partnerLinks>
@@ -83,11 +85,7 @@
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$thisGet_attachmentsRequestMsg.body</bpel:from>
-                                <bpel:to>$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="701140085" targetPath="$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE" targetedBy="728104015-arg0"></mapper:vertice>
-  <mapper:vertice id="728104015" sourcePath="$thisGet_attachmentsRequestMsg.body"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE</bpel:to><mapper:mapperLink><mapper:vertice id="701140085" targetPath="$select_attachmetnsSelect_attachmetnsRequest1Msg.parameters/select_attachmetns:execute/select_attachmetns:parameters/select_attachmetns:REFERENCE" targetedBy="728104015-arg0"></mapper:vertice><mapper:vertice id="728104015" sourcePath="$thisGet_attachmentsRequestMsg.body"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                         <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="select_attachmetnsSelect_attachmetnsRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="select_attachmetns:select_attachmetnsInput" bpdm:binding="select_attachmetns:select_attachmetnsPortSoapBinding" bpdm:ID="_3Rxv4IMyEeWG07MHKwyOLAOutgoing"></bpdm:linkset>
@@ -163,11 +161,7 @@
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisStore_attachmentsRequestMsg.body/tns:Reference</bpel:from>
-                                        <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1778919355" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE" targetedBy="105541008-arg0"></mapper:vertice>
-  <mapper:vertice id="105541008" sourcePath="$thisStore_attachmentsRequestMsg.body/tns:Reference"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE</bpel:to><mapper:mapperLink><mapper:vertice id="1778919355" targetPath="$nsInsert_attachmentRequestMsg.parameters/ns:execute/ns:parameters/ns:REFERENCE" targetedBy="105541008-arg0"></mapper:vertice><mapper:vertice id="105541008" sourcePath="$thisStore_attachmentsRequestMsg.body/tns:Reference"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                 </bpdm:linkset>
                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsInsert_attachmentRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="ns:insert_attachmentInput" bpdm:binding="ns:insert_attachmentPortSoapBinding" bpdm:ID="_wT7M8IMyEeWG07MHKwyOLAOutgoing"></bpdm:linkset>

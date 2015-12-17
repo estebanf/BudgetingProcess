@@ -5,7 +5,7 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0lHakYJcEeWG07MHKwyOLA" key="poolIsExecutable" value="true"/>
     </eAnnotations>
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_04KSYIJcEeWG07MHKwyOLA" source="inMemoryProcess">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_04K5cIJcEeWG07MHKwyOLA" key="InMemoryProcess" value="false"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_04K5cIJcEeWG07MHKwyOLA" key="InMemoryProcess" value="true"/>
     </eAnnotations>
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_JwaPwX6QEeWawKZ5ttgkIA" iD="_JwaPwH6QEeWawKZ5ttgkIA" name="thisRecieve_requestRequestMsg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JwaPwn6QEeWawKZ5ttgkIA" source="attachedDataobject">
