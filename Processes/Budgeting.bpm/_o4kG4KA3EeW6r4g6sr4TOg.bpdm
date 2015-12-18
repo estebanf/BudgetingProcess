@@ -191,13 +191,7 @@
                             </bpel:copy>
                             <bpel:copy>
                                 <bpel:from>true()</bpel:from>
-                                <bpel:to>$ExcerciseProject/Variables:included</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1139226474" targetPath="$ExcerciseProject/Variables:included" targetedBy="279429609-arg0"></mapper:vertice>
-  <mapper:vertice id="279429609" dimension="79x24" location="416,268">
-    <mapper:value>true()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$ExcerciseProject/Variables:included</bpel:to><mapper:mapperLink><mapper:vertice id="1139226474" targetPath="$ExcerciseProject/Variables:included" targetedBy="279429609-arg0"></mapper:vertice><mapper:vertice id="279429609" dimension="79x24" location="416,268"><mapper:value>true()</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>

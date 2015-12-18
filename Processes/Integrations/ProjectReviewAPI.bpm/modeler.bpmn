@@ -16,7 +16,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ss5qF6TrEeWVE9id1dycXQ" iD="_ss5qFqTrEeWVE9id1dycXQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ss5qF6TrEeWVE9id1dycXQ" iD="_ss5qFqTrEeWVE9id1dycXQ" name="thisUpdate_projectRequest2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ss5qGKTrEeWVE9id1dycXQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ss5qGaTrEeWVE9id1dycXQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ss5qIqTrEeWVE9id1dycXQ" key="defaultDeclarationName" value="thisUpdate_projectRequest2Msg"/>
@@ -107,7 +107,7 @@
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_ssmvIaTrEeWVE9id1dycXQ"/>
     </vertices>
     <vertices xmi:type="bpmn:SubProcess" xmi:id="_1R2tsaTrEeWVE9id1dycXQ" iD="_1R2tsKTrEeWVE9id1dycXQ" incomingEdges="_v6Y5yKTrEeWVE9id1dycXQ">
-      <artifacts xmi:type="bpmn:DataObject" xmi:id="_47qGC6TrEeWVE9id1dycXQ" iD="_47qF8KTrEeWVE9id1dycXQ" name="">
+      <artifacts xmi:type="bpmn:DataObject" xmi:id="_47qGC6TrEeWVE9id1dycXQ" iD="_47qF8KTrEeWVE9id1dycXQ" name="ExcerciseProject">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_47qGDKTrEeWVE9id1dycXQ" source="attachedDataobject">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_47qGDaTrEeWVE9id1dycXQ" key="isBpelDeclaration" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_47qGDqTrEeWVE9id1dycXQ" key="douri" value="project:///Metrics/Variables.xvar?xvartype={http://test.com/xvar/example}ExcerciseProject"/>
@@ -153,7 +153,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ssv5EaTrEeWVE9id1dycXQ" iD="_ssv5EKTrEeWVE9id1dycXQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ssv5EaTrEeWVE9id1dycXQ" iD="_ssv5EKTrEeWVE9id1dycXQ" name="processUpdate_projectRequest1Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ssv5EqTrEeWVE9id1dycXQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ssv5E6TrEeWVE9id1dycXQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ssv5HKTrEeWVE9id1dycXQ" key="defaultDeclarationName" value="processUpdate_projectRequest1Msg"/>
@@ -165,7 +165,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_zyfzyKTrEeWVE9id1dycXQ" iD="_zyfzx6TrEeWVE9id1dycXQ">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_zyfzyKTrEeWVE9id1dycXQ" iD="_zyfzx6TrEeWVE9id1dycXQ" name="processUpdate_projectResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zyfzyaTrEeWVE9id1dycXQ" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zyfzyqTrEeWVE9id1dycXQ" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zyo9uKTrEeWVE9id1dycXQ" key="defaultDeclarationName" value="processUpdate_projectResponse2Msg"/>

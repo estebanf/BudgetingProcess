@@ -1,4 +1,4 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:caller="http://thisdiagram/caller" xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_projectsservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/process" xmlns:tns="http://budgeting.example.everteam.com/Types/Business" xmlns:Technical="http://budgeting.example.everteam.com/Types/Technical" xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" xmlns:select_project_attachments="urn:intalio.com:connectors:database:budgeting:select_project_attachmentsservice" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" bpdm:in-memory="true" targetNamespace="http://thisdiagram/process">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:processimplicitPartner="http://thisdiagram/processimplicitPartner" xmlns:caller="http://thisdiagram/caller" xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_projectsservice" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/process" xmlns:tns="http://budgeting.example.everteam.com/Types/Business" xmlns:Technical="http://budgeting.example.everteam.com/Types/Technical" xmlns:select_project_attachments="urn:intalio.com:connectors:database:budgeting:select_project_attachmentsservice" xmlns:GetSingleDepartment-Process="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" bpdm:in-memory="true" targetNamespace="http://thisdiagram/process">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="Variables" bpdm:comment="contrib=&apos;project:///Metrics/Variables.xvar"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
@@ -10,8 +10,8 @@
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/process" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="Technical" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" bpdm:prefix="GetSingleDepartment-Process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:budgeting:select_project_attachmentsservice" bpdm:prefix="select_project_attachments" bpdm:comment="contrib=&apos;project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/GetSingleDepartment/Process" bpdm:prefix="GetSingleDepartment-Process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
         <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
             <wsdl:portType name="Forcaller">
@@ -46,17 +46,17 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_qjzW0KP_EeWVE9id1dycXQimplicitPartner" bpdm:label="processimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.sql.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_qjzW0KP_EeWVE9id1dycXQ">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_1R2tsKTrEeWVE9id1dycXQ:_zFVy0KTrEeWVE9id1dycXQ, _qjzW0KP_EeWVE9id1dycXQ:_nt3kQKTrEeWVE9id1dycXQ, _FLdK4KQAEeWVE9id1dycXQ:_Ve3SgKQBEeWVE9id1dycXQ, _qjzW0KP_EeWVE9id1dycXQ:_5f3GcKP_EeWVE9id1dycXQ" bpdm:isManaged="true" bpdm:otherPoolId="_xdxfUKP_EeWVE9id1dycXQ"/>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_qjzW0KP_EeWVE9id1dycXQ:_nt3kQKTrEeWVE9id1dycXQ, _1R2tsKTrEeWVE9id1dycXQ:_zFVy0KTrEeWVE9id1dycXQ, _FLdK4KQAEeWVE9id1dycXQ:_Ve3SgKQBEeWVE9id1dycXQ, _qjzW0KP_EeWVE9id1dycXQ:_5f3GcKP_EeWVE9id1dycXQ" bpdm:isManaged="true" bpdm:otherPoolId="_xdxfUKP_EeWVE9id1dycXQ"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForCanonicPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForCanonicPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="GetSingleDepartment-Process:CanonicServiceForCaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="epr" bpdm:invokedIsDefault="true" bpdm:clientTasks="_FLdK4KQAEeWVE9id1dycXQ:_cIRE5qQAEeWVE9id1dycXQ" bpdm:isManaged="true" bpdm:otherPoolId="_qjzW0KP_EeWVE9id1dycXQimplicitPartner"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForSelect_projectsPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForSelect_projectsPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="ns:select_projectsService" bpdm:invokedPort="select_projectsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_projects" bpdm:invokedIsDefault="true" bpdm:clientTasks="_FLdK4KQAEeWVE9id1dycXQ:_Mub-tqQBEeWVE9id1dycXQ" bpdm:isManaged="true" bpdm:otherPoolId="_qjzW0KP_EeWVE9id1dycXQimplicitPartner"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForSelect_project_attachmentsPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForSelect_project_attachmentsPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="select_project_attachments:select_project_attachmentsService" bpdm:invokedPort="select_project_attachmentsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_project_attachments" bpdm:invokedIsDefault="true" bpdm:clientTasks="_FLdK4KQAEeWVE9id1dycXQ:_dXiTZqQLEeWVE9id1dycXQ" bpdm:isManaged="true" bpdm:otherPoolId="_qjzW0KP_EeWVE9id1dycXQimplicitPartner"/>
@@ -229,51 +229,27 @@
                                 <bpdm:linkset bpdm:type="assignments">
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ExcerciseId</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:excercise_id</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="833736195" targetPath="$ExcerciseProject/Variables:excercise_id" targetedBy="714876571-arg0"></mapper:vertice>
-  <mapper:vertice id="714876571" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ExcerciseId"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:excercise_id</bpel:to><mapper:mapperLink><mapper:vertice id="833736195" targetPath="$ExcerciseProject/Variables:excercise_id" targetedBy="714876571-arg0"></mapper:vertice><mapper:vertice id="714876571" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ExcerciseId"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:project/tns:DepartmentId</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:DepartmentId</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1371377190" targetPath="$ExcerciseProject/Variables:DepartmentId" targetedBy="392272479-arg0"></mapper:vertice>
-  <mapper:vertice id="392272479" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:DepartmentId"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="1371377190" targetPath="$ExcerciseProject/Variables:DepartmentId" targetedBy="392272479-arg0"></mapper:vertice><mapper:vertice id="392272479" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:DepartmentId"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ProjectId</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:project_id</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1014788365" targetPath="$ExcerciseProject/Variables:project_id" targetedBy="43960767-arg0"></mapper:vertice>
-  <mapper:vertice id="43960767" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ProjectId"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:project_id</bpel:to><mapper:mapperLink><mapper:vertice id="1014788365" targetPath="$ExcerciseProject/Variables:project_id" targetedBy="43960767-arg0"></mapper:vertice><mapper:vertice id="43960767" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:project/tns:ProjectId"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:budget</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:Budget</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1885729049" targetPath="$ExcerciseProject/Variables:Budget" targetedBy="101160114-arg0"></mapper:vertice>
-  <mapper:vertice id="101160114" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:budget"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:Budget</bpel:to><mapper:mapperLink><mapper:vertice id="1885729049" targetPath="$ExcerciseProject/Variables:Budget" targetedBy="101160114-arg0"></mapper:vertice><mapper:vertice id="101160114" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:budget"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:priority</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:Priority</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="904294157" targetPath="$ExcerciseProject/Variables:Priority" targetedBy="924373270-arg0"></mapper:vertice>
-  <mapper:vertice id="924373270" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:priority"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:Priority</bpel:to><mapper:mapperLink><mapper:vertice id="904294157" targetPath="$ExcerciseProject/Variables:Priority" targetedBy="924373270-arg0"></mapper:vertice><mapper:vertice id="924373270" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:priority"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:included</bpel:from>
-                                        <bpel:to>$ExcerciseProject/Variables:included</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="48530137" targetPath="$ExcerciseProject/Variables:included" targetedBy="1467940546-arg0"></mapper:vertice>
-  <mapper:vertice id="1467940546" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:included"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$ExcerciseProject/Variables:included</bpel:to><mapper:mapperLink><mapper:vertice id="48530137" targetPath="$ExcerciseProject/Variables:included" targetedBy="1467940546-arg0"></mapper:vertice><mapper:vertice id="1467940546" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:included"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                 </bpdm:linkset>
                             </bpdm:messagingtask>
@@ -281,21 +257,11 @@
                                 <bpdm:linkset bpdm:type="assignments">
                                     <bpel:copy>
                                         <bpel:from>$ode:pid</bpel:from>
-                                        <bpel:to>$thisUpdate_projectResponse2Msg.body/Technical:InstanceId</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1739557142" targetPath="$thisUpdate_projectResponse2Msg.body/Technical:InstanceId" targetedBy="202386951-arg0"></mapper:vertice>
-  <mapper:vertice id="202386951" sourcePath="$ode:pid"></mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$thisUpdate_projectResponse2Msg.body/Technical:InstanceId</bpel:to><mapper:mapperLink><mapper:vertice id="1739557142" targetPath="$thisUpdate_projectResponse2Msg.body/Technical:InstanceId" targetedBy="202386951-arg0"></mapper:vertice><mapper:vertice id="202386951" sourcePath="$ode:pid"></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                     <bpel:copy>
                                         <bpel:from>current-dateTime()</bpel:from>
-                                        <bpel:to>$thisUpdate_projectResponse2Msg.body/Technical:Timestamp</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1694211934" targetPath="$thisUpdate_projectResponse2Msg.body/Technical:Timestamp" targetedBy="1187087003-arg0"></mapper:vertice>
-  <mapper:vertice id="1187087003" dimension="109x24" location="295,99">
-    <mapper:value>current-dateTime()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                                        <bpel:to>$thisUpdate_projectResponse2Msg.body/Technical:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="1694211934" targetPath="$thisUpdate_projectResponse2Msg.body/Technical:Timestamp" targetedBy="1187087003-arg0"></mapper:vertice><mapper:vertice id="1187087003" dimension="109x24" location="295,99"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
                                     </bpel:copy>
                                 </bpdm:linkset>
                                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisUpdate_projectResponse2Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:update_projectResponse" bpdm:ID="_zyCgwKTrEeWVE9id1dycXQ"></bpdm:linkset>

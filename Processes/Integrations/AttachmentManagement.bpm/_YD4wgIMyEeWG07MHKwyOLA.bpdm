@@ -23,14 +23,6 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForcaller" type="this:Forcaller" bpdm:isSynchronized="true"/>
-            <xs:element name="Store_attachmentsRequest" type="tns:StoreAttachmentRequestType" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
-            <wsdl:message name="Store_attachmentsRequest" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
-                <wsdl:part name="body" element="this:Store_attachmentsRequest"/>
-            </wsdl:message>
-            <xs:element name="Store_attachmentsResponse" type="tns:AcknowledgementType" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
-            <wsdl:message name="Store_attachmentsResponse" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
-                <wsdl:part name="body" element="this:Store_attachmentsResponse"/>
-            </wsdl:message>
             <xs:element name="Get_attachmentsRequest" type="xs:string" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
             <wsdl:message name="Get_attachmentsRequest" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
                 <wsdl:part name="body" element="this:Get_attachmentsRequest"/>
@@ -38,6 +30,14 @@
             <xs:element name="Get_attachmentsResponse" type="tns:AttachmentsType" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
             <wsdl:message name="Get_attachmentsResponse" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
                 <wsdl:part name="body" element="this:Get_attachmentsResponse"/>
+            </wsdl:message>
+            <xs:element name="Store_attachmentsRequest" type="tns:StoreAttachmentRequestType" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
+            <wsdl:message name="Store_attachmentsRequest" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
+                <wsdl:part name="body" element="this:Store_attachmentsRequest"/>
+            </wsdl:message>
+            <xs:element name="Store_attachmentsResponse" type="tns:AcknowledgementType" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA"/>
+            <wsdl:message name="Store_attachmentsResponse" bpdm:source="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA">
+                <wsdl:part name="body" element="this:Store_attachmentsResponse"/>
             </wsdl:message>
         </bpdm:namespaceContributor>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_h4nZ8IMyEeWG07MHKwyOLA" bpdm:label="caller"/>
@@ -51,7 +51,7 @@
     </bpdm:dependencies>
     <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="process" bpdm:ID="_YD4wgIMyEeWG07MHKwyOLA">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_ePYCYIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_4HG1YIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_w-HZcIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_fy2AQIMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_h4nZ8IMyEeWG07MHKwyOLA"/>
+            <bpel:partnerLink name="callerAndProcessPlkVar" partnerLinkType="diag:callerAndProcess" myRole="process_for_caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForcaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/process/caller" bpdm:providedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_4HG1YIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_ePYCYIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_w-HZcIMyEeWG07MHKwyOLA, _YD4wgIMyEeWG07MHKwyOLA:_fy2AQIMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_h4nZ8IMyEeWG07MHKwyOLA"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForInsert_attachmentPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForInsert_attachmentPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="ns:insert_attachmentService" bpdm:invokedPort="insert_attachmentPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/insert_attachment" bpdm:invokedIsDefault="true" bpdm:clientTasks="_Iie6UINBEeWG07MHKwyOLA:_wT7M8IMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_YD4wgIMyEeWG07MHKwyOLAimplicitPartner"/>
             <bpel:partnerLink name="processimplicitPartnerAndProcessForSelect_attachmetnsPortPlkVar" partnerLinkType="diag:processimplicitPartnerAndProcessForSelect_attachmetnsPortPlk" initializePartnerRole="yes" partnerRole="processimplicitPartner_for_process" bpdm:invokedService="select_attachmetns:select_attachmetnsService" bpdm:invokedPort="select_attachmetnsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_attachmetns" bpdm:invokedIsDefault="true" bpdm:clientTasks="_YD4wgIMyEeWG07MHKwyOLA:_3Rxv4IMyEeWG07MHKwyOLA" bpdm:isManaged="true" bpdm:otherPoolId="_YD4wgIMyEeWG07MHKwyOLAimplicitPartner"/>
         </bpel:partnerLinks>

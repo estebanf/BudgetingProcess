@@ -90,9 +90,9 @@
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/department_review.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
@@ -407,6 +407,16 @@
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="department_review1CreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="department_review1:createTaskSingleActivityRequest" bpdm:ID="_nf31caKDEeWFS7bBQTvFJwOutgoing"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpdm:messagingtask eventType="end: message" operation="Recieve_department_requirements" partnerLink="departmentsAndDepartment_directorPlkVar" portType="Departments:ForDepartment_director" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_q9wRkKKDEeWFS7bBQTvFJw">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisRecieve_requirement_requestRequest1Msg.body/tns:Reference</bpel:from>
+                        <bpel:to>$departmentsRecieve_department_requirementsRequest1Msg.body/tns:Reference</bpel:to><mapper:mapperLink><mapper:vertice id="1943000722" targetPath="$departmentsRecieve_department_requirementsRequest1Msg.body/tns:Reference" targetedBy="972580280-arg0"></mapper:vertice><mapper:vertice id="972580280" sourcePath="$thisRecieve_requirement_requestRequest1Msg.body/tns:Reference"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$thisRecieve_requirement_requestRequest1Msg.body/tns:DepartmentId</bpel:from>
+                        <bpel:to>$departmentsRecieve_department_requirementsRequest1Msg.body/tns:DepartmentId</bpel:to><mapper:mapperLink><mapper:vertice id="958898908" targetPath="$departmentsRecieve_department_requirementsRequest1Msg.body/tns:DepartmentId" targetedBy="989980857-arg0"></mapper:vertice><mapper:vertice id="989980857" sourcePath="$thisRecieve_requirement_requestRequest1Msg.body/tns:DepartmentId"></mapper:vertice></mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="departmentsRecieve_department_requirementsRequest1Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Departments:Recieve_department_requirementsRequest" bpdm:ID="_wwfsQKKDEeWFS7bBQTvFJw"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="departmentsRecieve_department_requirementsResponse2Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Departments:Recieve_department_requirementsResponse" bpdm:ID="_xIxpYKKDEeWFS7bBQTvFJw"></bpdm:linkset>
             </bpdm:messagingtask>
