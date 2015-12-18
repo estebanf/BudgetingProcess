@@ -90,9 +90,9 @@
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/department_review.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
@@ -273,7 +273,7 @@
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="requirementsCreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="requirements:createTaskSingleActivityRequest" bpdm:ID="_QaR8dqAeEeW6r4g6sr4TOgOutgoing"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Get project requirements" bpdm:ID="_5kLUIKAtEeW6r4g6sr4TOg">
-                <bpdm:linkset bpdm:type="loop" bpdm:loopType="forEach" bpdm:backEdgeParticipantType="none" parallel="yes" counterName="Get_project_requirementsCounter">
+                <bpdm:linkset bpdm:type="loop" bpdm:loopType="forEach" bpdm:backEdgeParticipantType="none" parallel="yes" counterName="Get_project_requirementsCounter" bpdm:isBackEdgeContributor="no">
                     <bpel:condition bpdm:loopType="forEachStartCounter">1<mapper:mapperLink><mapper:vertice id="924550448" targetPath="$Start counter" targetedBy="185280274-arg0"></mapper:vertice><mapper:vertice id="185280274" dimension="79x24" location="527,39"><mapper:value>1</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                     <bpel:condition bpdm:loopType="forEachFinalCounter">count($requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput/Business:Projects)<mapper:mapperLink><mapper:vertice id="1516486518" targetPath="$Final counter" targetedBy="1381814805-arg1"></mapper:vertice><mapper:vertice id="1381814805" dimension="79x24" location="475,207"><mapper:value>count()</mapper:value></mapper:vertice><mapper:vertice id="1672705885" sourcePath="$requirementsCreateTaskSingleActivityResponse1Msg.root/requirements:taskOutput/Business:RequirementDefinisionOutput/Business:Projects" targetedBy="1381814805-arg0"></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
