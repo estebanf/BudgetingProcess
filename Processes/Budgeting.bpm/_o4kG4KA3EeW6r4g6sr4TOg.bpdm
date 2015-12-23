@@ -1,4 +1,4 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:AttachmentManagement-process="http://thisproject/Processes/Integrations/AttachmentManagement/process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:ManagerimplicitPartner="http://thisdiagram/ManagerimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/Manager" xmlns:Department_director="http://thisdiagram/Department_director" xmlns:project="http://www.intalio.com/Budgeting/Webcontents/project.html" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:attachments="http://www.intalio.com/Budgeting/Webcontents/project.html/attachments" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Manager">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:Variables="http://test.com/xvar/example" xmlns:AttachmentManagement-process="http://thisproject/Processes/Integrations/AttachmentManagement/process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:ManagerimplicitPartner="http://thisdiagram/ManagerimplicitPartner" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:this="http://thisdiagram/Manager" xmlns:Department_director="http://thisdiagram/Department_director" xmlns:project="http://www.intalio.com/Budgeting/Webcontents/project.html" xmlns:Business="http://budgeting.example.everteam.com/Types/Business" xmlns:attachments="http://www.intalio.com/Budgeting/Webcontents/project.html/attachments" xmlns:tns="http://budgeting.example.everteam.com/Types/Technical" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Manager">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://test.com/xvar/example" bpdm:prefix="Variables" bpdm:comment="contrib=&apos;project:///Metrics/Variables.xvar"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisproject/Processes/Integrations/AttachmentManagement/process" bpdm:prefix="AttachmentManagement-process" bpdm:comment="contrib=&apos;project:///Processes/Integrations/AttachmentManagement-process.wsdl"></bpdm:namespaceDefinition>
@@ -10,8 +10,8 @@
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Department_director" bpdm:prefix="Department_director" bpdm:comment="contrib=&apos;partner-pool:///_nNN-MKAdEeW6r4g6sr4TOg"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/Budgeting/Webcontents/project.html" bpdm:prefix="project" bpdm:comment="contrib=&apos;project:///Webcontents/project.html.wsdl"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Business" bpdm:prefix="Business" bpdm:comment="contrib=&apos;project:///Schemas/Business.xsd"></bpdm:namespaceDefinition>
-        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.intalio.com/Budgeting/Webcontents/project.html/attachments" bpdm:prefix="attachments" bpdm:comment="contrib=&apos;project:///Webcontents/project.html.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://budgeting.example.everteam.com/Types/Technical" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///Schemas/Technical.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
         <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
             <wsdl:portType name="ForDepartment_director">
@@ -72,6 +72,10 @@
                 </bpel:from>
             </bpel:variable>
         </bpel:variables>
+        <bpel:links>
+            <bpel:link name="_wLgHAKBNEeW6r4g6sr4TOg_to__4RwD4KXIEeW1o-GnJ_ijAQ"/>
+            <bpel:link name="_x_r24KBMEeW6r4g6sr4TOg_to__4RwD4KXIEeW1o-GnJ_ijAQ"/>
+        </bpel:links>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="Recieve_project_request" partnerLink="managerAndDepartment_directorPlkVar" portType="this:ForDepartment_director" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve project request" bpdm:ID="_KaMDcKA4EeW6r4g6sr4TOg">
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_project_requestRequest2Msg" bpdm:msgVarScopeId="_o4kG4KA3EeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_project_requestRequest" bpdm:ID="_KaRjAKA4EeW6r4g6sr4TOg"></bpdm:linkset>
@@ -193,9 +197,18 @@
                                 <bpel:from>true()</bpel:from>
                                 <bpel:to>$ExcerciseProject/Variables:included</bpel:to><mapper:mapperLink><mapper:vertice id="1139226474" targetPath="$ExcerciseProject/Variables:included" targetedBy="279429609-arg0"></mapper:vertice><mapper:vertice id="279429609" dimension="79x24" location="416,268"><mapper:value>true()</mapper:value></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
+                            <bpel:copy>
+                                <bpel:from>true()</bpel:from>
+                                <bpel:to>$ExcerciseProject/Variables:approved</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1297320993" targetPath="$ExcerciseProject/Variables:approved" targetedBy="1105549916-arg0"></mapper:vertice>
+  <mapper:vertice id="1105549916" dimension="79x24" location="381,423">
+    <mapper:value>true()</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                            </bpel:copy>
                         </bpdm:linkset>
                     </bpdm:messagingtask>
-                    <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_zLwzAKBNEeW6r4g6sr4TOg"></bpdm:messagingtask>
                 </bpel:sequence>
                 <bpel:sequence>
                     <bpdm:gateway bpdm:label="Has attachments" bpdm:ID="_eXs60KHlEeWujqVpfVkA2w" bpdm:gatewayType="data_xor" bpdm:isMerge="false">
@@ -248,7 +261,7 @@
                         <bpel:sequence></bpel:sequence>
                     </bpdm:gateway>
                     <bpdm:gateway bpdm:label="Exclusive_Data-Based_Gateway" bpdm:ID="_ig3voKHlEeWujqVpfVkA2w" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
-                    <bpdm:messagingtask eventType="end: message" operation="Recieve_project_requirement" partnerLink="managerAndDepartment_directorPlkVar" portType="Department_director:ForManager" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_x_r24KBMEeW6r4g6sr4TOg">
+                    <bpdm:messagingtask eventType="intermediate: message" operation="Recieve_project_requirement" partnerLink="managerAndDepartment_directorPlkVar" portType="Department_director:ForManager" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_Intermediate_Event" bpdm:ID="_x_r24KBMEeW6r4g6sr4TOg">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$thisRecieve_project_requestRequest2Msg.body</bpel:from>
@@ -260,6 +273,9 @@
                     </bpdm:messagingtask>
                 </bpel:sequence>
             </bpdm:gateway>
+            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve project result" bpdm:ID="_6d054KXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Notify manager" bpdm:ID="_AqpBcKXJEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_CMPXEKXJEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
         </bpel:sequence>
     </bpel:scope>
 </bpel:process>

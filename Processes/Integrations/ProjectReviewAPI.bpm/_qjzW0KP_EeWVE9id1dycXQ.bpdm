@@ -25,14 +25,6 @@
                 </wsdl:operation>
             </wsdl:portType>
             <bpel:binding name="CanonicBindingForcaller" type="this:Forcaller" bpdm:isSynchronized="true"/>
-            <xs:element name="update_projectRequest" type="Technical:UpdateProjectType" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ"/>
-            <wsdl:message name="update_projectRequest" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
-                <wsdl:part name="body" element="this:update_projectRequest"/>
-            </wsdl:message>
-            <xs:element name="update_projectResponse" type="Technical:AcknowledgementType" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ"/>
-            <wsdl:message name="update_projectResponse" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
-                <wsdl:part name="body" element="this:update_projectResponse"/>
-            </wsdl:message>
             <xs:element name="Get_projectsRequest" type="tns:ProjectDeparmentIdentifierType" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ"/>
             <wsdl:message name="Get_projectsRequest" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
                 <wsdl:part name="body" element="this:Get_projectsRequest"/>
@@ -41,16 +33,24 @@
             <wsdl:message name="Get_projectsResponse" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
                 <wsdl:part name="body" element="this:Get_projectsResponse"/>
             </wsdl:message>
+            <xs:element name="update_projectRequest" type="Technical:UpdateProjectType" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ"/>
+            <wsdl:message name="update_projectRequest" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
+                <wsdl:part name="body" element="this:update_projectRequest"/>
+            </wsdl:message>
+            <xs:element name="update_projectResponse" type="Technical:AcknowledgementType" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ"/>
+            <wsdl:message name="update_projectResponse" bpdm:source="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ">
+                <wsdl:part name="body" element="this:update_projectResponse"/>
+            </wsdl:message>
         </bpdm:namespaceContributor>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_xdxfUKP_EeWVE9id1dycXQ" bpdm:label="caller"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_qjzW0KP_EeWVE9id1dycXQimplicitPartner" bpdm:label="processimplicitPartner"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Technical.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.sql.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.xsd"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.sql.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_projects.sql/select_projects.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_project_attachments.sql/select_project_attachments.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
@@ -250,6 +250,14 @@
                                     <bpel:copy>
                                         <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:included</bpel:from>
                                         <bpel:to>$ExcerciseProject/Variables:included</bpel:to><mapper:mapperLink><mapper:vertice id="48530137" targetPath="$ExcerciseProject/Variables:included" targetedBy="1467940546-arg0"></mapper:vertice><mapper:vertice id="1467940546" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:included"></mapper:vertice></mapper:mapperLink>
+                                    </bpel:copy>
+                                    <bpel:copy>
+                                        <bpel:from>$thisUpdate_projectRequest2Msg.body/Technical:approved</bpel:from>
+                                        <bpel:to>$ExcerciseProject/Variables:approved</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="329501789" targetPath="$ExcerciseProject/Variables:approved" targetedBy="1487138545-arg0"></mapper:vertice>
+  <mapper:vertice id="1487138545" sourcePath="$thisUpdate_projectRequest2Msg.body/Technical:approved"></mapper:vertice>
+</mapper:mapperLink>
                                     </bpel:copy>
                                 </bpdm:linkset>
                             </bpdm:messagingtask>

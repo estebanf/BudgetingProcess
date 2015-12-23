@@ -33,15 +33,15 @@
         </bpel:variables>
         <bpel:flow>
             <bpel:sequence>
-                <bpdm:messagingtask operation="update_project" partnerLink="callerAndProcessPlkVar" portType="process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Update project" bpdm:ID="_rcIlwKTrEeWVE9id1dycXQ">
-                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processUpdate_projectRequest1Msg" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:update_projectRequest" bpdm:ID="_ssmvIKTrEeWVE9id1dycXQ"></bpdm:linkset>
-                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processUpdate_projectResponse2Msg" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:update_projectResponse" bpdm:ID="_zyCgwKTrEeWVE9id1dycXQ"></bpdm:linkset>
-                </bpdm:messagingtask>
-            </bpel:sequence>
-            <bpel:sequence>
                 <bpdm:messagingtask operation="Get_projects" partnerLink="callerAndProcessPlkVar" portType="process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Request Projects For Review" bpdm:ID="_y4g_AKP_EeWVE9id1dycXQ">
                     <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processEventStartMessageRequest1" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:Get_projectsRequest" bpdm:ID="_5f3GeaP_EeWVE9id1dycXQ"></bpdm:linkset>
                     <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processEventStartMessageResponse1" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:Get_projectsResponse" bpdm:ID="_XwTJoKQBEeWVE9id1dycXQ"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="update_project" partnerLink="callerAndProcessPlkVar" portType="process:Forcaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Update project" bpdm:ID="_rcIlwKTrEeWVE9id1dycXQ">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="processUpdate_projectRequest1Msg" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:update_projectRequest" bpdm:ID="_ssmvIKTrEeWVE9id1dycXQ"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="processUpdate_projectResponse2Msg" bpdm:msgVarScopeId="_xdxfUKP_EeWVE9id1dycXQ" bpdm:variableIsManaged="true" bpdm:messageType="process:update_projectResponse" bpdm:ID="_zyCgwKTrEeWVE9id1dycXQ"></bpdm:linkset>
                 </bpdm:messagingtask>
             </bpel:sequence>
         </bpel:flow>
