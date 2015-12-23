@@ -93,8 +93,8 @@
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/department_review.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
@@ -161,7 +161,7 @@
         </bpel:links>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="Recieve_requirement_request" partnerLink="department_directorAndChief_financial_officerPlkVar" portType="this:ForChief_financial_officer" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve requirement request" bpdm:ID="_qWPkoKAdEeW6r4g6sr4TOg">
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_requirement_requestRequest2Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requirement_requestRequest" bpdm:ID="_XfxVMKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisRecieve_requirement_requestRequest2Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requirement_requestRequest" bpdm:ID="_XfxVMKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$ode:pid</bpel:from>
@@ -172,7 +172,7 @@
                         <bpel:to>$thisRecieve_requirement_requestResponse1Msg.body/tns:Timestamp</bpel:to><mapper:mapperLink><mapper:vertice id="1496279476" targetPath="$thisRecieve_requirement_requestResponse1Msg.body/tns:Timestamp" targetedBy="238375675-arg0"></mapper:vertice><mapper:vertice id="238375675" dimension="109x24" location="311,94"><mapper:value>current-dateTime()</mapper:value></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_requirement_requestResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requirement_requestResponse" bpdm:ID="_aR_lMKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisRecieve_requirement_requestResponse1Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="this:Recieve_requirement_requestResponse" bpdm:ID="_aR_lMKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_AV89MKAeEeW6r4g6sr4TOg" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
                 <bpel:sequence>

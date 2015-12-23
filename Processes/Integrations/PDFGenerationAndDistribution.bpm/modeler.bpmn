@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="__YClQammEeWuKtJ8pPF9gQ" iD="__YClQKmmEeWuKtJ8pPF9gQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="__YVgMammEeWuKtJ8pPF9gQ" iD="__YVgMKmmEeWuKtJ8pPF9gQ" name="BudgetProcess">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ZDyKt6mnEeWuKtJ8pPF9gQ" iD="_ZDyKtqmnEeWuKtJ8pPF9gQ" name="thisStartRequest1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZDyKuKmnEeWuKtJ8pPF9gQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDyKuamnEeWuKtJ8pPF9gQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDyKwqmnEeWuKtJ8pPF9gQ" key="defaultDeclarationName" value="thisStartRequest1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZD77sKmnEeWuKtJ8pPF9gQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BudgetProcess}StartRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ZDyKw6mnEeWuKtJ8pPF9gQ" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZDyKxKmnEeWuKtJ8pPF9gQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDyKxamnEeWuKtJ8pPF9gQ" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZKYM6mpEeWRE_dEqBu0KA" iD="_jZKYMqmpEeWRE_dEqBu0KA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZKYNKmpEeWRE_dEqBu0KA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZKYNampEeWRE_dEqBu0KA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZUJOKmpEeWRE_dEqBu0KA" key="defaultDeclarationName" value="thisStartResponse1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTIampEeWRE_dEqBu0KA" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BudgetProcess}StartResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_jZUJOampEeWRE_dEqBu0KA" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZUJOqmpEeWRE_dEqBu0KA" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTIKmpEeWRE_dEqBu0KA" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="__YVgM6mmEeWuKtJ8pPF9gQ" iD="__YVgMqmmEeWuKtJ8pPF9gQ" associations="_ZDyKw6mnEeWuKtJ8pPF9gQ" outgoingEdges="_YG6A0ampEeWRE_dEqBu0KA" name="Start" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_ZDfPwamnEeWuKtJ8pPF9gQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_iPCZUamnEeWuKtJ8pPF9gQ" iD="_iPCZUKmnEeWuKtJ8pPF9gQ" outgoingEdges="_gdQnwampEeWRE_dEqBu0KA" incomingEdges="_ZJXjYampEeWRE_dEqBu0KA" name="Generate Budget PDF" activityType="PDFTask">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iVJoYKmnEeWuKtJ8pPF9gQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iVJoYamnEeWuKtJ8pPF9gQ" key="douri" value="project:///IntalioObjects/_iPCZUKmnEeWuKtJ8pPF9gQ.wsdl?invokerequestresponsebound={http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_iPCZUKmnEeWuKtJ8pPF9gQ}JavaInternalWS/JavaInternalWSSOAP11port_http/com.intalio.bpms.pdfgen.PDFGenerator.generatePDF"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iVJoZKmnEeWuKtJ8pPF9gQ" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iVTZYKmnEeWuKtJ8pPF9gQ" key="isBpelDeclaration" value="true"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iVJoYqmnEeWuKtJ8pPF9gQ" source="pdfActivitySource">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iVJoY6mnEeWuKtJ8pPF9gQ" key="pdfActivityCreatorKey" value="EverTeam Team"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_myzfcKmnEeWuKtJ8pPF9gQ" key="pdfActivityAuthorKey" value="Everteam.ibpms"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mFRZIKmpEeWRE_dEqBu0KA" key="pdfActivityVariableNamesKey" value="projects"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_59F4IKmpEeWRE_dEqBu0KA" key="pdfActivityTemplateFileKey" value="../../Templates/budget_template.vm"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7esNwKmpEeWRE_dEqBu0KA" key="pdfActivitySubjectKey" value="Approved budget"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9VAPIKmpEeWRE_dEqBu0KA" key="pdfActivityTitleKey" value="Projects included in budget"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_WfDSRKmpEeWRE_dEqBu0KA" iD="_We5hNampEeWRE_dEqBu0KA" outgoingEdges="_ZJXjYampEeWRE_dEqBu0KA" incomingEdges="_YG6A0ampEeWRE_dEqBu0KA" name="Select approved projects" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WfDSRampEeWRE_dEqBu0KA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WfDSRqmpEeWRE_dEqBu0KA" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WfDSR6mpEeWRE_dEqBu0KA" key="douri" value="project:///Connectors/Database/select_approved_projects.sql/select_approved_projects.sql.wsdl?invokerequestresponsebound={urn:intalio.com:connectors:database:budgeting:select_approved_projectsservice}select_approved_projectsService/select_approved_projectsPort/select_approved_projects"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WfDSSKmpEeWRE_dEqBu0KA" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WfDSSampEeWRE_dEqBu0KA" key="projectRelativePath" value="Connectors/Database/select_approved_projects.sql/select_approved_projects.sql"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_gdG2wampEeWRE_dEqBu0KA" iD="_gdG2wKmpEeWRE_dEqBu0KA" associations="_jZUJOampEeWRE_dEqBu0KA" incomingEdges="_gdQnwampEeWRE_dEqBu0KA" name="Reply" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_jZKYMampEeWRE_dEqBu0KA"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_YG6A0ampEeWRE_dEqBu0KA" iD="_YG6A0KmpEeWRE_dEqBu0KA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZJXjYampEeWRE_dEqBu0KA" iD="_ZJXjYKmpEeWRE_dEqBu0KA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_gdQnwampEeWRE_dEqBu0KA" iD="_gdQnwKmpEeWRE_dEqBu0KA"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_QpHEcamnEeWuKtJ8pPF9gQ" iD="_QpHEcKmnEeWuKtJ8pPF9gQ" name="Caller">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RNnfsKmnEeWuKtJ8pPF9gQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RNnfsamnEeWuKtJ8pPF9gQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ZDoZsamnEeWuKtJ8pPF9gQ" iD="_ZDoZsKmnEeWuKtJ8pPF9gQ" name="budgetProcessStartRequest1Msg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZDoZsqmnEeWuKtJ8pPF9gQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDoZs6mnEeWuKtJ8pPF9gQ" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDoZvKmnEeWuKtJ8pPF9gQ" key="defaultDeclarationName" value="budgetProcessStartRequest1Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDyKsKmnEeWuKtJ8pPF9gQ" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BudgetProcess}StartRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ZDoZvamnEeWuKtJ8pPF9gQ" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZDoZvqmnEeWuKtJ8pPF9gQ" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZDoZv6mnEeWuKtJ8pPF9gQ" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZdTKKmpEeWRE_dEqBu0KA" iD="_jZdTJ6mpEeWRE_dEqBu0KA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZdTKampEeWRE_dEqBu0KA" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTKqmpEeWRE_dEqBu0KA" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTM6mpEeWRE_dEqBu0KA" key="defaultDeclarationName" value="budgetProcessStartResponse2Msg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZnEIKmpEeWRE_dEqBu0KA" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/BudgetProcess}StartResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_jZdTNKmpEeWRE_dEqBu0KA" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZdTNampEeWRE_dEqBu0KA" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTNqmpEeWRE_dEqBu0KA" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_W4KnsamnEeWuKtJ8pPF9gQ" iD="_W4KnsKmnEeWuKtJ8pPF9gQ" associations="_ZDoZvamnEeWuKtJ8pPF9gQ _jZdTNKmpEeWRE_dEqBu0KA" name="Request Budget Distribution" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ZDfPwamnEeWuKtJ8pPF9gQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_jZKYMampEeWRE_dEqBu0KA"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_ZDfPwamnEeWuKtJ8pPF9gQ" iD="_ZDfPwKmnEeWuKtJ8pPF9gQ" source="_W4KnsamnEeWuKtJ8pPF9gQ" target="__YVgM6mmEeWuKtJ8pPF9gQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_jZKYMampEeWRE_dEqBu0KA" iD="_jZKYMKmpEeWRE_dEqBu0KA" source="_gdG2wampEeWRE_dEqBu0KA" target="_W4KnsamnEeWuKtJ8pPF9gQ"/>
+</bpmn:BpmnDiagram>

@@ -1,0 +1,130 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:ns="urn:intalio.com:connectors:database:budgeting:select_approved_projectsservice" xmlns:this="http://thisdiagram/BudgetProcess" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BudgetProcessimplicitPartner="http://thisdiagram/BudgetProcessimplicitPartner" xmlns:diag="http://thisdiagram" xmlns:Caller="http://thisdiagram/Caller" xmlns:ns0="http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_iPCZUKmnEeWuKtJ8pPF9gQ" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/BudgetProcess">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="urn:intalio.com:connectors:database:budgeting:select_approved_projectsservice" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///Connectors/Database/select_approved_projects.sql/select_approved_projects.sql.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BudgetProcess" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BudgetProcessimplicitPartner" bpdm:prefix="BudgetProcessimplicitPartner" bpdm:comment="contrib=&apos;partner-pool:///__YVgMKmmEeWuKtJ8pPF9gQimplicitPartner"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Caller" bpdm:prefix="Caller" bpdm:comment="contrib=&apos;partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/tools/webservices/javainternalservices/pdf/_iPCZUKmnEeWuKtJ8pPF9gQ" bpdm:prefix="ns0" bpdm:comment="contrib=&apos;project:///IntalioObjects/_iPCZUKmnEeWuKtJ8pPF9gQ.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForCaller">
+                <wsdl:operation name="Start" bpdm:source="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ">
+                    <wsdl:input message="this:StartRequest" name="Start"/>
+                    <wsdl:output message="this:StartResponse" name="StartResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <bpel:binding name="CanonicBindingForCaller" type="this:ForCaller" bpdm:isSynchronized="true"/>
+            <xs:element name="StartRequest" type="xs:string" bpdm:source="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ"/>
+            <wsdl:message name="StartRequest" bpdm:source="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ">
+                <wsdl:part name="body" element="this:StartRequest"/>
+            </wsdl:message>
+            <xs:element name="StartResponse" type="xs:string" bpdm:source="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ"/>
+            <wsdl:message name="StartResponse" bpdm:source="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ">
+                <wsdl:part name="body" element="this:StartResponse"/>
+            </wsdl:message>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_QpHEcKmnEeWuKtJ8pPF9gQ" bpdm:label="Caller"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///__YVgMKmmEeWuKtJ8pPF9gQimplicitPartner" bpdm:label="BudgetProcessimplicitPartner"/>
+        <bpdm:namespaceContributor bpdm:url="project:///IntalioObjects/_iPCZUKmnEeWuKtJ8pPF9gQ.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_approved_projects.sql/select_approved_projects.sql.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Connectors/Database/select_approved_projects.sql/select_approved_projects.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="BudgetProcess" bpdm:ID="__YVgMKmmEeWuKtJ8pPF9gQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="budgetProcessAndCallerPlkVar" partnerLinkType="diag:BudgetProcessAndCaller" myRole="BudgetProcess_for_Caller" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForCaller" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BudgetProcess/Caller" bpdm:providedIsDefault="true" bpdm:clientTasks="__YVgMKmmEeWuKtJ8pPF9gQ:_gdG2wKmpEeWRE_dEqBu0KA, __YVgMKmmEeWuKtJ8pPF9gQ:__YVgMqmmEeWuKtJ8pPF9gQ" bpdm:isManaged="true" bpdm:otherPoolId="_QpHEcKmnEeWuKtJ8pPF9gQ"/>
+            <bpel:partnerLink name="budgetProcessimplicitPartnerAndBudgetProcessForJavaInternalWSSOAP11port_httpPlkVar" partnerLinkType="diag:BudgetProcessimplicitPartnerAndBudgetProcessForJavaInternalWSSOAP11port_httpPlk" initializePartnerRole="yes" partnerRole="BudgetProcessimplicitPartner_for_BudgetProcess" bpdm:invokedService="ns0:JavaInternalWS" bpdm:invokedPort="JavaInternalWSSOAP11port_http" bpdm:invokedSOAPAddress="http://localhost:8080/intalio/ode/processes/JavaInternalWS/_iPCZUKmnEeWuKtJ8pPF9gQ" bpdm:invokedIsDefault="true" bpdm:clientTasks="__YVgMKmmEeWuKtJ8pPF9gQ:_iPCZUKmnEeWuKtJ8pPF9gQ" bpdm:isManaged="true" bpdm:otherPoolId="__YVgMKmmEeWuKtJ8pPF9gQimplicitPartner"/>
+            <bpel:partnerLink name="budgetProcessimplicitPartnerAndBudgetProcessForSelect_approved_projectsPortPlkVar" partnerLinkType="diag:BudgetProcessimplicitPartnerAndBudgetProcessForSelect_approved_projectsPortPlk" initializePartnerRole="yes" partnerRole="BudgetProcessimplicitPartner_for_BudgetProcess" bpdm:invokedService="ns:select_approved_projectsService" bpdm:invokedPort="select_approved_projectsPort" bpdm:invokedSOAPAddress="http://bpms.local:8080/intalio/ode/processes/Budgeting/Connectors/Database/select_approved_projects" bpdm:invokedIsDefault="true" bpdm:clientTasks="__YVgMKmmEeWuKtJ8pPF9gQ:_We5hNampEeWRE_dEqBu0KA" bpdm:isManaged="true" bpdm:otherPoolId="__YVgMKmmEeWuKtJ8pPF9gQimplicitPartner"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisStartRequest1Msg" messageType="this:StartRequest" bpdm:id="_ZDyKtqmnEeWuKtJ8pPF9gQ" bpdm:messageIds="inc:_ZDfPwKmnEeWuKtJ8pPF9gQ"/>
+            <bpel:variable name="PDFTaskResponse1Msg" messageType="ns0:sendResponse" binding="ns0:JavaInternalWSSOAP11Binding" operation="com.intalio.bpms.pdfgen.PDFGenerator.generatePDF" opMsgType="1" bpdm:messageIds="inc:_iPCZUKmnEeWuKtJ8pPF9gQIncoming"/>
+            <bpel:variable name="PDFTaskRequest1Msg" messageType="ns0:sendRequest" binding="ns0:JavaInternalWSSOAP11Binding" operation="com.intalio.bpms.pdfgen.PDFGenerator.generatePDF" opMsgType="0" bpdm:messageIds=" out:_iPCZUKmnEeWuKtJ8pPF9gQOutgoing">
+                <bpel:from bpdm:toPart="inputParams">
+                    <bpel:literal bpdm:linkedMessageType="ns0:sendRequest" bpdm:linkedPart="inputParams" bpdm:binding="ns0:JavaInternalWSSOAP11Binding" bpdm:opMsgType="0" bpdm:operation="com.intalio.bpms.pdfgen.PDFGenerator.generatePDF"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="nsSelect_approved_projectsResponse1Msg" messageType="ns:select_approved_projectsOutput" binding="ns:select_approved_projectsPortSoapBinding" operation="select_approved_projects" opMsgType="1" bpdm:messageIds="inc:_We5hNampEeWRE_dEqBu0KAIncoming"/>
+            <bpel:variable name="nsSelect_approved_projectsRequest1Msg" messageType="ns:select_approved_projectsInput" binding="ns:select_approved_projectsPortSoapBinding" operation="select_approved_projects" opMsgType="0" bpdm:messageIds=" out:_We5hNampEeWRE_dEqBu0KAOutgoing">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="ns:select_approved_projectsInput" bpdm:linkedPart="parameters" bpdm:binding="ns:select_approved_projectsPortSoapBinding" bpdm:opMsgType="0" bpdm:operation="select_approved_projects"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="thisStartResponse1Msg" messageType="this:StartResponse" bpdm:id="_jZKYMqmpEeWRE_dEqBu0KA" bpdm:messageIds=" out:_jZKYMKmpEeWRE_dEqBu0KA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:StartResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Start" partnerLink="budgetProcessAndCallerPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Start" bpdm:ID="__YVgMqmmEeWuKtJ8pPF9gQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisStartRequest1Msg" bpdm:msgVarScopeId="__YVgMKmmEeWuKtJ8pPF9gQ" bpdm:variableIsManaged="true" bpdm:messageType="this:StartRequest" bpdm:ID="_ZDfPwKmnEeWuKtJ8pPF9gQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="select_approved_projects" partnerLink="budgetProcessimplicitPartnerAndBudgetProcessForSelect_approved_projectsPortPlkVar" portType="ns:select_approved_projectsPort" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Select approved projects" bpdm:ID="_We5hNampEeWRE_dEqBu0KA">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>xs:int($thisStartRequest1Msg.body)</bpel:from>
+                        <bpel:to>$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="134696128" targetPath="$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID" targetedBy="1231787004-arg1"></mapper:vertice>
+  <mapper:vertice id="1231787004" dimension="79x24" location="353,69">
+    <mapper:value>xs:int()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1322070211" sourcePath="$thisStartRequest1Msg.body" targetedBy="1231787004-arg0"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsSelect_approved_projectsRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:select_approved_projectsInput" bpdm:binding="ns:select_approved_projectsPortSoapBinding" bpdm:ID="_We5hNampEeWRE_dEqBu0KAOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="nsSelect_approved_projectsResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:select_approved_projectsOutput" bpdm:binding="ns:select_approved_projectsPortSoapBinding" bpdm:ID="_We5hNampEeWRE_dEqBu0KAIncoming"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="nsselect_approved_projectsFault" msgFaultTypeQname="ns:select_approved_projectsFault"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="com.intalio.bpms.pdfgen.PDFGenerator.generatePDF" partnerLink="budgetProcessimplicitPartnerAndBudgetProcessForJavaInternalWSSOAP11port_httpPlkVar" portType="ns0:JavaInternalWSPortType" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Generate Budget PDF" bpdm:ID="_iPCZUKmnEeWuKtJ8pPF9gQ">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>concat("budget_", $thisStartRequest1Msg.body, ".pdf")</bpel:from>
+                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="2121274253" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName" targetedBy="756517371-arg2"></mapper:vertice>
+  <mapper:vertice id="756517371" dimension="79x24" location="492,164">
+    <mapper:value>concat()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="484989656" dimension="79x24" location="358,122" targetedBy="756517371-arg0">
+    <mapper:value>"budget_"</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="1712960393" sourcePath="$thisStartRequest1Msg.body" targetedBy="756517371-arg1"></mapper:vertice>
+  <mapper:vertice id="275547975" dimension="79x24" location="348,215" targetedBy="756517371-arg3">
+    <mapper:value>".pdf"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$nsSelect_approved_projectsResponse1Msg.parameters/ns:rows</bpel:from>
+                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1864832292" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects" targetedBy="610568970-arg0"></mapper:vertice>
+  <mapper:vertice id="610568970" sourcePath="$nsSelect_approved_projectsResponse1Msg.parameters/ns:rows"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="PDFTaskRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendRequest" bpdm:binding="ns0:JavaInternalWSSOAP11Binding" bpdm:ID="_iPCZUKmnEeWuKtJ8pPF9gQOutgoing"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="PDFTaskResponse1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendResponse" bpdm:binding="ns0:JavaInternalWSSOAP11Binding" bpdm:ID="_iPCZUKmnEeWuKtJ8pPF9gQIncoming"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="fault" msgFaultTypeQname="ns0:sendFault"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="Start" partnerLink="budgetProcessAndCallerPlkVar" portType="this:ForCaller" isMyRole="true" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Reply" bpdm:ID="_gdG2wKmpEeWRE_dEqBu0KA">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$PDFTaskResponse1Msg.pdfAccessUrl</bpel:from>
+                        <bpel:to>$thisStartResponse1Msg.body</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1554022517" targetPath="$thisStartResponse1Msg.body" targetedBy="1091533054-arg0"></mapper:vertice>
+  <mapper:vertice id="1091533054" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisStartResponse1Msg" bpdm:msgVarScopeId="__YVgMKmmEeWuKtJ8pPF9gQ" bpdm:variableIsManaged="true" bpdm:messageType="this:StartResponse" bpdm:ID="_jZKYMKmpEeWRE_dEqBu0KA"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

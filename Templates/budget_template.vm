@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <br/>
+      <div class="jumbotron">
+        <h1>Approved budget items</h1>
+        <div class="well">
+        The following are the projects submitted by each deparment that are considered for the next budget
+        </div>
+      </div>
+          #foreach($row in $projects)
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">$row.DEPARTMENT_NAME : $row.NAME</h3>
+            </div>
+            <div class="panel-body">
+              <h4>Description</h4>
+              <p class="text-info">$row.DESCRIPTION</p>
+              <h4>Justification</h4>
+              <p class="text-warning">$row.JUSTIFICATION</p>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Approved budget: </strong>$ $row.BUDGET</li>
+              <li class="list-group-item"><strong>Start execution: </strong>$row.STARTEXECUTION</li>
+              <li class="list-group-item"><strong>End execution: </strong>$row.ENDEXECUTION</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      #end
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:BudgetProcess="http://thisdiagram/BudgetProcess" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:this="http://thisdiagram/Caller" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Caller">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/BudgetProcess" bpdm:prefix="BudgetProcess" bpdm:comment="contrib=&apos;partner-pool:///__YVgMKmmEeWuKtJ8pPF9gQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///__YVgMKmmEeWuKtJ8pPF9gQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Caller" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///__YVgMKmmEeWuKtJ8pPF9gQ" bpdm:label="BudgetProcess"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Caller" bpdm:ID="_QpHEcKmnEeWuKtJ8pPF9gQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="budgetProcessAndCallerPlkVar" partnerLinkType="diag:BudgetProcessAndCaller" initializePartnerRole="yes" partnerRole="BudgetProcess_for_Caller" bpdm:invokedService="BudgetProcess:CanonicServiceForCaller" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/BudgetProcess/Caller" bpdm:invokedIsDefault="true" bpdm:clientTasks="_QpHEcKmnEeWuKtJ8pPF9gQ:_W4KnsKmnEeWuKtJ8pPF9gQ" bpdm:isManaged="true" bpdm:otherPoolId="__YVgMKmmEeWuKtJ8pPF9gQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="budgetProcessStartRequest1Msg" messageType="BudgetProcess:StartRequest" bpdm:id="_ZDoZsKmnEeWuKtJ8pPF9gQ" bpdm:messageIds=" out:_ZDfPwKmnEeWuKtJ8pPF9gQ">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="BudgetProcess:StartRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="budgetProcessStartResponse2Msg" messageType="BudgetProcess:StartResponse" bpdm:id="_jZdTJ6mpEeWRE_dEqBu0KA" bpdm:messageIds="inc:_jZKYMKmpEeWRE_dEqBu0KA"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Start" partnerLink="budgetProcessAndCallerPlkVar" portType="BudgetProcess:ForCaller" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Request Budget Distribution" bpdm:ID="_W4KnsKmnEeWuKtJ8pPF9gQ">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="budgetProcessStartRequest1Msg" bpdm:msgVarScopeId="_QpHEcKmnEeWuKtJ8pPF9gQ" bpdm:variableIsManaged="true" bpdm:messageType="BudgetProcess:StartRequest" bpdm:ID="_ZDfPwKmnEeWuKtJ8pPF9gQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="budgetProcessStartResponse2Msg" bpdm:msgVarScopeId="_QpHEcKmnEeWuKtJ8pPF9gQ" bpdm:variableIsManaged="true" bpdm:messageType="BudgetProcess:StartResponse" bpdm:ID="_jZKYMKmpEeWRE_dEqBu0KA"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
