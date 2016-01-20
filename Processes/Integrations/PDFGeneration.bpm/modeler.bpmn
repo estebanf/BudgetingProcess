@@ -13,7 +13,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZKYM6mpEeWRE_dEqBu0KA" iD="_jZKYMqmpEeWRE_dEqBu0KA">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZKYM6mpEeWRE_dEqBu0KA" iD="_jZKYMqmpEeWRE_dEqBu0KA" name="thisStartResponse1Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZKYNKmpEeWRE_dEqBu0KA" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZKYNampEeWRE_dEqBu0KA" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZUJOKmpEeWRE_dEqBu0KA" key="defaultDeclarationName" value="thisStartResponse1Msg"/>
@@ -75,7 +75,7 @@
         </eAnnotations>
       </associations>
     </artifacts>
-    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZdTKKmpEeWRE_dEqBu0KA" iD="_jZdTJ6mpEeWRE_dEqBu0KA">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_jZdTKKmpEeWRE_dEqBu0KA" iD="_jZdTJ6mpEeWRE_dEqBu0KA" name="budgetProcessStartResponse2Msg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jZdTKampEeWRE_dEqBu0KA" source="attachedDataobject">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTKqmpEeWRE_dEqBu0KA" key="isBpelDeclaration" value="true"/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jZdTM6mpEeWRE_dEqBu0KA" key="defaultDeclarationName" value="budgetProcessStartResponse2Msg"/>
@@ -88,6 +88,10 @@
       </associations>
     </artifacts>
     <vertices xmi:type="bpmn:Activity" xmi:id="_W4KnsamnEeWuKtJ8pPF9gQ" iD="_W4KnsKmnEeWuKtJ8pPF9gQ" associations="_ZDoZvamnEeWuKtJ8pPF9gQ _jZdTNKmpEeWRE_dEqBu0KA" name="Request Budget Distribution" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DlMgQL7yEeWTlaFRiyNHgg" source="process_template">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DlMgQb7yEeWTlaFRiyNHgg" key="_DJeNkL7yEeWTlaFRiyNHgg" value="RequestBudgetFile"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WRJpEL7yEeWJXYruIRp_ig" key="_V27yQL7yEeWJXYruIRp_ig" value="RequestBudgetFile"/>
+      </eAnnotations>
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ZDfPwamnEeWuKtJ8pPF9gQ"/>
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_jZKYMampEeWRE_dEqBu0KA"/>
     </vertices>

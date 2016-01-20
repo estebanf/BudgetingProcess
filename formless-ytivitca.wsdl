@@ -112,6 +112,7 @@
                         <xsd:element name="taskId" type="xsd:string" />
                         <xsd:element name="participantToken" type="xsd:string" />
 						<xsd:element name="globalAttachments" type="attachments:globalAttachmentsType"/>
+						<xsd:element name="attachments" type="attachments:attachments"/>   
                         <xsd:element name="user" type="xsd:string" />
                         <xsd:element name="formUrl" type="xsd:string" />
                         <xsd:element name="taskOutput">

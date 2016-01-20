@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<bpt:template xmlns:bpt="http://www.intalio/designer/business-process-data-modeling/template" ID="_V27yQL7yEeWJXYruIRp_ig" displayName="RequestBudgetFile" ownerPoolId="_QpHEcKmnEeWuKtJ8pPF9gQ" ownerPoolNcName="Caller" ownerPoolIsExecutable="false" version="6000089">
+    <bpt:partnerPool ID="__YVgMKmmEeWuKtJ8pPF9gQ" ncName="BudgetProcess" isExecutable="true"/>
+    <bpt:container displayName="sequence" containerType="sequence">
+        <bpt:activity ID="_W4KnsKmnEeWuKtJ8pPF9gQ" displayName="Request Budget Distribution" activityType="Task" messaging="invokerequestresponsebound">
+            <bpt:generatedOperation providingPoolId="__YVgMKmmEeWuKtJ8pPF9gQ" generatedPartnerLinkTypeLocalName="BudgetProcessAndCaller" generatedService="CanonicServiceForCaller" generatedOperation="Start" generatedPort="canonicPort">
+                <bpt:input name="Start" generatedMessageTypeLocalName="StartRequest">
+                    <bpt:part name="body" generatedElementLocalName="StartRequest"/>
+                </bpt:input>
+                <bpt:output name="StartResponse" generatedMessageTypeLocalName="StartResponse">
+                    <bpt:part name="body" generatedElementLocalName="StartResponse"/>
+                </bpt:output>
+            </bpt:generatedOperation>
+        </bpt:activity>
+    </bpt:container>
+</bpt:template>

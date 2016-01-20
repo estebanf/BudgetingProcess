@@ -155,7 +155,7 @@
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_VNaGeKW_EeW1o-GnJ_ijAQ" iD="_VNaGd6W_EeW1o-GnJ_ijAQ"/>
       <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZnMKIaW_EeW1o-GnJ_ijAQ" iD="_ZnMKIKW_EeW1o-GnJ_ijAQ"/>
     </vertices>
-    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_Z1Rm4afXEeWSBZyrG3gepw" iD="_iLt9sKXEEeW1o-GnJ_ijAQ" outgoingEdges="_bEA-YaXIEeW1o-GnJ_ijAQ" incomingEdges="_iL3HqKXEEeW1o-GnJ_ijAQ" name="Review and approve budget" looping="false">
+    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_Z1Rm4afXEeWSBZyrG3gepw" iD="_iLt9sKXEEeW1o-GnJ_ijAQ" outgoingEdges="_ZK-V4b7yEeWJXYruIRp_ig" incomingEdges="_iL3HqKXEEeW1o-GnJ_ijAQ" name="Review and approve budget" looping="false">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z14D0afXEeWSBZyrG3gepw" source="genericFile">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Z14D0qfXEeWSBZyrG3gepw" key="projectRelativePath" value="Webcontents/budget_review.html"/>
       </eAnnotations>
@@ -182,24 +182,42 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4JxVoKmDEeWNlMC6tD901Q" key="description" value=""/>
       </eAnnotations>
     </vertices>
-    <vertices xmi:type="bpmn:SubProcess" xmi:id="_zWQKEajEEeWSc6sGizUbzA" iD="_zWQKEKjEEeWSc6sGizUbzA" incomingEdges="_bEA-YaXIEeW1o-GnJ_ijAQ" name="Budget distribution">
-      <vertices xmi:type="bpmn:Activity" xmi:id="_nuH5gaXIEeW1o-GnJ_ijAQ" iD="_nuH5gKXIEeW1o-GnJ_ijAQ" outgoingEdges="_ofwKwaXIEeW1o-GnJ_ijAQ _pmrWmqXIEeW1o-GnJ_ijAQ" incomingEdges="_nuH5iqXIEeW1o-GnJ_ijAQ" activityType="GatewayParallel"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_rqaI4aXIEeW1o-GnJ_ijAQ" iD="_rqaI4KXIEeW1o-GnJ_ijAQ" incomingEdges="_rqaI6qXIEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_3j8fgaXEEeW1o-GnJ_ijAQ" iD="_3j8fgKXEEeW1o-GnJ_ijAQ" incomingEdges="_3kFpcaXEEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_wXff4aXEEeW1o-GnJ_ijAQ" iD="_wXff4KXEEeW1o-GnJ_ijAQ" outgoingEdges="_3kFpcaXEEeW1o-GnJ_ijAQ" incomingEdges="_ofwKwaXIEeW1o-GnJ_ijAQ" name="Distribute budget to directors" activityType="Task"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_pmrWkaXIEeW1o-GnJ_ijAQ" iD="_pmrWkKXIEeW1o-GnJ_ijAQ" outgoingEdges="_rqaI6qXIEeW1o-GnJ_ijAQ" incomingEdges="_pmrWmqXIEeW1o-GnJ_ijAQ" name="Send PDF to CFO" activityType="Task"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_t5P70aXEEeW1o-GnJ_ijAQ" iD="_t5P70KXEEeW1o-GnJ_ijAQ" outgoingEdges="_nuH5iqXIEeW1o-GnJ_ijAQ" name="generate budget pdf" activityType="Task"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_rqaI6qXIEeW1o-GnJ_ijAQ" iD="_rqaI6aXIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pmrWmqXIEeW1o-GnJ_ijAQ" iD="_pmrWmaXIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_3kFpcaXEEeW1o-GnJ_ijAQ" iD="_3kFpcKXEEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ofwKwaXIEeW1o-GnJ_ijAQ" iD="_ofwKwKXIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nuH5iqXIEeW1o-GnJ_ijAQ" iD="_nuH5iaXIEeW1o-GnJ_ijAQ"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_YC2QP77yEeWJXYruIRp_ig" iD="_YCtGRb7yEeWJXYruIRp_ig" outgoingEdges="_mxf1-L7yEeWJXYruIRp_ig" incomingEdges="_ZK-V4b7yEeWJXYruIRp_ig" name="Request Budget Distribution" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YC2QQL7yEeWJXYruIRp_ig" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YC2QQb7yEeWJXYruIRp_ig" key="blackbox" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YC2QQr7yEeWJXYruIRp_ig" key="douri2" value="project:///Processes/Integrations/PDFGeneration.bpm/_V27yQL7yEeWJXYruIRp_ig.bptl?bptnode={http://www.intalio/designer/business-process-data-modeling/template}Request Budget Distribution"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YC2QQ77yEeWJXYruIRp_ig" key="douri" value="project:///Processes/Integrations/PDFGeneration-BudgetProcess.wsdl?invokerequestresponsebound={http://thisproject/Processes/Integrations/PDFGeneration/BudgetProcess}CanonicServiceForCaller/canonicPort/Start"/>
+      </eAnnotations>
     </vertices>
+    <vertices xmi:type="bpmn:ActivityUser" xmi:id="_mwdUIb7yEeWJXYruIRp_ig" iD="_mwdUIL7yEeWJXYruIRp_ig" outgoingEdges="_qbvTEb7yEeWJXYruIRp_ig" incomingEdges="_mxf1-L7yEeWJXYruIRp_ig" name="Send budget file to CFO" activityType="UserTask">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mwdUIr7yEeWJXYruIRp_ig" source="formlessIdentification">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mwdUI77yEeWJXYruIRp_ig" key="formlessname" value="Human-create-and-complete"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7CL7yEeWJXYruIRp_ig" key="isFormlesstask" value="true"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mxM7AL7yEeWJXYruIRp_ig" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7Ab7yEeWJXYruIRp_ig" key="partnerLinkTypeKey" value="WFmagic_mwdUIL7yEeWJXYruIRp_ig"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7Ar7yEeWJXYruIRp_ig" key="douri" value="project:///formless-ytivitca.wsdl?wsdloperation={http://www.intalio.com/formless}Process/createCompleteTaskSingleActivity"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7Bb7yEeWJXYruIRp_ig" key="blackbox" value="true"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mxM7A77yEeWJXYruIRp_ig" source="humanTask">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7BL7yEeWJXYruIRp_ig" key="taskType" value="create-and-complete"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mxM7Br7yEeWJXYruIRp_ig" source="formDeployURL">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mxM7B77yEeWJXYruIRp_ig" key="formURL" value="formless:25849534-35f6-4b16-bc7e-3d0c81c95628"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_u_NeQL7yEeWJXYruIRp_ig" source="participant">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u_NeQb7yEeWJXYruIRp_ig" key="users" value="intalio\admin"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u_XPQL7yEeWJXYruIRp_ig" key="roles" value=""/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_qbc_Mb7yEeWJXYruIRp_ig" iD="_qbc_ML7yEeWJXYruIRp_ig" incomingEdges="_qbvTEb7yEeWJXYruIRp_ig" activityType="EventEndEmpty"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_FB9XIaAPEeW0J6TOrDqjOw" iD="_FB9XIKAPEeW0J6TOrDqjOw"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JlPwgaW_EeW1o-GnJ_ijAQ" iD="_JlPwgKW_EeW1o-GnJ_ijAQ"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_SKzRGqW_EeW1o-GnJ_ijAQ" iD="_SKzRGaW_EeW1o-GnJ_ijAQ"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_iL3HqKXEEeW1o-GnJ_ijAQ" iD="_iL3Hp6XEEeW1o-GnJ_ijAQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_bEA-YaXIEeW1o-GnJ_ijAQ" iD="_bEA-YKXIEeW1o-GnJ_ijAQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZK-V4b7yEeWJXYruIRp_ig" iD="_ZK-V4L7yEeWJXYruIRp_ig"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_mxf1-L7yEeWJXYruIRp_ig" iD="_mxf1977yEeWJXYruIRp_ig"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_qbvTEb7yEeWJXYruIRp_ig" iD="_qbvTEL7yEeWJXYruIRp_ig"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_nNN-MaAdEeW6r4g6sr4TOg" iD="_nNN-MKAdEeW6r4g6sr4TOg" name="Department director">
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_84q-GqAdEeW6r4g6sr4TOg" iD="_84hNBqAdEeW6r4g6sr4TOg" name="BudgetingVar">
@@ -408,23 +426,9 @@
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_r-m1sKfVEeWSBZyrG3gepw" key="mapperParticipantUsers" value="$getSingleDepartment-ProcessRecieve__requestResponse1Msg.body/Business:DepartmentDirector"/>
       </eAnnotations>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_q9wRkaKDEeWFS7bBQTvFJw" iD="_q9wRkKKDEeWFS7bBQTvFJw" associations="_lFs_YKXAEeW1o-GnJ_ijAQ _mbr64KXAEeW1o-GnJ_ijAQ" outgoingEdges="_W0rQKKXIEeW1o-GnJ_ijAQ" incomingEdges="_q-M9gaKDEeWFS7bBQTvFJw" activityType="EventIntermediateMessage" looping="false">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_q9wRkaKDEeWFS7bBQTvFJw" iD="_q9wRkKKDEeWFS7bBQTvFJw" associations="_lFs_YKXAEeW1o-GnJ_ijAQ _mbr64KXAEeW1o-GnJ_ijAQ" incomingEdges="_q-M9gaKDEeWFS7bBQTvFJw" activityType="EventEndMessage" looping="false">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_lFQTcaXAEeW1o-GnJ_ijAQ"/>
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_mafBAaXAEeW1o-GnJ_ijAQ"/>
-    </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_W0hfIaXIEeW1o-GnJ_ijAQ" iD="_W0hfIKXIEeW1o-GnJ_ijAQ" outgoingEdges="_lq2aOqXIEeW1o-GnJ_ijAQ" incomingEdges="_W0rQKKXIEeW1o-GnJ_ijAQ" name="Recieve final budget" activityType="Task"/>
-    <vertices xmi:type="bpmn:SubProcess" xmi:id="_-XFaQajEEeWSc6sGizUbzA" iD="_-XFaQKjEEeWSc6sGizUbzA" incomingEdges="_lq2aOqXIEeW1o-GnJ_ijAQ" name="Send notifications">
-      <vertices xmi:type="bpmn:Activity" xmi:id="_uup9AaXIEeW1o-GnJ_ijAQ" iD="_uup9AKXIEeW1o-GnJ_ijAQ" outgoingEdges="_zfYhGqXIEeW1o-GnJ_ijAQ" incomingEdges="_uuzuCKXIEeW1o-GnJ_ijAQ" name="Send PDF to director" activityType="Task"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_0QHacaXIEeW1o-GnJ_ijAQ" iD="_0QHacKXIEeW1o-GnJ_ijAQ" incomingEdges="_0QQkaKXIEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_lq2aMaXIEeW1o-GnJ_ijAQ" iD="_lq2aMKXIEeW1o-GnJ_ijAQ" outgoingEdges="_uuzuCKXIEeW1o-GnJ_ijAQ _x6gN-qXIEeW1o-GnJ_ijAQ" incomingEdges="_C3ax4ajFEeWSc6sGizUbzA" activityType="GatewayParallel"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_zfYhEaXIEeW1o-GnJ_ijAQ" iD="_zfYhEKXIEeW1o-GnJ_ijAQ" incomingEdges="_zfYhGqXIEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_x6gN8aXIEeW1o-GnJ_ijAQ" iD="_x6gN8KXIEeW1o-GnJ_ijAQ" outgoingEdges="_0QQkaKXIEeW1o-GnJ_ijAQ" incomingEdges="_x6gN-qXIEeW1o-GnJ_ijAQ" name="Notify Managers" activityType="Task"/>
-      <vertices xmi:type="bpmn:Activity" xmi:id="_CRIN8ajFEeWSc6sGizUbzA" iD="_CRIN8KjFEeWSc6sGizUbzA" outgoingEdges="_C3ax4ajFEeWSc6sGizUbzA" activityType="EventStartEmpty"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_0QQkaKXIEeW1o-GnJ_ijAQ" iD="_0QQkZ6XIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_x6gN-qXIEeW1o-GnJ_ijAQ" iD="_x6gN-aXIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_zfYhGqXIEeW1o-GnJ_ijAQ" iD="_zfYhGaXIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_uuzuCKXIEeW1o-GnJ_ijAQ" iD="_uuzuB6XIEeW1o-GnJ_ijAQ"/>
-      <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_C3ax4ajFEeWSc6sGizUbzA" iD="_C3ax4KjFEeWSc6sGizUbzA"/>
     </vertices>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_AWGHKKAeEeW6r4g6sr4TOg" iD="_AWGHJ6AeEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_A0y1WqAeEeW6r4g6sr4TOg" iD="_A0y1WaAeEeW6r4g6sr4TOg"/>
@@ -438,8 +442,6 @@
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_5ke2IaAtEeW6r4g6sr4TOg" iD="_5ke2IKAtEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_p1xV0aKDEeWFS7bBQTvFJw" iD="_p1xV0KKDEeWFS7bBQTvFJw"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_q-M9gaKDEeWFS7bBQTvFJw" iD="_q-M9gKKDEeWFS7bBQTvFJw"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_W0rQKKXIEeW1o-GnJ_ijAQ" iD="_W0rQJ6XIEeW1o-GnJ_ijAQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_lq2aOqXIEeW1o-GnJ_ijAQ" iD="_lq2aOaXIEeW1o-GnJ_ijAQ"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_o4kG4aA3EeW6r4g6sr4TOg" iD="_o4kG4KA3EeW6r4g6sr4TOg" name="Manager">
     <artifacts xmi:type="bpmn:DataObject" xmi:id="_KajP0aA4EeW6r4g6sr4TOg" iD="_KajP0KA4EeW6r4g6sr4TOg" name="thisRecieve_project_requestRequest2Msg">
@@ -551,9 +553,7 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_eXs60aHlEeWujqVpfVkA2w" iD="_eXs60KHlEeWujqVpfVkA2w" outgoingEdges="_fNmoEaHlEeWujqVpfVkA2w _ihCHuKHlEeWujqVpfVkA2w" incomingEdges="_eYFVUaHlEeWujqVpfVkA2w" name="Has attachments" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_ig3voaHlEeWujqVpfVkA2w" iD="_ig3voKHlEeWujqVpfVkA2w" outgoingEdges="_jZpKsaHlEeWujqVpfVkA2w" incomingEdges="_ihCHuKHlEeWujqVpfVkA2w _jEgoMaHlEeWujqVpfVkA2w" activityType="GatewayDataBasedExclusive"/>
     <vertices xmi:type="bpmn:Activity" xmi:id="_4RwD4aXIEeW1o-GnJ_ijAQ" iD="_4RwD4KXIEeW1o-GnJ_ijAQ" outgoingEdges="_6d-D2KXIEeW1o-GnJ_ijAQ" incomingEdges="_4RwD6qXIEeW1o-GnJ_ijAQ _zL588aBNEeW6r4g6sr4TOg" activityType="GatewayParallel"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_6d054aXIEeW1o-GnJ_ijAQ" iD="_6d054KXIEeW1o-GnJ_ijAQ" outgoingEdges="_AqpBeqXJEeW1o-GnJ_ijAQ" incomingEdges="_6d-D2KXIEeW1o-GnJ_ijAQ" name="Recieve project result" activityType="Task"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_AqpBcaXJEeW1o-GnJ_ijAQ" iD="_AqpBcKXJEeW1o-GnJ_ijAQ" outgoingEdges="_CMZIGKXJEeW1o-GnJ_ijAQ" incomingEdges="_AqpBeqXJEeW1o-GnJ_ijAQ" name="Notify manager" activityType="Task"/>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_CMPXEaXJEeW1o-GnJ_ijAQ" iD="_CMPXEKXJEeW1o-GnJ_ijAQ" incomingEdges="_CMZIGKXJEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_CMPXEaXJEeW1o-GnJ_ijAQ" iD="_CMPXEKXJEeW1o-GnJ_ijAQ" incomingEdges="_6d-D2KXIEeW1o-GnJ_ijAQ" activityType="EventEndEmpty"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ll5pAaBHEeW6r4g6sr4TOg" iD="_ll5pAKBHEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_D0sGYaBJEeW6r4g6sr4TOg" iD="_D0sGYKBJEeW6r4g6sr4TOg"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_szissaBNEeW6r4g6sr4TOg" iD="_szissKBNEeW6r4g6sr4TOg"/>
@@ -566,8 +566,6 @@
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_jZpKsaHlEeWujqVpfVkA2w" iD="_jZpKsKHlEeWujqVpfVkA2w"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_4RwD6qXIEeW1o-GnJ_ijAQ" iD="_4RwD6aXIEeW1o-GnJ_ijAQ"/>
     <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6d-D2KXIEeW1o-GnJ_ijAQ" iD="_6d-D16XIEeW1o-GnJ_ijAQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_AqpBeqXJEeW1o-GnJ_ijAQ" iD="_AqpBeaXJEeW1o-GnJ_ijAQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_CMZIGKXJEeW1o-GnJ_ijAQ" iD="_CMZIF6XJEeW1o-GnJ_ijAQ"/>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_KaRjAaA4EeW6r4g6sr4TOg" iD="_KaRjAKA4EeW6r4g6sr4TOg" source="_PNPuUaAuEeW6r4g6sr4TOg" target="_KaMDcaA4EeW6r4g6sr4TOg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aOSQgKBHEeW6r4g6sr4TOg" source="attachedDataobject">

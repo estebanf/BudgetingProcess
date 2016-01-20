@@ -267,8 +267,6 @@
                     </bpdm:messagingtask>
                 </bpel:sequence>
             </bpdm:gateway>
-            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve project result" bpdm:ID="_6d054KXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Notify manager" bpdm:ID="_AqpBcKXJEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
             <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_CMPXEKXJEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
         </bpel:sequence>
     </bpel:scope>

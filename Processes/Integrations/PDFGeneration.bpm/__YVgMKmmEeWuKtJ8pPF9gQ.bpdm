@@ -66,14 +66,7 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>xs:int($thisStartRequest1Msg.body)</bpel:from>
-                        <bpel:to>$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="134696128" targetPath="$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID" targetedBy="1231787004-arg1"></mapper:vertice>
-  <mapper:vertice id="1231787004" dimension="79x24" location="353,69">
-    <mapper:value>xs:int()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1322070211" sourcePath="$thisStartRequest1Msg.body" targetedBy="1231787004-arg0"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID</bpel:to><mapper:mapperLink><mapper:vertice id="134696128" targetPath="$nsSelect_approved_projectsRequest1Msg.parameters/ns:execute/ns:parameters/ns:EXCERCISE_ID" targetedBy="1231787004-arg1"></mapper:vertice><mapper:vertice id="1231787004" dimension="79x24" location="353,69"><mapper:value>xs:int()</mapper:value></mapper:vertice><mapper:vertice id="1322070211" sourcePath="$thisStartRequest1Msg.body" targetedBy="1231787004-arg0"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="nsSelect_approved_projectsRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns:select_approved_projectsInput" bpdm:binding="ns:select_approved_projectsPortSoapBinding" bpdm:ID="_We5hNampEeWRE_dEqBu0KAOutgoing"></bpdm:linkset>
@@ -84,28 +77,11 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>concat("budget_", $thisStartRequest1Msg.body, ".pdf")</bpel:from>
-                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="2121274253" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName" targetedBy="756517371-arg2"></mapper:vertice>
-  <mapper:vertice id="756517371" dimension="79x24" location="492,164">
-    <mapper:value>concat()</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="484989656" dimension="79x24" location="358,122" targetedBy="756517371-arg0">
-    <mapper:value>"budget_"</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1712960393" sourcePath="$thisStartRequest1Msg.body" targetedBy="756517371-arg1"></mapper:vertice>
-  <mapper:vertice id="275547975" dimension="79x24" location="348,215" targetedBy="756517371-arg3">
-    <mapper:value>".pdf"</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName</bpel:to><mapper:mapperLink><mapper:vertice id="2121274253" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:pdfMetaData/ns0:fileName" targetedBy="756517371-arg2"></mapper:vertice><mapper:vertice id="756517371" dimension="79x24" location="492,164"><mapper:value>concat()</mapper:value></mapper:vertice><mapper:vertice id="484989656" dimension="79x24" location="358,122" targetedBy="756517371-arg0"><mapper:value>"budget_"</mapper:value></mapper:vertice><mapper:vertice id="1712960393" sourcePath="$thisStartRequest1Msg.body" targetedBy="756517371-arg1"></mapper:vertice><mapper:vertice id="275547975" dimension="79x24" location="348,215" targetedBy="756517371-arg3"><mapper:value>".pdf"</mapper:value></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                     <bpel:copy>
                         <bpel:from>$nsSelect_approved_projectsResponse1Msg.parameters/ns:rows</bpel:from>
-                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1864832292" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects" targetedBy="610568970-arg0"></mapper:vertice>
-  <mapper:vertice id="610568970" sourcePath="$nsSelect_approved_projectsResponse1Msg.parameters/ns:rows"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects</bpel:to><mapper:mapperLink><mapper:vertice id="1864832292" targetPath="$PDFTaskRequest1Msg.inputParams/ns0:templateVariables/ns0:projects" targetedBy="610568970-arg0"></mapper:vertice><mapper:vertice id="610568970" sourcePath="$nsSelect_approved_projectsResponse1Msg.parameters/ns:rows"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="PDFTaskRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="ns0:sendRequest" bpdm:binding="ns0:JavaInternalWSSOAP11Binding" bpdm:ID="_iPCZUKmnEeWuKtJ8pPF9gQOutgoing"></bpdm:linkset>
@@ -116,11 +92,7 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$PDFTaskResponse1Msg.pdfAccessUrl</bpel:from>
-                        <bpel:to>$thisStartResponse1Msg.body</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1554022517" targetPath="$thisStartResponse1Msg.body" targetedBy="1091533054-arg0"></mapper:vertice>
-  <mapper:vertice id="1091533054" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$thisStartResponse1Msg.body</bpel:to><mapper:mapperLink><mapper:vertice id="1554022517" targetPath="$thisStartResponse1Msg.body" targetedBy="1091533054-arg0"></mapper:vertice><mapper:vertice id="1091533054" sourcePath="$PDFTaskResponse1Msg.pdfAccessUrl"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisStartResponse1Msg" bpdm:msgVarScopeId="__YVgMKmmEeWuKtJ8pPF9gQ" bpdm:variableIsManaged="true" bpdm:messageType="this:StartResponse" bpdm:ID="_jZKYMKmpEeWRE_dEqBu0KA"></bpdm:linkset>

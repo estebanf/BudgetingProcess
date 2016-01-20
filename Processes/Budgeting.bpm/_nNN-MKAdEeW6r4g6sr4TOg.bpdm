@@ -93,9 +93,9 @@
         <bpdm:namespaceContributor bpdm:url="project:///Schemas/Business.xsd"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/department_review.html.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Webcontents/requirements.html.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetTeamMembers-Process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/GetSingleDepartment-Process.wsdl"/>
-        <bpdm:namespaceContributor bpdm:url="project:///Processes/Integrations/AttachmentManagement-process.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar"/>
         <bpdm:namespaceContributor bpdm:url="project:///Metrics/Variables.xvar.xsd"/>
     </bpdm:dependencies>
@@ -425,7 +425,7 @@
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="department_review1CreateTaskSingleActivityRequest1Msg" bpdm:variableIsManaged="true" bpdm:messageType="department_review:createTaskSingleActivityRequest" bpdm:ID="_nf31caKDEeWFS7bBQTvFJwOutgoing"></bpdm:linkset>
             </bpdm:messagingtask>
-            <bpdm:messagingtask eventType="intermediate: message" operation="Recieve_department_requirements" partnerLink="department_directorAndChief_financial_officerPlkVar" portType="Chief_financial_officer:ForDepartment_director" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_Intermediate_Event" bpdm:ID="_q9wRkKKDEeWFS7bBQTvFJw">
+            <bpdm:messagingtask eventType="end: message" operation="Recieve_department_requirements" partnerLink="department_directorAndChief_financial_officerPlkVar" portType="Chief_financial_officer:ForDepartment_director" isMyRole="false" enableSharing="false" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Message_End_Event" bpdm:ID="_q9wRkKKDEeWFS7bBQTvFJw">
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$thisRecieve_requirement_requestRequest2Msg.body/tns:Reference</bpel:from>
@@ -439,22 +439,6 @@
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="chief_financial_officerRecieve_department_requirementsRequest1Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Chief_financial_officer:Recieve_department_requirementsRequest" bpdm:ID="_lFQTcKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
                 <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="chief_financial_officerRecieve_department_requirementsResponse1Msg" bpdm:msgVarScopeId="_nNN-MKAdEeW6r4g6sr4TOg" bpdm:variableIsManaged="true" bpdm:messageType="Chief_financial_officer:Recieve_department_requirementsResponse" bpdm:ID="_mafBAKXAEeW1o-GnJ_ijAQ"></bpdm:linkset>
             </bpdm:messagingtask>
-            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Recieve final budget" bpdm:ID="_W0hfIKXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-            <bpel:scope bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Send notifications" bpdm:ID="_-XFaQKjEEeWSc6sGizUbzA">
-                <bpel:sequence>
-                    <bpdm:messagingtask eventType="start: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_Start_Event" bpdm:ID="_CRIN8KjFEeWSc6sGizUbzA"></bpdm:messagingtask>
-                    <bpdm:gateway bpdm:label="Parallel_Gateway" bpdm:ID="_lq2aMKXIEeW1o-GnJ_ijAQ" bpdm:gatewayType="parallel_and" bpdm:isMerge="false">
-                        <bpel:sequence>
-                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Send PDF to director" bpdm:ID="_uup9AKXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-                            <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_zfYhEKXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-                        </bpel:sequence>
-                        <bpel:sequence>
-                            <bpdm:messagingtask bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Notify Managers" bpdm:ID="_x6gN8KXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-                            <bpdm:messagingtask eventType="end: empty" bpdm:backEdgeId="" bpdm:backEdgeParticipantType="none" bpdm:backEdgeParticipantTarget="none" bpdm:label="Empty_End_Event" bpdm:ID="_0QHacKXIEeW1o-GnJ_ijAQ"></bpdm:messagingtask>
-                        </bpel:sequence>
-                    </bpdm:gateway>
-                </bpel:sequence>
-            </bpel:scope>
         </bpel:sequence>
     </bpel:scope>
 </bpel:process>
